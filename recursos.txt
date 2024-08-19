@@ -1,0 +1,38 @@
+BS Icons
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+------------------------------------------------------
+
+Google Fonts
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+------------------------------------------------------
+saldodes
+Variáveis
+--color-light: hsl(0, 0%, 100%);
+--color-red: #EA1D2C;
+--font-body: 'Poppins', sans-serif;
+------------------------------------------------------
+
+ícones
+Olho cortado = <i class="bi bi-eye-slash"></i>
+Início (casa) = <i class="bi bi-house-door-fill"></i>
+Perfil = <i class="bi bi-person-circle"></i>
+Saldo = <i class="bi bi-cash-coin"></i>
+Receitas = <i class="bi bi-currency-dollar"></i>
+Despesas = <i class="bi bi-bar-chart-fill"></i>
+Extrato = <i class="bi bi-file-earmark-text-fill"></i>
+Pedidos = <i class="bi bi-file-text-fill"></i>
+Relatórios = <i class="bi bi-file-earmark-bar-graph-fill"></i>
+Ajuda = <i class="bi bi-question-octagon-fill"></i>
+Segurança = <i class="bi bi-shield-fill-minus"></i>
+Sair = <i class="bi bi-box-arrow-right"></i>
+Seta Menu = <i class="bi bi-arrow-return-right"></i>
+Calendário = <i class="bi bi-calendar4-week"></i>
+Seta Opção para baixo = <i class="bi bi-chevron-down"></i>
+Seta direita > = <i class="bi bi-chevron-right"></i>
+Seta para baixo (Extrato/Relatório) = <i class="bi bi-arrow-down"></i>
+Pesquisar = <i class="bi bi-search"></i>
++ = <i class="bi bi-plus"></i>
+Lixo = <i class="bi bi-trash"></i>
+Editar = <i class="bi bi-pencil-square"></i>
