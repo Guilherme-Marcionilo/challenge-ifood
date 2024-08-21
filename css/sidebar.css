@@ -49,7 +49,8 @@ html {
 }
 
 .sidebar-nav .nav-link:hover {
-  background-color: #ea1d2bcc;
+  background-color: #fde9ea;
+  color: var(--color-red);
 }
 
 .sidebar-nav .nav-link i {
