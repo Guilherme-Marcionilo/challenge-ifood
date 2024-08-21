@@ -1,6 +1,7 @@
 :root {
   --color-light: hsl(0, 0%, 100%);
   --color-red: #EA1D2C;
+  --color-black: #000000;
   --font-body: 'Poppins', sans-serif;
 }
 
@@ -32,12 +33,6 @@ html {
   transition: all 0.3s ease;
 }
 
-.sidebar-header {
-  color: var(--color-red);
-  text-align: center;
-  padding: 20px 0;
-}
-
 .sidebar-nav {
   list-style: none;
   padding: 0;
@@ -47,14 +42,14 @@ html {
 .sidebar-nav .nav-link {
   display: flex;
   align-items: center;
-  color: var(--color-red);
+  color: var(--color-black);
   padding: 10px 20px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .sidebar-nav .nav-link:hover {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #ea1d2bcc;
 }
 
 .sidebar-nav .nav-link i {
@@ -66,36 +61,13 @@ html {
   margin-left: 10px;
 }
 
-.sidebar-nav .nav-item .nav-link .fas {
-  color: var(--color-red);
-}
-
-.sidebar-nav .nav-link .fas:hover {
-  color: var(--color-light);
-}
-
 .sidebar-nav .nav-link .ml-4 {
   margin-left: 40px;
 }
 
-.sidebar-nav .nav-link .fas {
-  color: var(--color-red);
-}
-
-.sidebar-nav .nav-link .fas:hover {
-  color: var(--color-light);
-}
 
 .sidebar-nav .nav-link .ml-4 {
   margin-left: 40px;
-}
-
-.sidebar-nav .nav-link .fas {
-  color: var(--color-red);
-}
-
-.sidebar-nav .nav-link .fas:hover {
-  color: var(--color-light);
 }
 
 .sidebar-footer {
