@@ -48,7 +48,7 @@ html {
   transition: background-color 0.3s ease;
 }
 
-.sidebar-nav .nav-link:hover {
+.sidebar-nav .nav-link:hover, .sidebar-nav .nav-link.active {
   background-color: #fde9ea;
   color: var(--color-red);
 }
