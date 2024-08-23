@@ -5,11 +5,10 @@
   --font-body: 'Poppins', sans-serif;
 }
 
-body,
-html {
+body, html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: auto;
   height: 100%;
   font-family: var(--font-body);
 }
@@ -53,7 +52,7 @@ html {
   transition: background-color 0.3s ease;
 }
 
-.sidebar-nav .nav-link:hover, .sidebar-nav .nav-link.active {
+.sidebar-nav .nav-link:hover {
   background-color: #fde9ea;
   color: var(--color-red);
 }
@@ -105,4 +104,74 @@ html {
 .btn-outline-red:hover {
   background-color: #fde9ea;
   cursor: pointer;
+}
+
+.navbar-custom {
+  background-color: var(--color-light);
+}
+
+.navbar-custom .navbar-brand {
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.movimentacoes {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar-header, .sidebar-footer {
+    text-align: center;
+  }
+  .sidebar-nav .nav-link {
+    justify-content: center;
+  }
+  .navbar-custom .container-fluid {
+    margin-left: 0;
+  }
+  main {
+    padding: 0 15px;
+  }
+}
+
+/* Estilos adicionais para a modal */
+.modal-header h4 {
+  font-weight: bold;
+}
+
+.modal-body h6, .modal-body h5 {
+  margin-top: 15px;
+}
+
+.modal-body .form-check-label {
+  margin-left: 10px;
+}
+
+.modal-body .form-control {
+  margin-bottom: 10px;
+}
+
+.modal-footer .btn-primary {
+  background-color: var(--color-red);
+  border: none;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #c71720;
+}
+
+/* Estilos para os radio buttons selecionados */
+.form-check-input:checked {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.small-form {
+  width: 44px;
 }
