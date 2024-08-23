@@ -94,3 +94,39 @@ html {
 #col-one {
   margin-left: 300px;
 }
+
+/* Estilos adicionais para a modal */
+.modal-header h4 {
+  font-weight: bold;
+}
+
+.modal-body h6, .modal-body h5 {
+  margin-top: 15px;
+}
+
+.modal-body .form-check-label {
+  margin-left: 10px;
+}
+
+.modal-body .form-control {
+  margin-bottom: 10px;
+}
+
+.modal-footer .btn-primary {
+  background-color: var(--color-red);
+  border: none;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #c71720;
+}
+
+/* Estilos para os radio buttons selecionados */
+.form-check-input:checked {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.small-form {
+  width: 44px;
+}
