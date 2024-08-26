@@ -1,6 +1,8 @@
 :root {
   --color-light: hsl(0, 0%, 100%);
   --color-red: #EA1D2C;
+  --color-grey-claro: #dadada;
+  --color-grey-escuro: #767676;
   --font-body: 'Poppins', sans-serif;
 }
 
@@ -109,3 +111,80 @@ html {
 }
 
 
+/* Tela Login 2 */
+
+.password-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+}
+
+.form-password {
+  font-weight: bold;
+}
+
+.alterar-email {
+  font-weight: bold;
+  text-align: left;
+  width: 75%;
+}
+
+.access-problem-alterar {
+  font-weight: bold;
+  text-align: right;
+  width: 75%;
+}
+
+.input-group {
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+}
+
+/* Tela login 3 */
+
+.btn-grey {
+  background-color: var(--color-grey-claro);
+  color: var(--color-grey-escuro);
+}
+
+.btn-grey:hover {
+  background-color: #7c7c7c;
+  color: var(--color-light);
+}
+
+.codigo-field {
+  display: flex;
+  color: var(--color-grey-escuro);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+}
+
+.form-codigo {
+  font-weight: bold;
+}
+
+
+.style-codigo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-color: var(--color-grey-claro);
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.style-codigo-dois:hover {
+  color: var(--color-grey-claro);
+}
+
+.link-codigo {
+  color: var(--color-grey-escuro);
+}
+
+.link-codigo:hover {
+  color: #c21825;
+}
