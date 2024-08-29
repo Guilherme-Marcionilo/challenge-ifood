@@ -34,7 +34,6 @@ html {
   left: 0;
   width: 250px;
   height: 100%;
-  overflow-y: auto;
   transition: all 0.3s ease;
   z-index: 10;
 }
@@ -85,12 +84,10 @@ html {
 }
 
 #col-one {
-  margin-left: auto;
-  padding-right: 30px;
-  padding-top: 5px;
+  margin-left: 250px;
+  padding-right: 3rem;
   padding-left: 0;
-  overflow: auto;
-  z-index: 5;
+  height: 100vh;
 }
 
 
