@@ -73,7 +73,6 @@ html {
   margin-left: 40px;
 }
 
-
 .sidebar-nav .nav-link .ml-4 {
   margin-left: 40px;
 }
@@ -92,7 +91,6 @@ html {
   overflow: auto;
   z-index: 5;
 }
-
 
 .add-order {
   color: var(--color-light);
@@ -183,7 +181,6 @@ html {
   outline: none;
 }
 
-
 .pagination .page-item.active .page-link {
   border: none;
   background-color: transparent;
@@ -199,12 +196,92 @@ html {
   outline: none;
 }
 
-
 .select-item {
   background-color: var(--color-red) !important;
   border-radius: 10px;
   border-style: none;
 }
+
+/* Adicionar pedidos */
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Espaçamento entre elementos */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #dddddd;
+  border-radius: 34px;
+  transition: .4s;
+}
+
+
+input:checked+.slider {
+  background-color: rgb(21, 214, 21);
+}
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+}
+
+
+input:checked+.slider:before {
+  transform: translateX(24px);
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group .form-control {
+  padding-right: 40px;
+  /* Ajuste para dar espaço ao ícone */
+  border-radius: 20px;
+  /* Ajuste conforme necessário */
+}
+
+.input-group .input-group-text {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  /* Ajuste conforme necessário */
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 
 /* Modal */
 .modal-body h6 {
@@ -261,16 +338,86 @@ html {
     height: auto;
     position: relative;
   }
-  .sidebar-header, .sidebar-footer {
+
+  .sidebar-header,
+  .sidebar-footer {
     text-align: center;
   }
+
   .sidebar-nav .nav-link {
     justify-content: center;
   }
+
   .navbar-custom .container-fluid {
     margin-left: 0;
   }
+
   main {
     padding: 0 15px;
   }
+}
+
+
+/* Página add-order */
+
+.nav-pedidos .nav-link,
+.nav-pedidos .nav-item p,
+.nav-pedidos .item-detail,
+.nav-pedidos span {
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.nav-pedidos .valor-pizza-desconto {
+  color: green !important;
+  margin: 0 5px;
+}
+
+.nav-pedidos .valor-pizza-sem-desconto {
+  text-decoration: line-through;
+  color: var(--color-black);
+  margin: 0 5px;
+}
+
+.nav-pedidos .valor-pizza {
+  color: var(--color-black);
+  margin: 0 5px;
+}
+
+.nav-pedidos .switch {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-pedidos .nav-link {
+  background-color: #f8f9fa;
+  font-weight: 500;
+}
+
+.border {
+  border: 1px solid #ced4da !important;
+  margin-bottom: 10px;
+}
+
+.nav-pedidos .item-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.nav-pedidos .item-detail p {
+  margin-bottom: 0;
+}
+
+.nav-pedidos .bi {
+  margin-left: 10px;
+}
+
+.nav-pedidos .nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
