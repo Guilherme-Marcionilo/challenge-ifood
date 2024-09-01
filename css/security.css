@@ -1,0 +1,67 @@
+.ctn-prince {
+    display: flex;
+    flex-direction: row;
+}
+
+.division {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title-acess {
+    
+}
+
+.acess-1 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.acess-2 {
+    font-size: 14px;
+    color: gray;
+}
+.btn-in {
+    flex-direction: column;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-in button {
+    border: none;
+    width: 260px;
+    height: 30px;
+    color: white;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.dono {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.relatorio {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+}
+
+.relatorio p {
+    margin: 0;
+    padding-top: 0;
+}
+
+.ver-mais-link {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    color: red;
+  }
