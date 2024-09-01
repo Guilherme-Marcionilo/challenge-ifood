@@ -71,8 +71,8 @@ function arrowclick3() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    let currentPage = 1; // Página inicial
-    const totalPages = 5; // Total de páginas (ajuste conforme necessário)
+    let currentPage = 1;
+    const totalPages = 5; 
 
     // Função para alternar a tabela
     function alternaTabela(tabelaId) {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Função para alternar as tabelas com base no número da página
+
     function alternaTabelaPorPagina(pageNumber) {
         let tabelaId;
         switch (pageNumber) {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 tabelaId = 'outras';
                 break;
             default:
-                tabelaId = 'comissoes'; // Default
+                tabelaId = 'comissoes'; 
                 break;
         }
 
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         atualizarPaginacao(pageNumber);
     }
 
-    // Função para atualizar a aparência da navegação paginada
+
     function atualizarPaginacao(pageNumber) {
         document.querySelectorAll('.pagination a').forEach(link => link.classList.remove('pagination-active'));
 
@@ -120,14 +120,13 @@ document.addEventListener('DOMContentLoaded', function() {
             pageLinks[pageNumber].classList.add('pagination-active');
         }
         
-        // Atualiza o botão "Anterior"
+  
         if (pageNumber === 1) {
             document.querySelector('.pagination .anterior').classList.add('disabled');
         } else {
             document.querySelector('.pagination .anterior').classList.remove('disabled');
         }
 
-        // Atualiza o botão "Próximo"
         if (pageNumber === totalPages) {
             document.querySelector('.pagination .proximo').classList.add('disabled');
         } else {
@@ -135,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Adiciona event listeners para todos os links de menu
+ 
     document.querySelectorAll('.menu-ta a').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -146,12 +145,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const tabelaId = this.getAttribute('data-table');
             alternaTabela(tabelaId);
-            currentPage = 1; // Reseta a página ao mudar de tabela
+            currentPage = 1; 
             atualizarPaginacao(currentPage);
         });
     });
 
-    // Adiciona event listeners para todos os itens de navegação
+    
     document.querySelectorAll('.pagination a').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -172,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Exibe a tabela "comissoes" e aplica a classe "men-table-2" ao menu correspondente por padrão ao carregar a página
+
     alternaTabela('comissoes');
     document.querySelector('.menu-ta a[data-table="comissoes"]').classList.add('men-table-2');
     atualizarPaginacao(currentPage);
