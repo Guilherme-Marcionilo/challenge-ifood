@@ -332,7 +332,7 @@ input:checked+.slider:before {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -355,7 +355,7 @@ input:checked+.slider:before {
   main {
     padding: 0 15px;
   }
-}
+} */
 
 
 /* Página add-order */

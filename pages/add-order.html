@@ -112,7 +112,7 @@
         <nav class="nav flex-column sidebar-nav py-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="dashboard.html">
                 <i class="bi bi-house-door-fill"></i>
                 <span class="ml-2">Início</span>
               </a>
@@ -130,13 +130,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="despesas.html">
                 <i class="bi bi-bar-chart-fill"></i>
                 <span class="ml-2">Despesas</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="transaction-extract.html">
                 <i class="bi bi-file-earmark-text-fill"></i>
                 <span class="ml-2">Extrato</span>
               </a>
@@ -147,9 +147,9 @@
                 <i class="bi bi-file-text-fill"></i>
                 <span class="ml-2">Pedidos</span>
               </a>
-              <ul class="nav flex-column ml-4 collapse" id="pedidos-collapse">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
+              <ul class="nav flex-column ml-4" id="pedidos-collapse">
+                <li class="nav-item" style="background-color: #fde9ea; color: #ea1d2c;">
+                  <a class="nav-link" href="add-order.html" style="color: #ea1d2c;">
                     <i class="bi bi-arrow-return-right"></i>
                     Adicionar pedido
                   </a>
@@ -157,7 +157,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="financial-report.html">
                 <i class="bi bi-file-earmark-bar-graph-fill"></i>
                 <span class="ml-2">Relatórios</span>
               </a>
@@ -176,15 +176,15 @@
               </a>
               <ul class="nav flex-column ml-4 collapse" id="seguranca-collapse">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="Security.html">
                     <i class="bi bi-arrow-return-right"></i>
-                    Minha Loja
+                    Gestão de acesso
                   </a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="login.html">
                 <i class="bi bi-box-arrow-right"></i>
                 <span class="ml-2">Sair</span>
               </a>
@@ -211,7 +211,7 @@
               <div class="row g-3 mb-3 align-items-end">
                 <div class="col-md-3">
                   <label for="CPF" class="form-label">CPF/CNPJ</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" placeholder="123.227.123-16">
                 </div>
                 <div class="col-md-2">
                   <button class="btn btn-red w-100" type="button" data-bs-toggle="add-client"
@@ -219,7 +219,7 @@
                 </div>
                 <div class="col-md-7">
                   <label for="name" class="form-label">Nome</label>
-                  <input type="text" class="form-control" disabled>
+                  <input type="text" class="form-control" disabled placeholder="José da Silva">
                 </div>
               </div>
             </div>
@@ -234,15 +234,15 @@
               <div class="row g-3 mb-3 align-items-end">
                 <div class="col-md-2">
                   <label for="CEP" class="form-label">CEP</label>
-                  <input type="text" class="form-control" disabled>
+                  <input type="text" class="form-control" disabled placeholder="0512371-200">
                 </div>
                 <div class="col-md-8">
                   <label for="Endereço" class="form-label">Endereço</label>
-                  <input type="text" class="form-control" disabled>
-                </div>
+                  <input type="text" class="form-control" disabled placeholder="Rua das ruas">
+                </div>  
                 <div class="col-md-2">
                   <label for="numero" class="form-label">Número</label>
-                  <input type="text" class="form-control" disabled>
+                  <input type="text" class="form-control" disabled placeholder="1892">
                 </div>
               </div>
             </div>
@@ -251,19 +251,19 @@
               <div class="row g-3 mb-3 align-items-end">
                 <div class="col-md-5">
                   <label for="complemento" class="form-label">Complemento</label>
-                  <input type="text" class="form-control" disabled>
+                  <input type="text" class="form-control" disabled placeholder="bloco A12">
                 </div>
                 <div class="col-md-3">
                   <label for="bairro" class="form-label">Bairro</label>
-                  <input type="text" class="form-control" disabled>
+                  <input type="text" class="form-control" disabled placeholder="Harry potter">
                 </div>
                 <div class="col-md-3">
                   <label for="cidade" class="form-label">Cidade</label>
-                  <input type="text" class="form-control" disabled>
+                  <input type="text" class="form-control" disabled placeholder="Rio de janeiro">
                 </div>
                 <div class="col-md-1">
                   <label for="estado" class="form-label">Estado</label>
-                  <input type="text" class="form-control" disabled>
+                  <input type="text" class="form-control" disabled placeholder="RJ">
                 </div>
               </div>
             </div>
@@ -272,11 +272,11 @@
               <div class="row g-3 mb-3 align-items-end">
                 <div class="col-md-3">
                   <label for="telefone" class="form-label">Telefone</label>
-                  <input type="text" class="form-control" disabled>
+                  <input type="text" class="form-control" disabled placeholder="2819-21031">
                 </div>
                 <div class="col-md-3">
                   <label for="celular" class="form-label">Celular</label>
-                  <input type="text" class="form-control" disabled>
+                  <input type="text" class="form-control" disabled placeholder="11 98293012">
                 </div>
                 <div class="col-md-3">
                 </div>
@@ -547,19 +547,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
-      navLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-          navLinks.forEach(function (nav) {
-            nav.classList.remove('active');
-          });
-          this.classList.add('active');
-        });
-      });
-    });
-  </script>
 </body>
 
 </html>

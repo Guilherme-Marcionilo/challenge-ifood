@@ -22,7 +22,7 @@
       <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
         style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)">
         <div class="container-fluid d-flex justify-content-between align-items-center" style="margin-left: 250px">
-          <a class="navbar-brand" href="#">Despesas</a>
+          <a class="navbar-brand" href="#">Segurança</a>
           <div class="d-flex align-items-center gap-3">
             <i class="bi bi-person-circle text-red"></i>
             <div class="d-flex flex-column">
@@ -78,7 +78,7 @@
         <nav class="nav flex-column sidebar-nav py-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-house-door-fill"></i><span class="ml-2">Início</span></a>
+              <a class="nav-link" href="dashboard.html"><i class="bi bi-house-door-fill"></i><span class="ml-2">Início</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="bi bi-cash-coin"></i><span class="ml-2">Saldo</span></a>
@@ -99,7 +99,7 @@
                   class="ml-2">Pedidos</span></a>
               <ul class="nav flex-column ml-4 collapse" id="pedidos-collapse">
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-arrow-return-right"></i>Adicionar
+                  <a class="nav-link" href="add-order.html"><i class="bi bi-arrow-return-right"></i>Adicionar
                     pedido</a>
                 </li>
               </ul>
@@ -116,9 +116,9 @@
               <a class="nav-link" href="#" data-toggle="collapse" data-target="#seguranca-collapse"
                 aria-expanded="false" aria-controls="seguranca-collapse"><i class="bi bi-shield-fill-minus"></i><span
                   class="ml-2">Segurança</span></a>
-              <ul class="nav flex-column ml-4 collapse" id="seguranca-collapse">
-                <li class="nav-item">
-                  <a class="nav-link" href="create-access.html"><i class="bi bi-arrow-return-right"></i>Minha Loja</a>
+              <ul class="nav flex-column ml-4" id="seguranca-collapse">
+                <li class="nav-item" style="background-color: #fde9ea; color: #ea1d2c;">
+                  <a class="nav-link" href="Security.html" style="color: #ea1d2c;"><i class="bi bi-arrow-return-right"></i>Gestão de acesso</a>
                 </li>
               </ul>
             </li>
@@ -134,7 +134,7 @@
           </div>
         </footer>
       </aside>
-      <main class="col-md-9 offset-md-3 px-5 pt-4">
+      <main id="col-one" class="col px-4 pt-34">
         <section class="cnt-prince">
           <div class="division">
             <div class="title-acess">
@@ -142,7 +142,7 @@
               <p class="acess-2">Crie e edite diferentes permissões de acessos aos dados da loja</p>
             </div>
             <div class="btn-in">
-              <button class="btn btn-primary">+ Criar acesso</button>
+              <a class="nav-link" href="create-access.html"><button class="btn btn-primary">+ Criar acesso</button></a>
               <button class="btn btn-secondary">Ver Acessos</button>
             </div>
           </div>

@@ -18,6 +18,7 @@
     ">
 
   <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/responsive-dashboard.css" />
 </head>
 
 
@@ -111,8 +112,8 @@
         </header>
         <nav class="nav flex-column sidebar-nav py-3">
           <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">
+            <li class="nav-item" style="background-color: #fde9ea; color: #ea1d2c;">
+              <a class="nav-link" href="dashboard.html" style="color: #ea1d2c;">
                 <i class="bi bi-house-door-fill"></i>
                 <span class="ml-2">Início</span>
               </a>
@@ -130,7 +131,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="despesas.html">
                 <i class="bi bi-bar-chart-fill"></i>
                 <span class="ml-2">Despesas</span>
               </a>
@@ -149,7 +150,7 @@
               </a>
               <ul class="nav flex-column ml-4 collapse" id="pedidos-collapse">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href="add-order.html">
                     <i class="bi bi-arrow-return-right"></i>
                     Adicionar pedido
                   </a>
@@ -176,9 +177,9 @@
               </a>
               <ul class="nav flex-column ml-4 collapse" id="seguranca-collapse">
                 <li class="nav-item">
-                  <a class="nav-link" href="create-access.html">
+                  <a class="nav-link" href="Security.html">
                     <i class="bi bi-arrow-return-right"></i>
-                    Minha Loja
+                    Gestão de acesso
                   </a>
                 </li>
               </ul>
@@ -200,12 +201,12 @@
       <!-- Fim Menu Lateral -->
 
       <!-- Início conteúdo dashboard -->
-      <main id="col-one" class="col-md-9 offset-md-2 pt-5">
+      <main id="col-one" class="col px-4 pt-3">
         <div class="row justify-content-center">          
-          <main class="col-md-10">
+          <main class="col-10">
             <section class="row justify-content-center">
               <div class="row align-items-center p-0">
-                <div class="col-md-4">
+                <div class="col-12 col-lg-4 mb-4">
                   <a href="balance.html" class="link-saldo">
                     <div class="card border-0 shadow-sm">
                       <div class="card-body">
@@ -223,7 +224,7 @@
                   </a>
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-12 col-lg-4 mb-4">
                   <a href="revenues.html" class="link-receita">
                     <div class="card border-0 shadow-sm">
                       <div class="card-body">
@@ -241,7 +242,7 @@
                   </a>
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-12 col-lg-4 mb-4">
                   <a href="expenses.html" class="link-despesa">
                     <div class="card border-0 shadow-sm">
                       <div class="card-body">
@@ -282,19 +283,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
-      navLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-          navLinks.forEach(function (nav) {
-            nav.classList.remove('active');
-          });
-          this.classList.add('active');
-        });
-      });
-    });
-  </script>
+
 </body>
 
 </html>

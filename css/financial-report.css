@@ -130,3 +130,12 @@ html {
 .small-form {
   width: 44px;
 }
+
+#col-one {
+  margin-left: 250px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-left: 0;
+  overflow: auto;
+  z-index: 5;
+}
