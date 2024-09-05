@@ -59,9 +59,18 @@
 
 .ver-mais-link {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     width: 50%;
     text-align: center;
     color: red;
+  }
+
+  #col-one {
+    margin-left: 250px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-left: 0;
+    overflow: auto;
+    z-index: 5;
   }

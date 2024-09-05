@@ -91,21 +91,21 @@ img {
 .format-icon-saldo {
   width: 120px;
   margin-bottom: 200px;
-  font-size: 3em;
+  font-size: 3vw;
   color: var(--color-blue);
 }
 
 .format-icon-receita {
   width: 120px;
   margin-bottom: 200px;
-  font-size: 3em;
+  font-size: 3vw;
   color: var(--color-green);
 }
 
 .format-icon-despesa {
   width: 120px;
   margin-bottom: 200px;
-  font-size: 3em;
+  font-size: 3vw;
   color: var(--color-red);
 }
 
@@ -139,7 +139,6 @@ img {
 }
 
 
-
 .btn-red {
   background-color: var(--color-red);
   color: var(--color-light);
@@ -168,5 +167,22 @@ img {
 .btn-outline-red:hover {
   background-color: #fde9ea;
   cursor: pointer;
+}
+
+#col-one {
+  margin-left: 250px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-left: 0;
+  overflow: auto;
+  z-index: 5;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
 }
 
