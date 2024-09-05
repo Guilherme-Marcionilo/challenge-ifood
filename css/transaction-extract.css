@@ -112,7 +112,6 @@ body, html {
 
 .navbar-custom .navbar-brand {
   color: var(--color-black);
-  font-weight: bold;
 }
 
 .movimentacoes {
@@ -120,7 +119,7 @@ body, html {
   overflow-y: auto;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -138,7 +137,7 @@ body, html {
   main {
     padding: 0 15px;
   }
-}
+} */
 
 /* Estilos adicionais para a modal */
 .modal-header h4 {
@@ -174,4 +173,13 @@ body, html {
 
 .small-form {
   width: 44px;
+}
+
+#col-one {
+  margin-left: 250px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-left: 0;
+  overflow: auto;
+  z-index: 5;
 }

@@ -295,3 +295,12 @@ input:checked + .slider:before {
             color: red;
             font-weight: bold; /* Opcional: destaca o texto */
         }
+
+        #col-one {
+            margin-left: 250px;
+            padding-right: 30px;
+            padding-top: 5px;
+            padding-left: 0;
+            overflow: auto;
+            z-index: 5;
+          }
