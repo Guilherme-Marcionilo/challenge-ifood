@@ -16,6 +16,7 @@ html {
   overflow: hidden;
   height: 100%;
   font-family: var(--font-body);
+  overflow-y: auto;
 }
 
 img {
