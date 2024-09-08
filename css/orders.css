@@ -138,25 +138,27 @@ html {
 }
 
 .badge.bg-warning {
-  background-color: #fce300be !important;
-  opacity: 0.9;
-  color: var(--color-light);
-  font-weight: 500;
-  padding-inline: 15px;
+  border: 1px solid #EECEB0 !important;
+  border-radius: 6px !important;
+  color: #CD7B2E !important;
+  padding-inline: 16px !important;
+  background-color: #FFF9F2 !important;
 }
 
 .badge.bg-success {
-  background-color: var(--color-green) !important;
-  opacity: 0.7;
-  color: var(--color-light);
-  font-weight: 500;
+  border: 1px solid #30a560 !important;
+  border-radius: 6px !important;
+  color: #038138 !important;
+  padding-inline: 9px !important;
+  background-color: #dcfde9 !important;
 }
 
 .badge.bg-danger {
-  background-color: var(--color-red) !important;
-  opacity: 0.7;
-  color: var(--color-light);
-  font-weight: 500;
+  border: 1px solid #d17379 !important;
+  border-radius: 6px !important;
+  color: #cc1724 !important;
+  padding-inline: 8px !important;
+  background-color: #f3dede !important;
 }
 
 .form-label {
