@@ -5,6 +5,22 @@
   --color-grey-escuro: #767676;
   --font-body: 'Poppins', sans-serif;
 }
+.password-field {
+  position: relative;
+}
+
+.password-field .form-control {
+  padding-right: 40px; /* Adicione espaço para o ícone */
+}
+
+.password-field .toggle-password {
+  right: 20px; 
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d; 
+  z-index: 10; 
+}
 
 body,
 html {

@@ -2,8 +2,8 @@
 
 
     #col-one {
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     .slider {
@@ -23,6 +23,57 @@
         background-color: white;
         transition: .4s;
     }
+    .ctn-prince {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .main-content {
+        padding: 0 20px;
+      }
+      .btn {
+        width: 100px;
+
+      }
+    
+      .btn-in {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+    
+      .btn-in a,
+      .btn-in button {
+        margin-bottom: 10px;
+      }
+    
+      .division2 {
+        flex-direction: column;
+      }
+    
+      .division2 .col-md-4 {
+        width: 100%;
+      }
+    
+      .card {
+        margin-bottom: 20px;
+      }
+
+      .title-acess {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+      .btn-in button {
+        border: none;
+        width: 100px !important;
+        font-size: 10px !important;
+        height: 30px;
+        color: white;
+        background-color: red;
+        border-radius: 10px !important;
+    }
+      
+  
 }
 
 
