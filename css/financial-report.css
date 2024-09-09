@@ -68,12 +68,12 @@ html {
   background-color: var(--color-red);
   color: var(--color-light);
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
 .btn-red:hover {
   background-color: #c71720;
+  color: white;
   cursor: pointer;
 }
 .btn-outline-red {

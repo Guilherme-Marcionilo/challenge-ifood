@@ -258,16 +258,13 @@
                         <label for="pesquisar" class="form-label">Pesquisar</label>
                         <input type="text" class="form-control" placeholder="Pesquisar">
                     </div>
-
                 </section>
-                <div class=" mt-4 align-items-end justify-content-end d-flex">
-                    <button class="btn btn-red fw-bold fs-8" type="button" data-bs-toggle="modal"
-                        data-bs-target="" style="width: 250px">Exportar extrato</button>
-                </div>
-
-                <hr class="my-4" style="border: 1px solid #ccc" />
 
                 <section class="row mt-5 movimentacoes">
+                    <div class="align-items-end justify-content-end d-flex">
+                        <button class="btn btn-red fs-6 add-order" type="button" data-bs-toggle="modal"
+                            data-bs-target="#exportModalExtrato" style="width: 250px">Exportar extrato</button>
+                    </div>
                     <div class="d-flex gap-4 w-100 menu-ta">
                         <a class="men-table" href="#" data-table="comissoes">Comissões</a>
                         <a class="men-table" href="#" data-table="mensalidade">Mensalidade</a>
@@ -645,7 +642,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-grey" data-bs-dismiss="modal" aria-label="Close">Fechar</button>
-                    <button type="button" class="btn btn-red" data-bs-dismiss="modal"
+                    <button type="button" class="btn btn-red fs-6" data-bs-dismiss="modal"
                         onclick="openPrimaryModal()">Salvar mudanças</button>
                 </div>
             </div>
@@ -718,7 +715,113 @@
         </div>
     </div>
 
-
+    <!-- Modal Exportar Extrato -->
+    <div class="modal fade" id="exportModalExtrato" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exportModalLabel">Extrato por período</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Escolha o mês que você quer o extrato</h6>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <h6>Mês</h6>
+                            <input type="text" class="form-control" placeholder="Atual">
+                        </div>
+                        <div class="col">
+                            <h6>Ano</h6>
+                            <input type="text" class="form-control" placeholder="Atual">
+                        </div>
+                    </div>
+                    <h6>Desde o dia <input type="text" class="form-control d-inline-block small-form" placeholder="1">
+                        até o dia <input type="text" class="form-control d-inline-block small-form" placeholder="30">
+                    </h6>
+                    <h5 class="mt-3">Selecione a forma do extrato</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="extratoForma" id="visualizarTela"
+                            value="visualizarTela">
+                        <label class="form-check-label" for="visualizarTela">
+                            Visualizar em tela
+                        </label>
+                    </div>
+                    <h5 class="mt-3">Selecione os tipos de despesa você deseja</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="extratoFormato" id="formatoOFX"
+                                    value="OFX">
+                                <label class="form-check-label" for="formatoOFX">
+                                    Comissões
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="extratoFormato" id="formatoPDF"
+                                    value="PDF">
+                                <label class="form-check-label" for="formatoPDF">
+                                    Mensalidade
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="extratoFormato" id="formatoCSV"
+                                    value="CSV">
+                                <label class="form-check-label" for="formatoCSV">
+                                    Taxas
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="extratoFormato" id="formatoCSV"
+                                    value="CSV">
+                                <label class="form-check-label" for="formatoCSV">
+                                    Outras Despesas
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    <h5 class="mt-3">Selecione o formato</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoOFX"
+                                    value="OFX">
+                                <label class="form-check-label" for="formatoOFX">
+                                    OFX
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoPDF"
+                                    value="PDF">
+                                <label class="form-check-label" for="formatoPDF">
+                                    PDF
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoCSV"
+                                    value="CSV">
+                                <label class="form-check-label" for="formatoCSV">
+                                    CSV
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-red px-5">Gerar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="../js/despesas.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
