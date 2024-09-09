@@ -1,3 +1,32 @@
+@media (max-width: 600px) {
+
+
+    #col-one {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider {
+        width: 48px;
+        height: 25px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 19px !important;
+        width: 18px !important;
+        border-radius: 50%;
+        right: 5px;
+        bottom: 5px;
+        top: 2px;
+        background-color: white;
+        transition: .4s;
+    }
+}
+
+
+
 .ctn-prince {
     display: flex;
     flex-direction: row;
@@ -9,9 +38,7 @@
     justify-content: space-between;
 }
 
-.title-acess {
-    
-}
+.title-acess {}
 
 .acess-1 {
     font-size: 18px;
@@ -22,6 +49,7 @@
     font-size: 14px;
     color: gray;
 }
+
 .btn-in {
     flex-direction: column;
     display: flex;
@@ -64,13 +92,23 @@
     width: 50%;
     text-align: center;
     color: red;
-  }
+}
 
-  #col-one {
+.btnacess:hover {
+    background-color: rgb(94, 0, 0);
+
+}
+
+.ver-mais-link:hover {
+
+    color: rgb(139, 0, 0);
+}
+
+#col-one {
     margin-left: 250px;
     padding-right: 30px;
     padding-top: 5px;
     padding-left: 0;
     overflow: auto;
     z-index: 5;
-  }
+}
