@@ -40,17 +40,17 @@
         </div>
 
         <div class="d-flex text-center mb-3">
-          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0">
-          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0">
-          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0">
-          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0">
-          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0">
-          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0">
+          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0" id="code1">
+          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0" id="code2">
+          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0" id="code3">
+          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0" id="code4">
+          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0" id="code5">
+          <input type="text" class="style-codigo text-center" maxlength="1" placeholder="0" id="code6">
         </div>
 
-        <a href="" class="link-codigo mb-4">Reenviar código(00:59)</a>
+        <a href="#" id="resend-code" class="link-codigo mb-4 linka">Reenviar código <span class="time">(00:59)</span></a>
 
-        <a href="dashboard.html" class="btn btn-grey btn-lg w-75 mb-3">Continuar</a>
+        <a href="dashboard.html" id="continue-btn" class="btn btn-grey btn-lg w-75 mb-3">Continuar</a>
 
         <a href="login2.html"
             class="text-red link-cadastro">Voltar</a>
@@ -63,6 +63,72 @@
     </div>
   </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const continueBtn = document.getElementById('continue-btn');
+  const codeInputs = document.querySelectorAll('.style-codigo');
+
+  function checkInputs() {
+   
+    const allFilled = Array.from(codeInputs).every(input => input.value.trim() !== '');
+    console.log('Todos preenchidos:', allFilled); 
+    if (allFilled) {
+      continueBtn.classList.add('active');
+    } else {
+      continueBtn.classList.remove('active');
+    }
+  }
+
+
+  codeInputs.forEach(input => {
+    input.addEventListener('input', checkInputs);
+  });
+
+
+  checkInputs();
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+      const resendCodeLink = document.getElementById('resend-code');
+      const display = document.querySelector('.time');
+      const link = document.querySelector(".linka");
+      let timer, interval;
+
+      function startTimer(duration, display) {
+        let timerDuration = duration; 
+        interval = setInterval(function () {
+          const minutes = Math.floor(timerDuration / 60);
+          const seconds = timerDuration % 60;
+
+          display.textContent = `(${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds})`;
+
+          if (--timerDuration < 0) {
+            clearInterval(interval);
+            display.textContent = '00:00';
+            display.classList.add('expired');
+            link.classList.add('expired');
+          }
+        }, 1000);
+      }
+
+      function resetTimer() {
+        clearInterval(interval);
+        display.classList.remove('expired');
+        link.classList.remove('expired');
+        startTimer(60, display); 
+      }
+
+      startTimer(60, display); 
+
+      resendCodeLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (display.classList.contains('expired')) {
+          resetTimer();
+        }
+      });
+    });
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
   </script>

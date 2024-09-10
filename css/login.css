@@ -165,6 +165,34 @@ html {
   color: var(--color-grey-escuro);
 }
 
+.style-codigo {
+  width: 50px;
+  margin: 0 5px;
+}
+
+.btn-grey.active {
+  background-color: red; 
+  color: white;
+  border: none;
+}
+
+.btn-grey.active:hover {
+  background-color: rgb(179, 0, 0); 
+ 
+}
+
+.time {
+  color: #333;
+  font-weight: bold;
+}
+.time.expired {
+  color: red;
+}
+
+.linka.expired{
+  color: red;
+
+}
 .btn-grey:hover {
   background-color: #7c7c7c;
   color: var(--color-light);
