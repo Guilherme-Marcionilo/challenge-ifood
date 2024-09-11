@@ -107,10 +107,12 @@ html {
 }
 
 .btn-red {
-  background-color: #EA1D2C;
+  background-color: var(--color-red);
   color: white;
+  border: none;
   border-radius: 10px;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .btn-red:hover {
@@ -287,7 +289,7 @@ input:checked+.slider:before {
 
 /* Modal */
 .modal-body h6 {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .modal-body table {

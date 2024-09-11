@@ -43,7 +43,8 @@
                 </div>
             </nav>
         </header>
-        <div class="collapse position-absolute end-0 px-4" id="userMenu" style="min-width: 500px; min-height: 200px; z-index: 100;">
+        <div class="collapse position-absolute end-0 px-4" id="userMenu"
+            style="min-width: 500px; min-height: 200px; z-index: 100;">
             <div class="card card-body p-12" style="z-index: 1">
                 <ul class="list-unstyled mb-0">
                     <p style="font-weight: 500">Escolher loja</p>
@@ -101,9 +102,10 @@
                                     class="bi bi-file-earmark-text-fill"></i><span class="ml-2">Extrato</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="orders.html" data-toggle="collapse" data-target="#pedidos-collapse"
-                                aria-expanded="false" aria-controls="pedidos-collapse"><i
-                                    class="bi bi-file-text-fill"></i><span class="ml-2">Pedidos</span></a>
+                            <a class="nav-link" href="orders.html" data-toggle="collapse"
+                                data-target="#pedidos-collapse" aria-expanded="false"
+                                aria-controls="pedidos-collapse"><i class="bi bi-file-text-fill"></i><span
+                                    class="ml-2">Pedidos</span></a>
                             <ul class="nav flex-column ml-4 collapse" id="pedidos-collapse">
                                 <li class="nav-item">
                                     <a class="nav-link" href="add-order.html"><i
@@ -149,32 +151,33 @@
 
             <!-- Conteudo principal -->
             <main id="col-one" class="col px-4 pt-3">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                    <!-- Seção de despesas -->
-                    <div class="d-flex gap-3">
-                        <div class="me-3"
-                            style="border-radius: 5px; width: 250px; height: 100px; text-align: center; padding: 20px; border-bottom: 2px solid rgba(128, 128, 128, 0.171); box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+                <div class="d-flex flex-wrap flex-md-nowrap justify-content-between align-items-start mb-3">
+                    <div class="d-flex flex-wrap gap-3 mb-3 flex-grow-1">
+                        <div class="me-3 p-3"
+                            style="border-radius: 5px; width: 250px; min-width: 200px; text-align: center; border-bottom: 2px solid rgba(128, 128, 128, 0.171); box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
                             <p class="mb-0 fs-6 fw-bold">Despesa Atual</p>
                             <p class="mb-2 fs-4 fw-light">R$ 437,50</p>
                         </div>
-                        <div
-                            style="border-radius: 5px; width: 250px; height: 100px; text-align: center; padding: 20px; border-bottom: 2px solid rgba(128, 128, 128, 0.171); box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
-                            <div class="row align-items-center">
-                                <div class="col-10 me-0">
+                        <div class="p-3"
+                            style="border-radius: 5px; width: 250px; min-width: 200px; text-align: center; border-bottom: 2px solid rgba(128, 128, 128, 0.171); box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
                                     <p class="mb-0 fs-6 fw-bold">Despesa prevista</p>
                                     <p class="mb-2 fs-4 fw-light">R$ 50,00</p>
                                 </div>
-                                <div class="col-1 p-0 text-end">
-                                    <p class="mb-0 fs-6" style="font-weight: bold;">-5%</p>
+                                <div class="text-end">
+                                    <p class="mb-0 fs-6 fw-bold">-5%</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Botão de adicionar despesa -->
-                    <button class="btn btn-red fw-bold fs-6 text-center" type="button" data-bs-toggle="modal"
-                        data-bs-target="#exportModal" style="width: 250px; height:40px;">+ Adicionar
-                        Despesa</button>
+                    <button class="btn btn-red fs-6 text-center" type="button"
+                        data-bs-toggle="modal" data-bs-target="#exportModal"
+                        style="width: 250px;">
+                        + Adicionar Despesa
+                    </button>
                 </div>
+
                 <section class="row mt-4">
                     <div class="col-md-6">
                         <div>
@@ -204,10 +207,9 @@
                         <div class="">
                             <div class="">
                                 <h5 style="font-size: 18px;" class="card-title mb-3 text-center">Julho de 2024 <a
-                                        style="cursor: pointer;"><i
-                                            class="bi bi-chevron-down"></i></a></h5>
+                                        style="cursor: pointer;"><i class="bi bi-chevron-down"></i></a></h5>
                             </div>
-                            <div id="itensArrow3" 
+                            <div id="itensArrow3"
                                 style="box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); padding: 15px; align-items: center;">
                                 <ul>
                                     <li class="list-group-item mb-2">Valor bruto das vendas <span
@@ -232,7 +234,7 @@
 
 
                 <section class="row mt-4">
-                    <h4 style="font-size: 18px;">Filtros</h4>
+                    <h4 style="font-size: 15px;">Filtros</h4>
                     <div class="col-md-2">
                         <label for="dateFrom" class="form-label">De</label>
                         <div class="input-group">
@@ -260,11 +262,11 @@
                     </div>
                 </section>
 
-                <section class="row mt-5 movimentacoes">
-                    <div class="align-items-end justify-content-end d-flex">
-                        <button class="btn btn-red fs-6 add-order" type="button" data-bs-toggle="modal"
-                            data-bs-target="#exportModalExtrato" style="width: 250px">Exportar extrato</button>
-                    </div>
+                <div class="align-items-end justify-content-end d-flex pt-4">
+                    <button class="btn btn-red fs-6 add-order" type="button" data-bs-toggle="modal"
+                        data-bs-target="#exportModalExtrato" style="width: 250px">Exportar extrato</button>
+                </div>
+                <section class="row mt-4 movimentacoes">
                     <div class="d-flex gap-4 w-100 menu-ta">
                         <a class="men-table" href="#" data-table="comissoes">Comissões</a>
                         <a class="men-table" href="#" data-table="mensalidade">Mensalidade</a>
@@ -524,7 +526,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exportModalLabel">Nova despesa</h4>
+                    <h5 class="modal-title" id="exportModalLabel">Nova despesa</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -587,7 +589,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-grey" data-bs-dismiss="modal" aria-label="Close">Voltar</button>
+                        <button type="button" class="btn btn-grey" data-bs-dismiss="modal"
+                            aria-label="Close">Voltar</button>
                         <button type="button" class="btn btn-red ml-auto">Adicionar Despesa</button>
                     </div>
                 </div>
@@ -641,7 +644,8 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-grey" data-bs-dismiss="modal" aria-label="Close">Fechar</button>
+                    <button type="button" class="btn btn-grey" data-bs-dismiss="modal"
+                        aria-label="Close">Fechar</button>
                     <button type="button" class="btn btn-red fs-6" data-bs-dismiss="modal"
                         onclick="openPrimaryModal()">Salvar mudanças</button>
                 </div>
@@ -720,7 +724,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exportModalLabel">Extrato por período</h4>
+                    <h5 class="modal-title" id="exportModalLabel">Extrato por período</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -738,15 +742,7 @@
                     <h6>Desde o dia <input type="text" class="form-control d-inline-block small-form" placeholder="1">
                         até o dia <input type="text" class="form-control d-inline-block small-form" placeholder="30">
                     </h6>
-                    <h5 class="mt-3">Selecione a forma do extrato</h5>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="extratoForma" id="visualizarTela"
-                            value="visualizarTela">
-                        <label class="form-check-label" for="visualizarTela">
-                            Visualizar em tela
-                        </label>
-                    </div>
-                    <h5 class="mt-3">Selecione os tipos de despesa você deseja</h5>
+                    <h6 class="mt-3">Selecione os tipos de despesa você deseja</h6>
                     <ul class="list-unstyled">
                         <li>
                             <div class="form-check">
@@ -785,7 +781,15 @@
                             </div>
                         </li>
                     </ul>
-                    <h5 class="mt-3">Selecione o formato</h5>
+                    <h6 class="mt-3">Selecione a forma do extrato</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="extratoForma" id="visualizarTela"
+                            value="visualizarTela">
+                        <label class="form-check-label" for="visualizarTela">
+                            Visualizar em tela
+                        </label>
+                    </div>
+                    <h6 class="mt-3">Selecione o formato</h6>
                     <ul class="list-unstyled">
                         <li>
                             <div class="form-check">
