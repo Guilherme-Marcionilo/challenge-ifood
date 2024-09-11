@@ -345,3 +345,8 @@ input:checked+.slider:before {
     border-radius: 10px;
     border-style: none;
 }
+
+.form-label {
+    font-weight: 500;
+    font-size: 15px;
+}

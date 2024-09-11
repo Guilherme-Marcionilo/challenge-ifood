@@ -78,14 +78,16 @@ body, html {
 
 .btn-red {
   background-color: var(--color-red);
-  color: var(--color-light);
+  color: white;
+  border: none;
   border-radius: 10px;
-  font-weight: 500 !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .btn-red:hover {
   background-color: #cc1724;
-  color: var(--color-light);
+  color: white;
 }
 
 .btn-grey {

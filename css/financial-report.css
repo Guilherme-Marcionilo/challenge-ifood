@@ -66,13 +66,14 @@ html {
 }
 .btn-red {
   background-color: var(--color-red);
-  color: var(--color-light);
+  color: white;
   border: none;
   border-radius: 10px;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 .btn-red:hover {
-  background-color: #c71720;
+  background-color: #cc1724;
   color: white;
   cursor: pointer;
 }
@@ -97,7 +98,7 @@ html {
 
 /* Estilos adicionais para a modal */
 .modal-header h4 {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .modal-body h6, .modal-body h5 {
