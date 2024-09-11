@@ -1,313 +1,434 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>iFood - Gestão Financeira do Parceiro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/security.css" />
+    <link rel="stylesheet" href="../css/despesas.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/transaction-extract.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>iFood - Gestão Financeira do Parceiro</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/security.css">
-  <link rel="stylesheet" href="../css/despesas.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <link rel="stylesheet" href="../css/transaction-extract.css" />
-</head>
-
-<body>
-  <div class="container-fluid h-100">
-    <header class="row">
-      <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
-        style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)">
-        <div class="container-fluid d-flex justify-content-between align-items-center" style="margin-left: 250px">
-          <a class="navbar-brand" href="#">Segurança</a>
-          <div class="d-flex align-items-center gap-3">
-            <i class="bi bi-person-circle text-red"></i>
-            <div class="d-flex flex-column">
-              <div class="d-flex gap-2 align-items-center">
-                <span class="fs-5">Pizzaria G'S</span>
-                <i class="bi bi-chevron-down" style="cursor: pointer; font-weight: bold" data-bs-toggle="collapse"
-                  data-bs-target="#userMenu" aria-expanded="false" aria-controls="userMenu"></i>
-              </div>
-              <div class="d-flex align-items-center gap-2">
-                <span class="fs-9">Loja Ativa</span>
-                <div style="top: 0; background-color: #58cf81; width: 13px; height: 13px; border-radius: 50px;">
+  <body>
+    <div class="container-fluid h-100">
+      <header class="row">
+        <nav
+          class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
+          style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)"
+        >
+          <div
+            class="container-fluid d-flex justify-content-between align-items-center"
+            style="margin-left: 250px"
+          >
+            <a class="navbar-brand" href="#">Segurança</a>
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-person-circle text-red"></i>
+              <div class="d-flex flex-column">
+                <div class="d-flex gap-2 align-items-center">
+                  <span class="fs-5">Pizzaria G'S</span>
+                  <i
+                    class="bi bi-chevron-down"
+                    style="cursor: pointer; font-weight: bold"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#userMenu"
+                    aria-expanded="false"
+                    aria-controls="userMenu"
+                  ></i>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="fs-9">Loja Ativa</span>
+                  <div
+                    style="
+                      top: 0;
+                      background-color: #58cf81;
+                      width: 13px;
+                      height: 13px;
+                      border-radius: 50px;
+                    "
+                  ></div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-    <div class="collapse position-absolute end-0 px-4" id="userMenu" style="min-width: 500px; min-height: 200px; z-index: 100;">
-      <div class="card card-body p-12" style="z-index: 1">
-        <ul class="list-unstyled mb-0">
-          <p style="font-weight: 500">Escolher loja</p>
-          <div>
-            <input type="text" class="form-control" placeholder="Busque pelo nome ou ID" />
-          </div>
-          <div class="tela mb-3 p-3 d-flex align-items-center"
-            style="background-color: rgba(128, 128, 128, 0.205); margin-top: 25px; width: 100%; height: 60px;">
-            <div class="d-flex align-items-center justify-content-between w-100">
-              <img src="../images/fluent-emoji-flat_pizza.png" alt="" style="margin-left: 20px; height: 40px" />
-              <div class="text-nowrap" style="margin-right: 20px">
-                <p class="mb-0" style="font-weight: 500">Pizzaria G's - 1001000</p>
-                <p class="mb-0">Rua xxxx, 100, Bairro, Cidade, SP, BR</p>
+        </nav>
+      </header>
+      <div
+        class="collapse position-absolute end-0 px-4"
+        id="userMenu"
+        style="min-width: 500px; min-height: 200px; z-index: 100"
+      >
+        <div class="card card-body p-12" style="z-index: 1">
+          <ul class="list-unstyled mb-0">
+            <p style="font-weight: 500">Escolher loja</p>
+            <div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Busque pelo nome ou ID"
+              />
+            </div>
+            <div
+              class="tela mb-3 p-3 d-flex align-items-center"
+              style="
+                background-color: rgba(128, 128, 128, 0.205);
+                margin-top: 25px;
+                width: 100%;
+                height: 60px;
+              "
+            >
+              <div
+                class="d-flex align-items-center justify-content-between w-100"
+              >
+                <img
+                  src="../images/fluent-emoji-flat_pizza.png"
+                  alt=""
+                  style="margin-left: 20px; height: 40px"
+                />
+                <div class="text-nowrap" style="margin-right: 20px">
+                  <p class="mb-0" style="font-weight: 500">
+                    Pizzaria G's - 1001000
+                  </p>
+                  <p class="mb-0">Rua xxxx, 100, Bairro, Cidade, SP, BR</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="d-flex gap-3 justify-content-between">
-            <p class="mb-0">Exibindo <span style="font-weight: 500">1 de 1</span></p>
-            <div class="d-flex gap-5">
-              <a style="color: black; text-decoration: underline; cursor: pointer;">&lt;Anterior</a>
-              <a style="color: black; text-decoration: underline; cursor: pointer;">Próximo&gt;</a>
+            <div class="d-flex gap-3 justify-content-between">
+              <p class="mb-0">
+                Exibindo <span style="font-weight: 500">1 de 1</span>
+              </p>
+              <div class="d-flex gap-5">
+                <a
+                  style="
+                    color: black;
+                    text-decoration: underline;
+                    cursor: pointer;
+                  "
+                  >&lt;Anterior</a
+                >
+                <a
+                  style="
+                    color: black;
+                    text-decoration: underline;
+                    cursor: pointer;
+                  "
+                  >Próximo&gt;</a
+                >
+              </div>
             </div>
-          </div>
-        </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="row h-100">
+        <aside class="col-md-3 text-dark sidebar h-100">
+          <header class="sidebar-header py-4">
+            <div class="d-flex justify-content-start align-items-center">
+              <img src="../images/Logo.png" alt="FinHub Logo" />
+            </div>
+          </header>
+          <nav class="nav flex-column sidebar-nav py-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html"
+                  ><i class="bi bi-house-door-fill"></i
+                  ><span class="ml-2">Início</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="saldo.html"
+                  ><i class="bi bi-cash-coin"></i
+                  ><span class="ml-2">Saldo</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="receitas.html"
+                  ><i class="bi bi-currency-dollar"></i
+                  ><span class="ml-2">Receitas</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="despesas.html"
+                  ><i class="bi bi-bar-chart-fill"></i
+                  ><span class="ml-2">Despesas</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="transaction-extract.html"
+                  ><i class="bi bi-file-earmark-text-fill"></i
+                  ><span class="ml-2">Extrato</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="orders.html"
+                  data-toggle="collapse"
+                  data-target="#pedidos-collapse"
+                  aria-expanded="false"
+                  aria-controls="pedidos-collapse"
+                  ><i class="bi bi-file-text-fill"></i
+                  ><span class="ml-2">Pedidos</span></a
+                >
+                <ul class="nav flex-column ml-4 collapse" id="pedidos-collapse">
+                  <li class="nav-item">
+                    <a class="nav-link" href="add-order.html"
+                      ><i class="bi bi-arrow-return-right"></i>Adicionar
+                      pedido</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="financial-report.html"
+                  ><i class="bi bi-file-earmark-bar-graph-fill"></i
+                  ><span class="ml-2">Relatórios</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-question-octagon-fill"></i
+                  ><span class="ml-2">Ajuda</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-toggle="collapse"
+                  data-target="#seguranca-collapse"
+                  aria-expanded="false"
+                  aria-controls="seguranca-collapse"
+                  ><i class="bi bi-shield-fill-minus"></i
+                  ><span class="ml-2">Segurança</span></a
+                >
+                <ul class="nav flex-column ml-4" id="seguranca-collapse">
+                  <li
+                    class="nav-item"
+                    style="background-color: #fde9ea; color: #ea1d2c"
+                  >
+                    <a
+                      class="nav-link"
+                      href="Security.html"
+                      style="color: #ea1d2c"
+                      ><i class="bi bi-arrow-return-right"></i>Gestão de
+                      acesso</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html"
+                  ><i class="bi bi-box-arrow-right"></i
+                  ><span class="ml-2">Sair</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <footer class="sidebar-footer py-4">
+            <div class="d-flex justify-content-start align-items-center">
+              <img src="../images/Logo FinHub.png" alt="FinHub Logo" />
+            </div>
+          </footer>
+        </aside>
+
+        <main id="col-one" class="col px-4 pt-34">
+          <section class="cnt-prince">
+            <div class="division">
+              <div class="title-acess">
+                <p class="acess-1">Gestão de acesso</p>
+                <p class="acess-2">
+                  Crie e edite diferentes permissões de acessos aos dados da
+                  loja
+                </p>
+              </div>
+              <div class="btn-in">
+                <a class="nav-link" href="create-access.html "
+                  ><button type="button" class="btn btn-red fw-bold">
+                    + Criar acesso
+                  </button></a
+                >
+                <a class="nav-link" href="see-access.html">
+                  <button class="btn btn-red fw-bold" type="button">
+                    Ver Acessos
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="division2 row">
+              <div class="col-md-4 col-sm-6 mb-3">
+                <div class="dono card p-3 border-0">
+                  <p class="mb-1"><strong>Dono(a)</strong></p>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Relatório</p>
+                  </div>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Despesas</p>
+                  </div>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Receitas</p>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a href="#" class="ver-mais-link">Ver mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <div class="dono card p-3 border-0">
+                  <p class="mb-1"><strong>Operador</strong></p>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Relatório</p>
+                  </div>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Despesas</p>
+                  </div>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Receitas</p>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a href="#" class="ver-mais-link">Ver mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <div class="dono card p-3 border-0">
+                  <p class="mb-1"><strong>Gerente</strong></p>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Relatório</p>
+                  </div>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Despesas</p>
+                  </div>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Receitas</p>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a href="#" class="ver-mais-link">Ver mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <div class="dono card p-3 border-0">
+                  <p class="mb-1"><strong>Marketing</strong></p>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Relatório</p>
+                  </div>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Despesas</p>
+                  </div>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Receitas</p>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a href="#" class="ver-mais-link">Ver mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-3">
+                <div class="dono card p-3 border-0">
+                  <p class="mb-1"><strong>Financeiro</strong></p>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Relatório</p>
+                  </div>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Despesas</p>
+                  </div>
+                  <div class="relatorio d-flex align-items-center mb-2">
+                    <label class="switch me-2">
+                      <input type="checkbox" id="toggle-switch-fixel" />
+                      <span class="slider"></span>
+                    </label>
+                    <p class="m-0">Visualizar Receitas</p>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a href="#" class="ver-mais-link">Ver mais</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <script src="../js/despesas.js"></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       </div>
     </div>
-    <div class="row h-100">
-      <aside class="col-md-3 text-dark sidebar h-100">
-        <header class="sidebar-header py-4">
-          <div class="d-flex justify-content-start align-items-center">
-            <img src="../images/Logo.png" alt="FinHub Logo" />
-          </div>
-        </header>
-        <nav class="nav flex-column sidebar-nav py-3">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html"><i class="bi bi-house-door-fill"></i><span class="ml-2">Início</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-cash-coin"></i><span class="ml-2">Saldo</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-currency-dollar"></i><span class="ml-2">Receitas</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="despesas.html"><i class="bi bi-bar-chart-fill"></i><span class="ml-2">Despesas</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="transaction-extract.html"><i class="bi bi-file-earmark-text-fill"></i><span
-                  class="ml-2">Extrato</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="orders.html" data-toggle="collapse" data-target="#pedidos-collapse" aria-expanded="false"
-                aria-controls="pedidos-collapse"><i class="bi bi-file-text-fill"></i><span
-                  class="ml-2">Pedidos</span></a>
-              <ul class="nav flex-column ml-4 collapse" id="pedidos-collapse">
-                <li class="nav-item">
-                  <a class="nav-link" href="add-order.html"><i class="bi bi-arrow-return-right"></i>Adicionar
-                    pedido</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="financial-report.html"><i class="bi bi-file-earmark-bar-graph-fill"></i><span
-                  class="ml-2">Relatórios</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-question-octagon-fill"></i><span
-                  class="ml-2">Ajuda</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-toggle="collapse" data-target="#seguranca-collapse"
-                aria-expanded="false" aria-controls="seguranca-collapse"><i class="bi bi-shield-fill-minus"></i><span
-                  class="ml-2">Segurança</span></a>
-              <ul class="nav flex-column ml-4" id="seguranca-collapse">
-                <li class="nav-item" style="background-color: #fde9ea; color: #ea1d2c;">
-                  <a class="nav-link" href="Security.html" style="color: #ea1d2c;"><i class="bi bi-arrow-return-right"></i>Gestão de acesso</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html"><i class="bi bi-box-arrow-right"></i><span
-                  class="ml-2">Sair</span></a>
-            </li>
-          </ul>
-        </nav>
-        <footer class="sidebar-footer py-4">
-          <div class="d-flex justify-content-start align-items-center">
-            <img src="../images/Logo FinHub.png" alt="FinHub Logo" />
-          </div>
-        </footer>
-      </aside>
-
-
-
-      <main id="col-one" class="col  px-4 pt-34">
-        <section class="cnt-prince">
-          <div class="division ">
-            <div class="title-acess">
-              <p class="acess-1">Gestão de acesso</p>
-              <p class="acess-2">Crie e edite diferentes permissões de acessos aos dados da loja</p>
-            </div>
-            <div class="btn-in">
-              <a class="nav-link " href="create-access.html "><button type="button" class="btn  btn-red  fw-bold">+ Criar acesso</button></a>
-              <button class="btn btn-red  fw-bold" type="button">Ver Acessos</button>
-            </div>
-          </div>
-          <div class="division2 row">
-            <div class="col-md-4 col-sm-6 mb-3">
-              <div class="dono card p-3 border-0">
-                <p class="mb-1"><strong>Dono(a)</strong></p>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Relatório</p>
-                </div>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Despesas</p>
-                </div>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Receitas</p>
-                </div>
-                <div class="text-center mt-2">
-                  <a href="#" class="ver-mais-link">Ver mais</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-3">
-              <div class="dono card p-3 border-0">
-                <p class="mb-1"><strong>Operador</strong></p>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Relatório</p>
-                </div>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Despesas</p>
-                </div>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Receitas</p>
-                </div>
-                <div class="text-center mt-2">
-                  <a href="#" class="ver-mais-link">Ver mais</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-3">
-              <div class="dono card p-3 border-0">
-                <p class="mb-1"><strong>Gerente</strong></p>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Relatório</p>
-                </div>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Despesas</p>
-                </div>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Receitas</p>
-                </div>
-                <div class="text-center mt-2">
-                  <a href="#" class="ver-mais-link">Ver mais</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-3">
-              <div class="dono  card p-3 border-0">
-                <p class="mb-1"><strong>Marketing</strong></p>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Relatório</p>
-                </div>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Despesas</p>
-                </div>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Receitas</p>
-                </div>
-                <div class="text-center mt-2">
-                  <a href="#" class="ver-mais-link">Ver mais</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-3">
-              <div class="dono card p-3 border-0">
-                <p class="mb-1"><strong>Financeiro</strong></p>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Relatório</p>
-                </div>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Despesas</p>
-                </div>
-                <div class="relatorio d-flex align-items-center mb-2">
-                  <label class="switch me-2">
-                    <input type="checkbox" id="toggle-switch-fixel">
-                    <span class="slider"></span>
-                  </label>
-                  <p class="m-0">Visualizar Receitas</p>
-                </div>
-                <div class="text-center mt-2">
-                  <a href="#" class="ver-mais-link">Ver mais</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      </section>
-      </main>
-      <script src="../js/despesas.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>
