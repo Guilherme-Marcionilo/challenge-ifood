@@ -92,28 +92,22 @@
 .title-acess {}
 
 .acess-1 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
 
-.acess-2 {
-    font-size: 14px;
-    color: gray;
-}
-
-.btn-in {
-    flex-direction: column;
-    display: flex;
-    gap: 15px;
-}
-
-.btn-in button {
-    border: none;
-    width: 260px;
-    height: 30px;
+.btn-red {
+    background-color: var(--color-red);
     color: white;
-    background-color: red;
-    border-radius: 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-red:hover {
+    background-color: #cc1724;
+    color: var(--color-light);
 }
 
 .dono {
