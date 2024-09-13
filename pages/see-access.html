@@ -3,30 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Criar acesso</title>
-
+    <title>Ver acesso</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-
-    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/see-access.css" />
   </head>
 
+  <!-- Início Topnav -->
   <body>
     <div class="container-fluid h-100">
       <div class="row">
@@ -39,7 +36,7 @@
             style="margin-left: 250px"
           >
             <!-- Tema da tela em que o usuário se encontra -- (Trocar o nome) -->
-            <a class="navbar-brand" href="#">Criar acesso</a>
+            <a class="navbar-brand" href="#">Ver acesso</a>
 
             <div class="d-flex align-items-center gap-3">
               <i class="bi bi-person-circle text-red"></i>
@@ -74,72 +71,75 @@
       </div>
 
       <div
-      class="collapse position-absolute end-0 px-4"
-      id="userMenu"
-      style="min-width: 500px; min-height: 200px"
-    >
-      <div class="card card-body p-12" style="z-index: 1;">
-        <!-- Conteúdo do popup -->
-        <ul class="list-unstyled mb-0">
-          <p style="font-weight: 500">Escolher loja</p>
-          <div>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Busue pelo nome ou ID"
-            />
-          </div>
-          <div
-            class="tela mb-3 p-3 d-flex align-items-center"
-            style="
-              background-color: rgba(128, 128, 128, 0.205);
-              margin-top: 25px;
-              width: 100%;
-              height: 60px;
-            "
-          >
-            <div
-              class="d-flex align-items-center justify-content-between w-100"
-            >
-              <img
-                src="../images/fluent-emoji-flat_pizza.png"
-                alt=""
-                style="margin-left: 20px; height: 40px"
+        class="collapse position-absolute end-0 px-4"
+        id="userMenu"
+        style="min-width: 500px; min-height: 200px; z-index: 100"
+      >
+        <div class="card card-body p-12" style="z-index: 1">
+          <!-- Conteúdo do popup -->
+          <ul class="list-unstyled mb-0">
+            <p style="font-weight: 500">Escolher loja</p>
+            <div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Busue pelo nome ou ID"
               />
-              <div class="text-nowrap" style="margin-right: 20px">
-                <p class="mb-0" style="font-weight: 500">
-                  Pizzaria G's - 1001000
-                </p>
-                <p class="mb-0">Rua xxxx, 100, Bairro, Cidade, SP, BR</p>
+            </div>
+            <div
+              class="tela mb-3 p-3 d-flex align-items-center"
+              style="
+                background-color: rgba(128, 128, 128, 0.205);
+                margin-top: 25px;
+                width: 100%;
+                height: 60px;
+              "
+            >
+              <div
+                class="d-flex align-items-center justify-content-between w-100"
+              >
+                <img
+                  src="../images/fluent-emoji-flat_pizza.png"
+                  alt=""
+                  style="margin-left: 20px; height: 40px"
+                />
+                <div class="text-nowrap" style="margin-right: 20px">
+                  <p class="mb-0" style="font-weight: 500">
+                    Pizzaria G's - 1001000
+                  </p>
+                  <p class="mb-0">Rua xxxx, 100, Bairro, Cidade, SP, BR</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="d-flex gap-3 justify-content-between">
-            <p class="mb-0">
-              Exibindo <span style="font-weight: 500">1 de 1</span>
-            </p>
-            <div class="d-flex gap-5">
-              <a
-                style="
-                  color: black;
-                  text-decoration: underline;
-                  cursor: pointer;
-                "
-                >&lt;Anterior</a
-              >
-              <a
-                style="
-                  color: black;
-                  text-decoration: underline;
-                  cursor: pointer;
-                "
-                >Próximo&gt;</a
-              >
+            <div class="d-flex gap-3 justify-content-between">
+              <p class="mb-0">
+                Exibindo <span style="font-weight: 500">1 de 1</span>
+              </p>
+              <div class="d-flex gap-5">
+                <a
+                  style="
+                    color: black;
+                    text-decoration: underline;
+                    cursor: pointer;
+                  "
+                  >&lt;Anterior</a
+                >
+                <a
+                  style="
+                    color: black;
+                    text-decoration: underline;
+                    cursor: pointer;
+                  "
+                  >Próximo&gt;</a
+                >
+              </div>
             </div>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </div>
-    </div>
+      <!-- Fim Topnav -->
+
+      <!-- Início Menu Lateral -->
       <div class="row h-100">
         <aside class="col-md-3 text-dark sidebar h-100">
           <header class="sidebar-header py-4">
@@ -180,13 +180,20 @@
                 </a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="orders.html" data-toggle="collapse" data-target="#pedidos-collapse" aria-expanded="false" aria-controls="pedidos-collapse">
+                <a
+                  class="nav-link"
+                  href="orders.html"
+                  data-toggle="collapse"
+                  data-target="#pedidos-collapse"
+                  aria-expanded="false"
+                  aria-controls="pedidos-collapse"
+                >
                   <i class="bi bi-file-text-fill"></i>
                   <span class="ml-2">Pedidos</span>
                 </a>
-                <ul class="nav flex-column ml-4 collapse" id="pedidos-collapse">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
+                <ul class="nav flex-column ml-4" id="pedidos-collapse">
+                  <li>
+                    <a class="nav-link" href="add-order.html">
                       <i class="bi bi-arrow-return-right"></i>
                       Adicionar pedido
                     </a>
@@ -206,15 +213,25 @@
                 </a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="Security.html" data-toggle="collapse" data-target="#seguranca-collapse" aria-expanded="false" aria-controls="seguranca-collapse">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-toggle="collapse"
+                  data-target="#seguranca-collapse"
+                  aria-expanded="false"
+                  aria-controls="seguranca-collapse"
+                >
                   <i class="bi bi-shield-fill-minus"></i>
                   <span class="ml-2">Segurança</span>
                 </a>
-              <ul class="nav flex-column ml-4 collapse" id="seguranca-collapse">
+                <ul
+                  class="nav flex-column ml-4 collapse"
+                  id="seguranca-collapse"
+                >
                   <li class="nav-item">
                     <a class="nav-link" href="Security.html">
                       <i class="bi bi-arrow-return-right"></i>
-                      Gestão de acessos
+                      Gestão de acesso
                     </a>
                   </li>
                 </ul>
@@ -233,74 +250,87 @@
             </div>
           </footer>
         </aside>
+        <!-- Fim Menu Lateral -->
+
+        <!-- Conteudo principal -->
         <main id="col-one" class="col px-4 pt-3">
-          <header class="p-4 col-md-7">
-            <p class="fs-5 text-black-60">
-              Digite os dados da pessoa para quem você gostaria de criar o
-              acesso.
-            </p>
-          </header>
-          <section class="p-4 col-md-12">
-            <div class="row justify-content-between">
-              <div class="col-md-8">
-                <div class="card border-0 shadow-sm">
-                  <div class="card-body">
-                    <form class="row g-3">
-                      <div class="col-md-12">
-                        <label for="nome" class="form-label"
-                          >Nome da pessoa</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="nome"
-                          placeholder="Fulano"
-                        />
-                      </div>
-                      <div class="col-md-12">
-                        <label for="email" class="form-label"
-                          >E-mail de acesso</label
-                        >
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="email"
-                          placeholder="nome@email.com.br"
-                        />
-                      </div>
-                      <div class="col-md-12">
-                        <label for="perfil" class="form-label"
-                          >Selecione o tipo de perfil</label
-                        >
-                        <select class="form-select" id="perfil">
-                          <option value="operador">Operador</option>
-                          <option value="gerente">Gerente</option>
-                          <option value="administrador">Administrador</option>
-                        </select>
-                      </div>
-                      <div class="col-md-12 d-flex justify-content-end">
-                        <button type="submit" class="btn btn-red px-4">
-                          Salvar
-                        </button>
-                        <button type="reset" class="btn btn-outline-red px-4">
-                          Cancelar
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
+          <section class="row mt-1">
+            <div class="col-md">
+              <label for="pesquisar" class="form-label">Pesquisar</label>
+              <input type="text" class="form-control" />
+            </div>
+          </section>
+          <section class="row mt-4 acessos">
+            <div class="d-flex gap-4 w-100 menu-ta">
+              <a class="men-table" href="#" data-table="ativos">Ativos</a>
+              <a class="men-table" href="#" data-table="removidos">Removidos</a>
+            </div>
+            <div class="table-container">
+              <table id="ativos" class="table table-bordered table-hidden">
+                <thead>
+                  <tr>
+                    <th class="table-active">Usuário</th>
+                    <th class="table-active">E-mail</th>
+                    <th class="table-active">Permissões</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>MOTOBOY</td>
+                    <td>mario@gmai.com</td>
+                    <td>Operador</td>
+                  </tr>
+                  <tr>
+                    <td>MOTOBOY</td>
+                    <td>mario@gmai.com</td>
+                    <td>Operador</td>
+                  </tr>
+                  <tr>
+                    <td>MOTOBOY</td>
+                    <td>mario@gmai.com</td>
+                    <td>Operador</td>
+                  </tr>
+                  <tr>
+                    <td>MOTOBOY</td>
+                    <td>mario@gmai.com</td>
+                    <td>Operador</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- Tabela de Removidos -->
+              <table id="removidos" class="table table-bordered table-hidden">
+                <thead>
+                  <tr>
+                    <th class="table-active">Usuário</th>
+                    <th class="table-active">E-mail</th>
+                    <th class="table-active">Permissões</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>MOTOBOY 2</td>
+                    <td>mario@gmai.com</td>
+                    <td>Operador</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
         </main>
+        <!-- Fim Conteudo principal -->
       </div>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
-    </script>
+
+    <script src="../js/see-access.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
