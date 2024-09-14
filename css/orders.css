@@ -1,6 +1,7 @@
 :root {
   --color-light: hsl(0, 0%, 100%);
   --color-red: #EA1D2C;
+  --color-red-background: #cc1724;
   --color-black: #000000;
   --color-blue: #2B57AC;
   --color-grey-escuro: #767676;
@@ -102,7 +103,7 @@ html {
 }
 
 .add-order:hover {
-  background-color: #c21825;
+  background-color: var(--color-red-background);
   color: var(--color-light);
 }
 
@@ -116,7 +117,7 @@ html {
 }
 
 .btn-red:hover {
-  background-color: #cc1724;
+  background-color: var(--color-red-background);
   color: var(--color-light);
 }
 
@@ -126,7 +127,7 @@ html {
 
 .text-red:hover {
   text-decoration: none;
-  color: #c21825;
+  color: var(--color-red-background);
 }
 
 .table th {
@@ -288,6 +289,7 @@ input:checked+.slider:before {
 
 
 /* Modal */
+
 .modal-body h6 {
   font-weight: 500;
 }
@@ -335,31 +337,6 @@ input:checked+.slider:before {
   padding: 0;
   margin: 0;
 }
-
-/* @media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  .sidebar-header,
-  .sidebar-footer {
-    text-align: center;
-  }
-
-  .sidebar-nav .nav-link {
-    justify-content: center;
-  }
-
-  .navbar-custom .container-fluid {
-    margin-left: 0;
-  }
-
-  main {
-    padding: 0 15px;
-  }
-} */
 
 
 /* Página add-order */

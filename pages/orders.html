@@ -56,7 +56,8 @@
       </nav>
     </div>
 
-    <div class="collapse position-absolute end-0 px-4" id="userMenu" style="min-width: 500px; min-height: 200px; z-index: 100;">
+    <div class="collapse position-absolute end-0 px-4" id="userMenu"
+      style="min-width: 500px; min-height: 200px; z-index: 100;">
       <div class="card card-body p-12" style="z-index: 1;">
         <!-- Conteúdo do popup -->
         <ul class="list-unstyled mb-0">
@@ -141,7 +142,7 @@
                 <span class="ml-2">Extrato</span>
               </a>
             </li>
-            <li class="nav-item" >
+            <li class="nav-item">
               <a class="nav-link" href="orders.html" style="background-color: #fde9ea; color: #ea1d2c;">
                 <i class="bi bi-file-text-fill"></i>
                 <span class="ml-2">Pedidos</span>
@@ -567,17 +568,19 @@
               <input type="text" class="form-control" placeholder="Atual">
             </div>
           </div>
-          <h6>Desde o dia <input type="text" class="form-control d-inline-block small-form mt-2 mb-2" placeholder="1"> até o dia
+          <h6>Desde o dia <input type="text" class="form-control d-inline-block small-form mt-2 mb-2" placeholder="1">
+            até o dia
             <input type="text" class="form-control d-inline-block small-form mt-2" placeholder="30"></h6>
-          <h6 class="mt-3">Selecione a forma como você deseja exportar</h6>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="extratoForma" id="visualizarTela" value="visualizarTela">
-            <label class="form-check-label" for="visualizarTela">
-              Visualizar em tela
-            </label>
-          </div>
           <h6 class="mt-3">Selecione o formato</h6>
           <ul class="list-unstyled">
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoPDF" value="PDF">
+                <label class="form-check-label" for="formatoPDF">
+                  Visualizar em tela
+                </label>
+              </div>
+            </li>
             <li>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="extratoFormato" id="formatoOFX" value="OFX">

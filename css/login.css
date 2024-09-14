@@ -1,25 +1,28 @@
 :root {
   --color-light: hsl(0, 0%, 100%);
   --color-red: #EA1D2C;
+  --color-red-background: #cc1724;
   --color-grey-claro: #dadada;
   --color-grey-escuro: #767676;
   --font-body: 'Poppins', sans-serif;
 }
+
 .password-field {
   position: relative;
 }
 
 .password-field .form-control {
-  padding-right: 40px; /* Adicione espaço para o ícone */
+  padding-right: 40px;
+  /* Adicione espaço para o ícone */
 }
 
 .password-field .toggle-password {
-  right: 20px; 
+  right: 20px;
   top: 70%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #6c757d; 
-  z-index: 10; 
+  color: #6c757d;
+  z-index: 10;
 }
 
 body,
@@ -41,10 +44,15 @@ html {
 
 .btn-red {
   background-color: var(--color-red);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .btn-red:hover {
-  background-color: #c21825;
+  background-color: var(--color-red-background);
   color: var(--color-light);
 }
 
@@ -67,7 +75,7 @@ html {
 }
 
 .custom-link {
-  color: #EA1D2C;
+  color: var(--color-red);
 }
 
 .titulo {
@@ -117,7 +125,7 @@ html {
 }
 
 .link-cadastro:hover {
-  color: #c21825;
+  color: var(--color-red-background);
   text-decoration: none;
 }
 
@@ -171,28 +179,28 @@ html {
 }
 
 .btn-grey.active {
-  background-color: red; 
+  background-color: var(--color-red);
   color: white;
   border: none;
 }
 
 .btn-grey.active:hover {
-  background-color: rgb(179, 0, 0); 
- 
+  background-color: var(--color-red-background);
 }
 
 .time {
   color: #333;
   font-weight: bold;
 }
+
 .time.expired {
-  color: red;
+  color: var(--color-red);
 }
 
-.linka.expired{
-  color: red;
-
+.linka.expired {
+  color: var(--color-red);
 }
+
 .btn-grey:hover {
   background-color: #7c7c7c;
   color: var(--color-light);
@@ -230,5 +238,5 @@ html {
 }
 
 .link-codigo:hover {
-  color: #c21825;
+  color: var(--color-red-background);
 }
