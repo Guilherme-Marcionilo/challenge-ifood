@@ -82,6 +82,15 @@
     max-width: 80%;
 }
 
+.text-red {
+    color: #EA1D2C;
+}
+
+.text-red:hover {
+    text-decoration: none;
+    color: #cc1724;
+}
+
 @media (min-width: 768px) {
     .modal-lg-custom {
         max-width: 800px;

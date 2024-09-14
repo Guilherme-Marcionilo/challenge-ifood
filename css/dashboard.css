@@ -1,6 +1,7 @@
 :root {
   --color-light: hsl(0, 0%, 100%);
   --color-red: #EA1D2C;
+  --color-red-background: #cc1724;
   --color-black: #000000;
   --color-blue: #2B57AC;
   --color-grey-escuro: #767676;
@@ -150,7 +151,7 @@ img {
 }
 
 .btn-red:hover {
-  background-color: #c71720;
+  background-color: var(--color-red-background);
   cursor: pointer;
 }
 

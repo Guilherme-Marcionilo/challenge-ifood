@@ -1,6 +1,7 @@
 :root {
   --color-light: hsl(0, 0%, 100%);
   --color-red: #ea1d2c;
+  --color-red-background: #cc1724;
   --color-black: #000000;
   --font-body: "Poppins", sans-serif;
 }
@@ -14,6 +15,10 @@ html {
 }
 .text-red {
   color: var(--color-red);
+}
+.text-red:hover {
+  text-decoration: none;
+  color: var(--color-red-background);
 }
 .text-light {
   color: var(--color-light);
