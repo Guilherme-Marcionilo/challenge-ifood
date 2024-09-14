@@ -99,12 +99,14 @@ html {
 .btn-red {
   background-color: var(--color-red);
   color: var(--color-light);
+  border: none;
   border-radius: 10px;
-  font-weight: 500 !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .btn-red:hover {
-  background-color: #cc1724;
+  background-color: var(--color-red-background);
   color: var(--color-light);
 }
 
@@ -118,6 +120,14 @@ html {
 .btn-grey:hover {
   background-color: #7c7c7c;
   color: var(--color-light);
+}
+
+.text-decoration-all {
+  opacity: 0.6;
+}
+
+.text-decoration {
+  text-decoration: none;
 }
 
 .pagination-style {

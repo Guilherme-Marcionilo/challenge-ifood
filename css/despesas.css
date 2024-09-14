@@ -321,7 +321,7 @@ input:checked+.slider:before {
 }
 
 .text-decoration {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .pagination-style {
