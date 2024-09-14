@@ -176,3 +176,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.menu-ta a[data-table="comissoes"]').classList.add('men-table-2');
     atualizarPaginacao(currentPage);
 });
+
+function openAnotherModal() {
+    $('#exportModal').modal('hide'); // Fecha o modal atual
+    $('#secondaryModal').modal('show'); // Abre o outro modal
+}
