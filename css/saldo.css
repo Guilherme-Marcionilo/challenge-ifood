@@ -1,6 +1,7 @@
 :root {
     --color-light: hsl(0, 0%, 100%);
     --color-red: #EA1D2C;
+    --color-red-background: #cc1724;
     --color-black: #000000;
     --color-blue: #2B57AC;
     --color-grey-escuro: #767676;
@@ -123,6 +124,14 @@ html {
     border-style: none;
 }
 
+.text-decoration-all {
+  opacity: 0.6;
+}
+
+.text-decoration {
+  text-decoration: none;
+}
+
 .pagination-style {
     font-weight: 500;
 }
@@ -156,20 +165,24 @@ html {
 .btn-red {
     background-color: var(--color-red);
     color: var(--color-light);
+    border: none;
     border-radius: 10px;
     font-weight: 500 !important;
+    transition: all 0.3s ease;
 }
 
 .btn-red:hover {
-    background-color: #cc1724;
+    background-color: var(--color-red-background);
     color: var(--color-light);
 }
 
 .btn-grey {
     background-color: #dadada;
     color: #767676;
+    border: none;
     border-radius: 10px;
     font-weight: 500 !important;
+    transition: all 0.3s ease;
 }
   
 .btn-grey:hover {

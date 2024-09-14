@@ -115,3 +115,18 @@ html {
   overflow: auto;
   z-index: 5;
 }
+
+
+.btn-grey {
+  background-color: #dadada;
+  color: #767676;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-grey:hover {
+  background-color: #7c7c7c;
+  color: var(--color-light);
+}

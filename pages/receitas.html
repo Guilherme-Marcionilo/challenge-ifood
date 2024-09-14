@@ -1,265 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Receitas</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Receitas</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="
       https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css
-      "
-    />
+      " />
 
-    <link rel="stylesheet" href="../css/receitas.css" />
-  </head>
+  <link rel="stylesheet" href="../css/receitas.css" />
+</head>
 
-  <!-- Início Topnav -->
-  <body>
-    <div class="container-fluid h-100">
-      <div class="row">
-        <nav
-          class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
-          style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)"
-        >
-          <div
-            class="container-fluid d-flex justify-content-between align-items-center"
-            style="margin-left: 250px"
-          >
-            <!-- Tema da tela em que o usuário se encontra -- (Trocar o nome) -->
-            <a class="navbar-brand" href="#">Receitas</a>
+<!-- Início Topnav -->
 
-            <div class="d-flex align-items-center gap-3">
-              <i class="bi bi-person-circle text-red"></i>
-              <div class="d-flex flex-column">
-                <div class="d-flex gap-2 align-items-center">
-                  <span class="fs-5">Pizzaria G'S</span>
-                  <i
-                    class="bi bi-chevron-down"
-                    style="cursor: pointer; font-weight: bold"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#userMenu"
-                    aria-expanded="false"
-                    aria-controls="userMenu"
-                  ></i>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                  <span class="fs-9">Loja Ativa</span>
-                  <div
-                    style="
+<body>
+  <div class="container-fluid h-100">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
+        style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)">
+        <div class="container-fluid d-flex justify-content-between align-items-center" style="margin-left: 250px">
+          <!-- Tema da tela em que o usuário se encontra -- (Trocar o nome) -->
+          <a class="navbar-brand" href="#">Receitas</a>
+
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-person-circle text-red"></i>
+            <div class="d-flex flex-column">
+              <div class="d-flex gap-2 align-items-center">
+                <span class="fs-5">Pizzaria G'S</span>
+                <i class="bi bi-chevron-down" style="cursor: pointer; font-weight: bold" data-bs-toggle="collapse"
+                  data-bs-target="#userMenu" aria-expanded="false" aria-controls="userMenu"></i>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="fs-9">Loja Ativa</span>
+                <div style="
                       top: 0;
                       background-color: #58cf81;
                       width: 13px;
                       height: 13px;
                       border-radius: 50px;
-                    "
-                  ></div>
-                </div>
+                    "></div>
               </div>
             </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
+    </div>
 
-      <div
-        class="collapse position-absolute end-0 px-4"
-        id="userMenu"
-        style="min-width: 500px; min-height: 200px; z-index: 100"
-      >
-        <div class="card card-body p-12" style="z-index: 1">
-          <!-- Conteúdo do popup -->
-          <ul class="list-unstyled mb-0">
-            <p style="font-weight: 500">Escolher loja</p>
-            <div>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Busue pelo nome ou ID"
-              />
-            </div>
-            <div
-              class="tela mb-3 p-3 d-flex align-items-center"
-              style="
+    <div class="collapse position-absolute end-0 px-4" id="userMenu"
+      style="min-width: 500px; min-height: 200px; z-index: 100">
+      <div class="card card-body p-12" style="z-index: 1">
+        <!-- Conteúdo do popup -->
+        <ul class="list-unstyled mb-0">
+          <p style="font-weight: 500">Escolher loja</p>
+          <div>
+            <input type="text" class="form-control" placeholder="Busue pelo nome ou ID" />
+          </div>
+          <div class="tela mb-3 p-3 d-flex align-items-center" style="
                 background-color: rgba(128, 128, 128, 0.205);
                 margin-top: 25px;
                 width: 100%;
                 height: 60px;
-              "
-            >
-              <div
-                class="d-flex align-items-center justify-content-between w-100"
-              >
-                <img
-                  src="../images/fluent-emoji-flat_pizza.png"
-                  alt=""
-                  style="margin-left: 20px; height: 40px"
-                />
-                <div class="text-nowrap" style="margin-right: 20px">
-                  <p class="mb-0" style="font-weight: 500">
-                    Pizzaria G's - 1001000
-                  </p>
-                  <p class="mb-0">Rua xxxx, 100, Bairro, Cidade, SP, BR</p>
-                </div>
+              ">
+            <div class="d-flex align-items-center justify-content-between w-100">
+              <img src="../images/fluent-emoji-flat_pizza.png" alt="" style="margin-left: 20px; height: 40px" />
+              <div class="text-nowrap" style="margin-right: 20px">
+                <p class="mb-0" style="font-weight: 500">
+                  Pizzaria G's - 1001000
+                </p>
+                <p class="mb-0">Rua xxxx, 100, Bairro, Cidade, SP, BR</p>
               </div>
             </div>
-            <div class="d-flex gap-3 justify-content-between">
-              <p class="mb-0">
-                Exibindo <span style="font-weight: 500">1 de 1</span>
-              </p>
-              <div class="d-flex gap-5">
-                <a
-                  style="
+          </div>
+          <div class="d-flex gap-3 justify-content-between">
+            <p class="mb-0">
+              Exibindo <span style="font-weight: 500">1 de 1</span>
+            </p>
+            <div class="d-flex gap-5">
+              <a style="
                     color: black;
                     text-decoration: underline;
                     cursor: pointer;
-                  "
-                  >&lt;Anterior</a
-                >
-                <a
-                  style="
+                  ">&lt;Anterior</a>
+              <a style="
                     color: black;
                     text-decoration: underline;
                     cursor: pointer;
-                  "
-                  >Próximo&gt;</a
-                >
-              </div>
+                  ">Próximo&gt;</a>
             </div>
-          </ul>
-        </div>
+          </div>
+        </ul>
       </div>
-      <!-- Fim Topnav -->
-      <!-- Início Menu Lateral -->
-      <div class="row h-100">
-        <aside class="col-md-3 text-dark sidebar h-100">
-          <header class="sidebar-header py-4">
-            <div class="d-flex justify-content-start align-items-center">
-              <img src="../images/Logo.png" alt="FinHub Logo" />
-            </div>
-          </header>
-          <nav class="nav flex-column sidebar-nav py-3">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link" href="dashboard.html">
-                  <i class="bi bi-house-door-fill"></i>
-                  <span class="ml-2">Início</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="saldo.html">
-                  <i class="bi bi-cash-coin"></i>
-                  <span class="ml-2">Saldo</span>
-                </a>
-              </li>
-              <li
-                class="nav-item"
-              >
-                <a class="nav-link" href="#" style="background-color: #fde9ea; color: #ea1d2c">
-                  <i class="bi bi-currency-dollar"></i>
-                  <span class="ml-2">Receitas</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="despesas.html">
-                  <i class="bi bi-bar-chart-fill"></i>
-                  <span class="ml-2">Despesas</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="transaction-extract.html">
-                  <i class="bi bi-file-earmark-text-fill"></i>
-                  <span class="ml-2">Extrato</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="orders.html"
-                >
-                  <i class="bi bi-file-text-fill"></i>
-                  <span class="ml-2">Pedidos</span>
-                </a>
-                <ul class="nav flex-column ml-4" id="pedidos-collapse">
-                  <li>
-                    <a class="nav-link" href="add-order.html">
-                      <i class="bi bi-arrow-return-right"></i>
-                      Adicionar pedido
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="financial-report.html">
-                  <i class="bi bi-file-earmark-bar-graph-fill"></i>
-                  <span class="ml-2">Relatórios</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="bi bi-question-octagon-fill"></i>
-                  <span class="ml-2">Ajuda</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#"
-                >
-                  <i class="bi bi-shield-fill-minus"></i>
-                  <span class="ml-2">Segurança</span>
-                </a>
-                <ul
-                  class="nav flex-column ml-4"
-                  id="seguranca-collapse"
-                >
-                  <li class="nav-item">
-                    <a class="nav-link" href="gestao-acesso.html">
-                      <i class="bi bi-arrow-return-right"></i>
-                      Gestão de acesso
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">
-                  <i class="bi bi-box-arrow-right"></i>
-                  <span class="ml-2">Sair</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <footer class="sidebar-footer py-4">
-            <div class="d-flex justify-content-start align-items-center">
-              <img src="../images/Logo FinHub.png" alt="FinHub Logo" />
-            </div>
-          </footer>
-        </aside>
-        <!-- Fim Menu Lateral -->
+    </div>
+    <!-- Fim Topnav -->
+    <!-- Início Menu Lateral -->
+    <div class="row h-100">
+      <aside class="col-md-3 text-dark sidebar h-100">
+        <header class="sidebar-header py-4">
+          <div class="d-flex justify-content-start align-items-center">
+            <img src="../images/Logo.png" alt="FinHub Logo" />
+          </div>
+        </header>
+        <nav class="nav flex-column sidebar-nav py-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="bi bi-house-door-fill"></i>
+                <span class="ml-2">Início</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saldo.html">
+                <i class="bi bi-cash-coin"></i>
+                <span class="ml-2">Saldo</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="background-color: #fde9ea; color: #ea1d2c">
+                <i class="bi bi-currency-dollar"></i>
+                <span class="ml-2">Receitas</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="despesas.html">
+                <i class="bi bi-bar-chart-fill"></i>
+                <span class="ml-2">Despesas</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="transaction-extract.html">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span class="ml-2">Extrato</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="orders.html">
+                <i class="bi bi-file-text-fill"></i>
+                <span class="ml-2">Pedidos</span>
+              </a>
+              <ul class="nav flex-column ml-4" id="pedidos-collapse">
+                <li>
+                  <a class="nav-link" href="add-order.html">
+                    <i class="bi bi-arrow-return-right"></i>
+                    Adicionar pedido
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="financial-report.html">
+                <i class="bi bi-file-earmark-bar-graph-fill"></i>
+                <span class="ml-2">Relatórios</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-question-octagon-fill"></i>
+                <span class="ml-2">Ajuda</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-shield-fill-minus"></i>
+                <span class="ml-2">Segurança</span>
+              </a>
+              <ul class="nav flex-column ml-4" id="seguranca-collapse">
+                <li class="nav-item">
+                  <a class="nav-link" href="gestao-acesso.html">
+                    <i class="bi bi-arrow-return-right"></i>
+                    Gestão de acesso
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span class="ml-2">Sair</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <footer class="sidebar-footer py-4">
+          <div class="d-flex justify-content-start align-items-center">
+            <img src="../images/Logo FinHub.png" alt="FinHub Logo" />
+          </div>
+        </footer>
+      </aside>
+      <!-- Fim Menu Lateral -->
 
-        <!-- Início Conteúdo -->
-        <main id="col-one" class="col px-4 pt-3">
-          <section>
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <!-- Seção de Saldo -->
-              <div class="d-flex gap-3">
-                <div
-                  class="me-3"
-                  style="
+      <!-- Início Conteúdo -->
+      <main id="col-one" class="col px-4 pt-3">
+        <section>
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <!-- Seção de Saldo -->
+            <div class="d-flex gap-3">
+              <div class="me-3" style="
                     border-radius: 5px;
                     width: 250px;
                     height: 100px;
@@ -267,13 +211,11 @@
                     padding: 20px;
                     border-bottom: 2px solid rgba(128, 128, 128, 0.171);
                     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-                  "
-                >
-                  <p class="mb-0 fs-6 fw-bold">Receita atual</p>
-                  <p class="mb-2 fs-4 fw-light">R$ 5.600,00</p>
-                </div>
-                <div
-                  style="
+                  ">
+                <p class="mb-0 fs-6 fw-bold">Receita atual</p>
+                <p class="mb-2 fs-4 fw-light">R$ 5.600,00</p>
+              </div>
+              <div style="
                     border-radius: 5px;
                     width: 250px;
                     height: 100px;
@@ -281,80 +223,61 @@
                     padding: 20px;
                     border-bottom: 2px solid rgba(128, 128, 128, 0.171);
                     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-                  "
-                >
-                  <div class="row align-items-center">
-                    <div>
-                      <p class="mb-0 fs-6 fw-bold">Receita prevista</p>
-                      <p class="mb-2 fs-4 fw-light">
-                        R$ 6.500,00
-                        <span class="text-success">
-                          <i class="bi bi-arrow-up mb-2 fs-6 fw-light">+10%</i>
-                        </span>
-                      </p>
-                    </div>
+                  ">
+                <div class="row align-items-center">
+                  <div>
+                    <p class="mb-0 fs-6 fw-bold">Receita prevista</p>
+                    <p class="mb-2 fs-4 fw-light">
+                      R$ 6.500,00
+                      <span class="text-success">
+                        <i class="bi bi-arrow-up mb-2 fs-6 fw-light">+10%</i>
+                      </span>
+                    </p>
                   </div>
                 </div>
               </div>
-              <button
-                class="btn btn-red fw-bold fs-6 text-center"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#exportModal"
-                style="width: 250px; height: 40px"
-              >
-                + Adicionar recebimento
-              </button>
             </div>
-            <div style="display: flex; justify-content: space-between">
-              <div class="d-flex gap-2">
-                <div
-                  style="
+            <button class="btn btn-red fs-6 text-center" type="button" data-bs-toggle="modal"
+              data-bs-target="#exportModal" style="width: 250px">
+              + Adicionar recebimento
+            </button>
+          </div>
+          <div style="display: flex; justify-content: space-between">
+            <div class="d-flex gap-2">
+              <div style="
                     border-radius: 5px;
                     height: 120px;
                     display: flex;
                     flex-direction: column;
                     padding: 20px;
-                  "
-                >
-                  <div>
-                    <span>Cálculo repasse iFood </span>
-                    <button
-                      data-toggle="collapse"
-                      data-target="#repasse-calc"
-                      style="border: none"
-                      onclick="changeCalcArrowBtnImage()"
-                    >
-                      <img
-                        id="arrow-btn-calc"
-                        src="../images/arrow-down-short.svg"
-                      />
-                    </button>
-                  </div>
-                  <div id="repasse-calc" class="collapse">
-                    Valor bruto das vendas - Valor recebido via loja - Total de
-                    descontos = Valor repasse
-                  </div>
+                  ">
+                <div>
+                  <span>Cálculo repasse iFood </span>
+                  <button data-toggle="collapse" data-target="#repasse-calc" style="border: none"
+                    onclick="changeCalcArrowBtnImage()">
+                    <img id="arrow-btn-calc" src="../images/arrow-down-short.svg" />
+                  </button>
+                </div>
+                <div id="repasse-calc" class="collapse">
+                  Valor bruto das vendas - Valor recebido via loja - Total de
+                  descontos = Valor repasse
                 </div>
               </div>
+            </div>
 
-              <div class="d-flex gap-2">
-                <div
-                  style="
+            <div class="d-flex gap-2">
+              <div style="
                     border-radius: 5px;
                     height: 200px;
                     display: flex;
                     flex-direction: column;
                     padding: 20px;
-                  "
-                >
-                  <div style="border-bottom: 5px">
-                    <span>Setembro de 2024</span>
-                  </div>
+                  ">
+                <div style="border-bottom: 5px">
+                  <span>Setembro de 2024</span>
+                </div>
 
-                  <div
-                    id="repasse-total"
-                    style="
+                <div id="repasse-total" style="
                       border-radius: 5px;
                       width: 400px;
                       height: 200px;
@@ -363,259 +286,293 @@
                       padding: 20px;
                       border-bottom: 2px solid rgba(128, 128, 128, 0.171);
                       box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-                    "
-                  >
-                    <div style="display: flex; justify-content: space-between">
-                      <span>Total de repasses: </span>
-                      <span style="font-weight: 500" ;>R$ 2.000,00</span>
-                    </div>
+                    ">
+                  <div style="display: flex; justify-content: space-between">
+                    <span>Total de repasses: </span>
+                    <span style="font-weight: 500" ;>R$ 2.000,00</span>
+                  </div>
 
-                    <div style="display: flex; justify-content: space-between">
-                      <span>Total outros recebimentos: </span>
-                      <span style="font-weight: 500">R$ 240,00 </span>
-                    </div>
+                  <div style="display: flex; justify-content: space-between">
+                    <span>Total outros recebimentos: </span>
+                    <span style="font-weight: 500">R$ 240,00 </span>
+                  </div>
 
-                    <div style="display: flex; justify-content: space-between">
-                      <span>Valor já recebido: </span>
-                      <span style="font-weight: 500">R$ 1.000,00</span>
-                    </div>
+                  <div style="display: flex; justify-content: space-between">
+                    <span>Valor já recebido: </span>
+                    <span style="font-weight: 500">R$ 1.000,00</span>
+                  </div>
 
-                    <div style="display: flex; justify-content: space-between">
-                      <span>Valor a receber: </span>
-                      <span style="font-weight: 500">R$ 970,20</span>
-                    </div>
+                  <div style="display: flex; justify-content: space-between">
+                    <span>Valor a receber: </span>
+                    <span style="font-weight: 500">R$ 970,20</span>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section class="row mt-4">
-            <h4 style="font-size: 18px">Filtros</h4>
-            <div class="col-md-2">
-              <label for="dateFrom" class="form-label">De</label>
-              <div class="input-group">
-                <input type="date" class="form-control" id="dateFrom" />
+        <section class="row mt-4">
+          <h5 style="font-size: 15px">Filtros</h5>
+          <div class="col-md-2">
+            <label for="dateFrom" class="form-label">De</label>
+            <div class="input-group">
+              <input type="date" class="form-control" id="dateFrom" />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label for="dateTo" class="form-label">Até</label>
+            <div class="input-group">
+              <input type="date" class="form-control" id="dateTo" />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label for="situacao" class="form-label">Situação</label>
+            <select class="form-select" id="situacao">
+              <option value="todos" selected>Todos</option>
+              <option value="pendente">Pendente</option>
+              <option value="concluido">Concluído</option>
+              <option value="cancelado">Cancelado</option>
+            </select>
+          </div>
+          <div class="col-md">
+            <label for="pesquisar" class="form-label">Pesquisar</label>
+            <input type="text" class="form-control" placeholder="Pesquisar" />
+          </div>
+        </section>
+
+        <section class="row mt-5 lancamentos">
+          <div class="align-items-end justify-content-end d-flex">
+            <button class="btn btn-red fs-6 add-order" type="button" data-bs-toggle="modal"
+              data-bs-target="#exportModalExtrato" style="width: 250px">Exportar</button>
+          </div>
+          <div class="d-flex gap-4 w-100 menu-ta">
+            <a class="men-table" href="#" data-table="repasses-ifood">Repasses iFood</a>
+            <a class="men-table" href="#" data-table="outros-recebimentos">Outros recebimentos</a>
+          </div>
+          <div class="table-container">
+            <table id="repasses-ifood" class="table table-bordered table-hidden">
+              <thead>
+                <tr>
+                  <th class="table-active">Previsão de pagamento</th>
+                  <th class="table-active">Período de apuração</th>
+                  <th class="table-active">Valor</th>
+                  <th class="table-active">Situação</th>
+                  <th class="table-active">Detalhes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>17-07-24</td>
+                  <td>07 a 13-07-2400</td>
+                  <td>R$ 1.000,00</td>
+                  <td class="status-tb">
+                    <span class="status-aberto">ABERTO</span>
+                  </td>
+                  <td>
+                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                      detalhes</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>10-07-24</td>
+                  <td>30-06 a 06-07-24</td>
+                  <td>R$ 500,00</td>
+                  <td class="status-tb">
+                    <span class="status-pendente">PENDENTE</span>
+                  </td>
+                  <td>
+                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                      detalhes</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>03-07-24</td>
+                  <td>23 a 29-06-24</td>
+                  <td>R$ 1.000,00</td>
+                  <td class="status-tb">
+                    <span class="status-pago">PAGO</span>
+                  </td>
+                  <td>
+                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                      detalhes</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>26-06-24</td>
+                  <td>16 a 22-06-24</td>
+                  <td>R$ 400,00</td>
+                  <td class="status-tb">
+                    <span class="status-pago">PAGO</span>
+                  </td>
+                  <td>
+                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                      detalhes</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>19-06-24</td>
+                  <td>09 a 15-06-24</td>
+                  <td>R$ 400,00</td>
+                  <td class="status-tb">
+                    <span class="status-pago">PAGO</span>
+                  </td>
+                  <td>
+                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                      detalhes</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12-06-24</td>
+                  <td>02 a 08-06-24</td>
+                  <td>R$ 400,00</td>
+                  <td class="status-tb">
+                    <span class="status-pago">PAGO</span>
+                  </td>
+                  <td>
+                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                      detalhes</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table id="outros-recebimentos" class="table table-bordered table-hidden">
+              <thead>
+                <tr>
+                  <th class="table-active">Data</th>
+                  <th class="table-active">Valor</th>
+                  <th class="table-active">Descrição</th>
+                  <th class="table-active">Excluir | Editar</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-style">
+              <li class="page-item text-decoration-all">
+                <a class="page-link text-red" href="#">&lt; <span class="text-decoration">Anterior</span></a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link select-item" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-red" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-red" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-red" href="#">4</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-red" href="#">5</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-red" href="#"><span class="text-decoration">Próximo</span> &gt;</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal Exportar Extrato -->
+  <div class="modal fade" id="exportModalExtrato" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exportModalLabel">Extrato por período</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>Escolha o mês que você quer o extrato</h6>
+          <div class="row mb-3">
+            <div class="col">
+              <h6>Mês</h6>
+              <input type="text" class="form-control" placeholder="Atual">
+            </div>
+            <div class="col">
+              <h6>Ano</h6>
+              <input type="text" class="form-control" placeholder="Atual">
+            </div>
+          </div>
+          <h6>Desde o dia <input type="text" class="form-control d-inline-block small-form" placeholder="1">
+            até o dia <input type="text" class="form-control d-inline-block small-form" placeholder="30">
+          </h6>
+          <h6 class="mt-3">Selecione os tipos de receita você deseja</h6>
+          <ul class="list-unstyled">
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="extratoFormato" id="formatoOFX" value="OFX">
+                <label class="form-check-label" for="formatoOFX">
+                  Repasses iFood
+                </label>
               </div>
-            </div>
-            <div class="col-md-2">
-              <label for="dateTo" class="form-label">Até</label>
-              <div class="input-group">
-                <input type="date" class="form-control" id="dateTo" />
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="extratoFormato" id="formatoPDF" value="PDF">
+                <label class="form-check-label" for="formatoPDF">
+                  Outros recebimentos
+                </label>
               </div>
-            </div>
-            <div class="col-md-2">
-              <label for="situacao" class="form-label">Situação</label>
-              <select class="form-select" id="situacao">
-                <option value="todos" selected>Todos</option>
-                <option value="pendente">Pendente</option>
-                <option value="concluido">Concluído</option>
-                <option value="cancelado">Cancelado</option>
-              </select>
-            </div>
-            <div class="col-md">
-              <label for="pesquisar" class="form-label">Pesquisar</label>
-              <input type="text" class="form-control" placeholder="Pesquisar" />
-            </div>
-          </section>
-
-          <section class="row mt-5 lancamentos">
-            <div class="align-items-end justify-content-end d-flex">
-              <button
-                class="btn btn-red fs-6 add-order"
-                type="button"
-                style="width: 250px"
-              >
-                Exportar
-              </button>
-            </div>
-            <div class="d-flex gap-4 w-100 menu-ta">
-              <a class="men-table" href="#" data-table="repasses-ifood"
-                >Repasses Ifood</a
-              >
-              <a class="men-table" href="#" data-table="outros-recebimentos"
-                >Outros recebimentos</a
-              >
-            </div>
-            <div class="table-container">
-              <table
-                id="repasses-ifood"
-                class="table table-bordered table-hidden"
-              >
-                <thead>
-                  <tr>
-                    <th class="table-active">Previsão de pagamento</th>
-                    <th class="table-active">Período de apuração</th>
-                    <th class="table-active">Valor</th>
-                    <th class="table-active">Situação</th>
-                    <th class="table-active">Detalhes</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>17-07-24</td>
-                    <td>07 a 13-07-2400</td>
-                    <td>R$ 1.000,00</td>
-                    <td class="status-tb">
-                      <span class="status-aberto">ABERTO</span>
-                    </td>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-danger"
-                        data-bs-toggle="modal"
-                        data-bs-target="#pedidoModal"
-                        >Ver detalhes</a
-                      >
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>10-07-24</td>
-                    <td>30-06 a 06-07-24</td>
-                    <td>R$ 500,00</td>
-                    <td class="status-tb">
-                      <span class="status-pendente">PENDENTE</span>
-                    </td>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-danger"
-                        data-bs-toggle="modal"
-                        data-bs-target="#pedidoModal"
-                        >Ver detalhes</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>03-07-24</td>
-                    <td>23 a 29-06-24</td>
-                    <td>R$ 1.000,00</td>
-                    <td class="status-tb">
-                      <span class="status-pago">PAGO</span>
-                    </td>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-danger"
-                        data-bs-toggle="modal"
-                        data-bs-target="#pedidoModal"
-                        >Ver detalhes</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>26-06-24</td>
-                    <td>16 a 22-06-24</td>
-                    <td>R$ 400,00</td>
-                    <td class="status-tb">
-                      <span class="status-pago">PAGO</span>
-                    </td>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-danger"
-                        data-bs-toggle="modal"
-                        data-bs-target="#pedidoModal"
-                        >Ver detalhes</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>19-06-24</td>
-                    <td>09 a 15-06-24</td>
-                    <td>R$ 400,00</td>
-                    <td class="status-tb">
-                      <span class="status-pago">PAGO</span>
-                    </td>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-danger"
-                        data-bs-toggle="modal"
-                        data-bs-target="#pedidoModal"
-                        >Ver detalhes</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>12-06-24</td>
-                    <td>02 a 08-06-24</td>
-                    <td>R$ 400,00</td>
-                    <td class="status-tb">
-                      <span class="status-pago">PAGO</span>
-                    </td>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-danger"
-                        data-bs-toggle="modal"
-                        data-bs-target="#pedidoModal"
-                        >Ver detalhes</a
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <table
-                id="outros-recebimentos"
-                class="table table-bordered table-hidden"
-              >
-                <thead>
-                  <tr>
-                    <th class="table-active">Data</th>
-                    <th class="table-active">Valor</th>
-                    <th class="table-active">Descrição</th>
-                    <th class="table-active">Excluir | Editar</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-
-            <nav aria-label="Page navigation example">
-              <ul class="pagination pagination-style">
-                <li class="page-item text-decoration-all">
-                  <a class="page-link text-red" href="#"
-                    >&lt; <span class="text-decoration">Anterior</span></a
-                  >
-                </li>
-                <li class="page-item active">
-                  <a class="page-link select-item" href="#">1</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link text-red" href="#">2</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link text-red" href="#">3</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link text-red" href="#">4</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link text-red" href="#">5</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link text-red" href="#"
-                    ><span class="text-decoration">Próximo</span> &gt;</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </section>
-        </main>
+            </li>
+          </ul>
+          <h6 class="mt-3">Selecione o formato</h6>
+          <ul class="list-unstyled">
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoOFX" value="OFX">
+                <label class="form-check-label" for="formatoOFX">
+                  Visualizar em tela
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoOFX" value="OFX">
+                <label class="form-check-label" for="formatoOFX">
+                  OFX
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoPDF" value="PDF">
+                <label class="form-check-label" for="formatoPDF">
+                  PDF
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoCSV" value="CSV">
+                <label class="form-check-label" for="formatoCSV">
+                  CSV
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-red px-5">Gerar</button>
+        </div>
       </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/receitas.js"></script>
-  </body>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/receitas.js"></script>
+</body>
+
 </html>

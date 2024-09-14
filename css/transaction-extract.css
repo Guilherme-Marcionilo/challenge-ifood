@@ -1,6 +1,7 @@
 :root {
   --color-light: hsl(0, 0%, 100%);
   --color-red: #ea1d2c;
+  --color-red-background: #cc1724;
   --color-black: #000000;
   --font-body: 'Poppins', sans-serif;
 }
@@ -86,15 +87,17 @@ body, html {
 }
 
 .btn-red:hover {
-  background-color: #cc1724;
+  background-color: var(--color-red-background);
   color: white;
 }
 
 .btn-grey {
   background-color: #dadada;
   color: #767676;
+  border: none;
   border-radius: 10px;
   font-weight: 500 !important;
+  transition: all 0.3s ease;
 }
 
 .btn-grey:hover {
@@ -170,7 +173,7 @@ body, html {
 }
 
 .modal-footer .btn-primary:hover {
-  background-color: #c71720;
+  background-color: var(--color-red-background);
 }
 
 /* Estilos para os radio buttons selecionados */
