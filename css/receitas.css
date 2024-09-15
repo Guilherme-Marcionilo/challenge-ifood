@@ -1,6 +1,7 @@
 :root {
   --color-light: hsl(0, 0%, 100%);
   --color-red: #EA1D2C;
+  --color-red-background: #cc1724;
   --color-black: #000000;
   --color-blue: #2B57AC;
   --color-grey-escuro: #767676;
@@ -21,6 +22,11 @@ html {
 
 .text-red {
   color: var(--color-red);
+}
+
+.text-red:hover {
+  text-decoration: none;
+  color: var(--color-red-background);
 }
 
 .text-light {
@@ -160,6 +166,11 @@ html {
   border-style: none;
 }
 
+.form-label {
+  font-weight: 500;
+  font-size: 15px;
+}
+
 .menu-ta {
   border-bottom: 2px solid #ccc;
 }
@@ -181,7 +192,6 @@ html {
   text-align: center;
 }
 
-
 .status-pendente {
   border: 1px solid #EECEB0;
   border-radius: 6px;
@@ -194,7 +204,7 @@ html {
   border: 1px solid #30a560 !important;
   border-radius: 6px !important;
   color: #038138 !important;
-  padding-inline: 9px !important;
+  padding-inline: 30px !important;
   background-color: #dcfde9 !important;
 }
 
@@ -202,7 +212,224 @@ html {
   border: 1px solid #B5B5B5;
   border-radius: 6px;
   color: #B5B5B5;
-  padding-inline: 16px;
-  font-size: 15px;
+  padding-inline: 25px;
   background-color: #FFF9F2;
+}
+
+@media (min-width: 768px) {
+  .modal-lg-custom {
+    max-width: 800px;
+  }
+}
+
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-select {
+  width: 100%;
+  height: 40px;
+  padding-left: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff url('data:image/svg+xml;base64,...') no-repeat right 10px center;
+  background-size: 10px;
+  position: relative;
+}
+
+.custom-select option {
+  padding-left: 30px;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  background-color: #fff;
+}
+
+.custom-select-wrapper::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: currentColor;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+.custom-select option {
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+
+.custom-select option::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: plum;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 3px;
+  margin-right: 10px;
+  display: inline-block;
+  z-index: 1;
+
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+  border-radius: 34px;
+  transition: .4s;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+  border-radius: 34px;
+  transition: .4s;
+}
+
+
+input:checked+.slider {
+  background-color: rgb(21, 214, 21);
+}
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.colored-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.colored-checkbox:not(:checked) {
+  background-color: #fff;
+}
+
+.colored-checkbox:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+
+.colored-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+
+.colored-checkbox[data-color="red"]:checked {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.colored-checkbox[data-color="green"]:checked {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.colored-checkbox[data-color="yellow"]:checked {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.remove-itens {
+
+  display: none;
+}
+
+.remove-itens2 {
+
+  display: none;
+}
+
+.table-hidden {
+  display: none;
+}
+
+.status-pago {
+  border: 1px solid #81e973;
+  font-size: 15px;
+  border-radius: 6px;
+  padding: 1.5px;
+
+  background-color: #eef1ef;
+  color: #004113;
+}
+
+.pagination-active {
+  color: red;
+  font-weight: bold;
+  /* Opcional: destaca o texto */
 }
