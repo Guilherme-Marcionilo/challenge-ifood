@@ -199,114 +199,64 @@
 
       <!-- Início Conteúdo -->
       <main id="col-one" class="col px-4 pt-3">
-        <section>
-          <div class="d-flex justify-content-between align-items-start mb-3">
-            <!-- Seção de Saldo -->
-            <div class="d-flex gap-3">
-              <div class="me-3" style="
-                    border-radius: 5px;
-                    width: 250px;
-                    height: 100px;
-                    text-align: center;
-                    padding: 20px;
-                    border-bottom: 2px solid rgba(128, 128, 128, 0.171);
-                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-                  ">
-                <p class="mb-0 fs-6 fw-bold">Receita atual</p>
-                <p class="mb-2 fs-4 fw-light">R$ 5.600,00</p>
-              </div>
-              <div style="
-                    border-radius: 5px;
-                    width: 250px;
-                    height: 100px;
-                    text-align: center;
-                    padding: 20px;
-                    border-bottom: 2px solid rgba(128, 128, 128, 0.171);
-                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-                  ">
-                <div class="row align-items-center">
-                  <div>
-                    <p class="mb-0 fs-6 fw-bold">Receita prevista</p>
-                    <p class="mb-2 fs-4 fw-light">
-                      R$ 6.500,00
-                      <span class="text-success">
-                        <i class="bi bi-arrow-up mb-2 fs-6 fw-light">+10%</i>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <div class="d-flex flex-wrap flex-md-nowrap justify-content-between align-items-start mb-3">
+          <div class="d-flex flex-wrap gap-3 mb-3 flex-grow-1">
+            <div class="me-3 p-3"
+              style="border-radius: 5px; width: 250px; min-width: 200px; text-align: center; border-bottom: 2px solid rgba(128, 128, 128, 0.171); box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+              <p class="mb-0 fs-6 fw-bold">Receita atual</p>
+              <p class="mb-2 fs-4 fw-light">R$ 5.600,00</p>
             </div>
-            <button class="btn btn-red fs-6 text-center" type="button" data-bs-toggle="modal"
-              data-bs-target="#exportModal" style="width: 250px">
-              + Adicionar recebimento
-            </button>
-          </div>
-          <div style="display: flex; justify-content: space-between">
-            <div class="d-flex gap-2">
-              <div style="
-                    border-radius: 5px;
-                    height: 120px;
-                    display: flex;
-                    flex-direction: column;
-                    padding: 20px;
-                  ">
+            <div class="p-3"
+              style="border-radius: 5px; width: 250px; min-width: 200px; text-align: center; border-bottom: 2px solid rgba(128, 128, 128, 0.171); box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+              <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <span>Cálculo repasse iFood </span>
-                  <button data-toggle="collapse" data-target="#repasse-calc" style="border: none"
-                    onclick="changeCalcArrowBtnImage()">
-                    <img id="arrow-btn-calc" src="../images/arrow-down-short.svg" />
-                  </button>
+                  <p class="mb-0 fs-6 fw-bold">Receita prevista</p>
+                  <p class="mb-2 fs-4 fw-light">R$ 6.500,00</p>
                 </div>
-                <div id="repasse-calc" class="collapse">
-                  Valor bruto das vendas - Valor recebido via loja - Total de
-                  descontos = Valor repasse
+                <div class="text-end">
+                  <p class="mb-0 fs-6 fw-bold">+10%</p>
                 </div>
               </div>
             </div>
+          </div>
+          <button class="btn btn-red fs-6 text-center" type="button" data-bs-toggle="modal"
+            data-bs-target="#exportModal" style="width: 250px;">
+            + Adicionar Receita
+          </button>
+        </div>
 
-            <div class="d-flex gap-2">
-              <div style="
-                    border-radius: 5px;
-                    height: 200px;
-                    display: flex;
-                    flex-direction: column;
-                    padding: 20px;
-                  ">
-                <div style="border-bottom: 5px">
-                  <span>Setembro de 2024</span>
-                </div>
-
-                <div id="repasse-total" style="
-                      border-radius: 5px;
-                      width: 400px;
-                      height: 200px;
-                      display: flex;
-                      flex-direction: column;
-                      padding: 20px;
-                      border-bottom: 2px solid rgba(128, 128, 128, 0.171);
-                      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-                    ">
-                  <div style="display: flex; justify-content: space-between">
-                    <span>Total de repasses: </span>
-                    <span style="font-weight: 500" ;>R$ 2.000,00</span>
-                  </div>
-
-                  <div style="display: flex; justify-content: space-between">
-                    <span>Total outros recebimentos: </span>
-                    <span style="font-weight: 500">R$ 240,00 </span>
-                  </div>
-
-                  <div style="display: flex; justify-content: space-between">
-                    <span>Valor já recebido: </span>
-                    <span style="font-weight: 500">R$ 1.000,00</span>
-                  </div>
-
-                  <div style="display: flex; justify-content: space-between">
-                    <span>Valor a receber: </span>
-                    <span style="font-weight: 500">R$ 970,20</span>
-                  </div>
-                </div>
+        <section class="row mt-4">
+          <div class="col-md-6">
+            <div>
+              <br>
+              <p style="font-weight: 500;">Cálculo repasse iFood <a style="cursor: pointer;" onclick="arrowclick()"
+                  id="arrowbotton"><i class="bi bi-chevron-down"></i></a></p>
+              <p id="itensArrow" class="remove-itens" style="font-weight: 500;">Valor bruto das vendas - Valor recebido
+                via loja - Total de descontos = Valor repasse
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="">
+              <div class="">
+                <h5 style="font-size: 18px;" class="card-title mb-3 text-center">Julho de 2024 <a
+                    style="cursor: pointer;"><i class="bi bi-chevron-down"></i></a></h5>
+              </div>
+              <div id="itensArrow3"
+                style="box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); padding: 15px; align-items: center;">
+                <ul>
+                  <li class="list-group-item mb-2">Total de repasses <span style="font-weight: bold;"
+                      class="float-end">R$
+                      2.000,00</span></li>
+                  <li class="list-group-item mb-2">Total outros recebimentos <span style="font-weight: bold;"
+                      class="float-end">R$ 240,00</span>
+                  </li>
+                  <li class="list-group-item mb-2">Valor já recebido <span style="font-weight: bold;"
+                      class="float-end">R$
+                      1.000,00</span></li>
+                  <li class="list-group-item mb-2">Valor a receber <span style="font-weight: bold;" class="float-end">R$
+                      970,20</span></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -341,11 +291,11 @@
           </div>
         </section>
 
-        <section class="row mt-5 lancamentos">
-          <div class="align-items-end justify-content-end d-flex">
-            <button class="btn btn-red fs-6 add-order" type="button" data-bs-toggle="modal"
-              data-bs-target="#exportModalExtrato" style="width: 250px">Exportar</button>
-          </div>
+        <div class="align-items-end justify-content-end d-flex pt-4">
+          <button class="btn btn-red fs-6 add-order" type="button" data-bs-toggle="modal"
+            data-bs-target="#exportModalExtrato" style="width: 250px">Exportar</button>
+        </div>
+        <section class="row mt-4 lancamentos">
           <div class="d-flex gap-4 w-100 menu-ta">
             <a class="men-table" href="#" data-table="repasses-ifood">Repasses iFood</a>
             <a class="men-table" href="#" data-table="outros-recebimentos">Outros recebimentos</a>
@@ -370,7 +320,7 @@
                     <span class="status-aberto">ABERTO</span>
                   </td>
                   <td>
-                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                    <a href="#" class="text-red" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
                       detalhes</a>
                   </td>
                 </tr>
@@ -383,7 +333,7 @@
                     <span class="status-pendente">PENDENTE</span>
                   </td>
                   <td>
-                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                    <a href="#" class="text-red" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
                       detalhes</a>
                   </td>
                 </tr>
@@ -395,7 +345,7 @@
                     <span class="status-pago">PAGO</span>
                   </td>
                   <td>
-                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                    <a href="#" class="text-red" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
                       detalhes</a>
                   </td>
                 </tr>
@@ -407,7 +357,7 @@
                     <span class="status-pago">PAGO</span>
                   </td>
                   <td>
-                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                    <a href="#" class="text-red" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
                       detalhes</a>
                   </td>
                 </tr>
@@ -419,7 +369,7 @@
                     <span class="status-pago">PAGO</span>
                   </td>
                   <td>
-                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                    <a href="#" class="text-red" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
                       detalhes</a>
                   </td>
                 </tr>
@@ -431,7 +381,7 @@
                     <span class="status-pago">PAGO</span>
                   </td>
                   <td>
-                    <a href="#" class="text-danger" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
+                    <a href="#" class="text-red" data-bs-toggle="modal" data-bs-target="#pedidoModal">Ver
                       detalhes</a>
                   </td>
                 </tr>
@@ -481,6 +431,139 @@
     </div>
   </div>
 
+<!-- Modal Adicionar receita -->
+<div class="modal fade bd-example-modal-lg" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exportModalLabel">Nova receita</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row mb-3">
+          <div class="col">
+            <h6>Nome da receita</h6>
+            <input type="text" class="form-control" placeholder="Dê um nome para sua receita">
+          </div>
+          <div class="col">
+            <h6>Descrição</h6>
+            <input type="text" class="form-control" placeholder="Exemplo: Valor recebido via loja">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <h6>Categorias</h6>
+            <div class="custom-select-wrapper">
+              <select class="custom-select">
+                <option value="categoria1" data-color="#007bff">Categoria 1</option>
+                <option value="categoria2" data-color="#28a745">Categoria 2</option>
+                <option value="categoria3" data-color="#dc3545">Categoria 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col">
+            <h6>Valor</h6>
+            <input type="text" class="form-control" placeholder="Exemplo: R$ 200,00">
+          </div>
+        </div>
+        <button type="button" class="btn btn-red mt-2">
+          Nova Categoria
+        </button>
+        <div class="row mb-3">
+          <div class="col-md-3">
+            <h6>Receita Fixa</h6>
+            <label class="switch">
+              <input type="checkbox" id="toggle-switch-fixel">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="col">
+            <h6>Receita variável</h6>
+            <label class="switch">
+              <input type="checkbox" id="toggle-switch-variavel">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <h6>Data de recebimento</h6>
+            <div class="input-group">
+              <input type="date" class="form-control" id="dateTo">
+            </div>
+          </div>
+          <div class="col d-flex align-items-center gap-3">
+            <h6 class="m-0" style="text-align: center;">Recebido</h6>
+            <input style="text-align: center;" type="checkbox">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-bs-dismiss="modal" aria-label="Close">Voltar</button>
+          <button type="button" class="btn btn-red ml-auto">Adicionar Despesa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- modal ver detalhes -->
+  <div class="modal fade" id="pedidoModal" tabindex="-1" aria-labelledby="pedidoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header p-4">
+          <h5 class="modal-title" id="pedidoModalLabel">Receitas</h5>
+          <div class="d-flex justify-content-end">
+            <span class="p-3">12-07-24 19:45</span>
+          </div>
+        </div>
+        <div class="modal-body p-4">
+          <!-- Primeira linha de textos -->
+          <div class="row">
+            <div class="col text-center">
+              <h6>Receita</h6>
+            </div>
+            <div class="col text-center">
+              <h6>Período de apuração</h6>
+            </div>
+            <div class="col text-center">
+              <h6>Situação</h6>
+            </div>
+            <div class="col text-center">
+              <h6>Nome</h6>
+            </div>
+          </div>
+          <!-- Segunda linha de textos -->
+          <div class="row ">
+            <div class="col text-center">
+              <h6 class="text-muted">Repasse iFood</h6>
+            </div>
+            <div class="col text-center">
+              <h6 class="text-muted">30-06 a 06-07-2024</h6>
+            </div>
+            <div class="col text-center">
+              <h6 class="text-muted">Pendente</h6>
+            </div>
+            <div class="col text-center">
+              <h6 class="text-muted">iFood</h6>
+            </div>
+          </div>
+
+          <div class="mt-4"
+            style="background-color: rgba(206, 206, 206, 0.664); width: 600px; border-radius: 30px; padding: 15px;">
+            <p style="font-weight: 500;">Repasse iFood</p>
+            <ul>
+              <li>Referente a pedidos realizados entre 30-06 a 06-07-2024</li>
+              <li>Valor total do repasse: R$ 500,00</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="modal-footer p-4">
+          <button type="button" class="btn btn-red px-5" data-bs-dismiss="modal">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Modal Exportar Extrato -->
   <div class="modal fade" id="exportModalExtrato" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
     <div class="modal-dialog">
