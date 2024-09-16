@@ -297,7 +297,6 @@ input:checked+.slider:before {
 .pagination-active {
     color: red;
     font-weight: bold;
-    /* Opcional: destaca o texto */
 }
 
 #col-one {

@@ -1,23 +1,25 @@
-body {
-    background-color: #f8f9fa;
-}
+
 .accordion-button:not(.collapsed) {
-    background-color: #ff0000; /* Vermelho para a pergunta aberta */
-    color: white; /* Cor do texto branca para contraste */
+    background-color: #ff0000;
+    color: white ; 
 }
 
-/* Alterar a cor da borda e do texto quando o botão estiver focado ou no hover */
+
 .accordion-button {
-    color: #ff0000; /* Texto vermelho quando a pergunta está fechada */
-    border-color: #ff0000; /* Borda vermelha */
+    color: #ff0000; 
+    border-color: #ff0000; 
+}
+.accordion-button:not(.collapsed)::after {
+  color: black;
+  text-decoration: none;
 }
 
 .accordion-button:hover {
-    background-color: #ffcccc; /* Tom mais claro no hover */
+    background-color: #ffcccc; 
 }
 
 .accordion-button:focus {
-    box-shadow: none; /* Remove o brilho azul ao focar */
+    box-shadow: none; 
 }
 
 .header {
@@ -37,13 +39,14 @@ body {
 
 
 h2 {
-    font-size: 2rem;
+    font-size: 24px;
     margin-bottom: 30px;
-    color: #ff0000;
+    font-weight: 500;
+    color: #616161;
 }
 
 .faq .accordion-button {
-    font-size: 1.2rem;
+    font-size: 15px;
     font-weight: bold;
 }
 
