@@ -435,3 +435,13 @@ input:checked+.slider:before {
   font-weight: bold;
   /* Opcional: destaca o texto */
 }
+
+.small-form {
+  width: 44px;
+}
+
+/* Estilos para os radio buttons selecionados */
+.form-check-input:checked {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+}
