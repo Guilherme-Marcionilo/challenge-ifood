@@ -30,117 +30,56 @@
 
   <body>
     <div class="container-fluid h-100">
-      <div class="row">
-        <nav
-          class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
-          style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)"
-        >
-          <div
-            class="container-fluid d-flex justify-content-between align-items-center"
-            style="margin-left: 250px"
-          >
-            <!-- Tema da tela em que o usuário se encontra -- (Trocar o nome) -->
+      <header class="row">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
+          style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)">
+          <div class="container-fluid d-flex justify-content-between align-items-center" style="margin-left: 250px">
             <a class="navbar-brand" href="#">Criar acesso</a>
-
             <div class="d-flex align-items-center gap-3">
               <i class="bi bi-person-circle text-red"></i>
               <div class="d-flex flex-column">
                 <div class="d-flex gap-2 align-items-center">
                   <span class="fs-5">Pizzaria G'S</span>
-                  <i
-                    class="bi bi-chevron-down"
-                    style="cursor: pointer; font-weight: bold"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#userMenu"
-                    aria-expanded="false"
-                    aria-controls="userMenu"
-                  ></i>
+                  <i class="bi bi-chevron-down" style="cursor: pointer; font-weight: bold" data-bs-toggle="collapse"
+                    data-bs-target="#userMenu" aria-expanded="false" aria-controls="userMenu"></i>
                 </div>
                 <div class="d-flex align-items-center gap-2">
                   <span class="fs-9">Loja Ativa</span>
-                  <div
-                    style="
-                      top: 0;
-                      background-color: #58cf81;
-                      width: 13px;
-                      height: 13px;
-                      border-radius: 50px;
-                    "
-                  ></div>
+                  <div style="top: 0; background-color: #58cf81; width: 13px; height: 13px; border-radius: 50px;"></div>
                 </div>
               </div>
             </div>
           </div>
         </nav>
-      </div>
-
-      <div
-      class="collapse position-absolute end-0 px-4"
-      id="userMenu"
-      style="min-width: 500px; min-height: 200px"
-    >
-      <div class="card card-body p-12" style="z-index: 1;">
-        <!-- Conteúdo do popup -->
-        <ul class="list-unstyled mb-0">
-          <p style="font-weight: 500">Escolher loja</p>
-          <div>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Busue pelo nome ou ID"
-            />
-          </div>
-          <div
-            class="tela mb-3 p-3 d-flex align-items-center"
-            style="
-              background-color: rgba(128, 128, 128, 0.205);
-              margin-top: 25px;
-              width: 100%;
-              height: 60px;
-            "
-          >
-            <div
-              class="d-flex align-items-center justify-content-between w-100"
-            >
-              <img
-                src="../images/fluent-emoji-flat_pizza.png"
-                alt=""
-                style="margin-left: 20px; height: 40px"
-              />
-              <div class="text-nowrap" style="margin-right: 20px">
-                <p class="mb-0" style="font-weight: 500">
-                  Pizzaria G's - 1001000
-                </p>
-                <p class="mb-0">Rua xxxx, 100, Bairro, Cidade, SP, BR</p>
+      </header>
+      <div class="collapse position-absolute end-0 px-4" id="userMenu"
+        style="min-width: 500px; min-height: 200px; z-index: 100;">
+        <div class="card card-body p-12" style="z-index: 1">
+          <ul class="list-unstyled mb-0">
+            <p style="font-weight: 500">Escolher loja</p>
+            <div>
+              <input type="text" class="form-control" placeholder="Busque pelo nome ou ID" />
+            </div>
+            <div class="tela mb-3 p-3 d-flex align-items-center"
+              style="background-color: rgba(128, 128, 128, 0.205); margin-top: 25px; width: 100%; height: 60px;">
+              <div class="d-flex align-items-center justify-content-between w-100">
+                <img src="../images/fluent-emoji-flat_pizza.png" alt="" style="margin-left: 20px; height: 40px" />
+                <div class="text-nowrap" style="margin-right: 20px">
+                  <p class="mb-0" style="font-weight: 500">Pizzaria G's - 1001000</p>
+                  <p class="mb-0">Rua xxxx, 100, Bairro, Cidade, SP, BR</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="d-flex gap-3 justify-content-between">
-            <p class="mb-0">
-              Exibindo <span style="font-weight: 500">1 de 1</span>
-            </p>
-            <div class="d-flex gap-5">
-              <a
-                style="
-                  color: black;
-                  text-decoration: underline;
-                  cursor: pointer;
-                "
-                >&lt;Anterior</a
-              >
-              <a
-                style="
-                  color: black;
-                  text-decoration: underline;
-                  cursor: pointer;
-                "
-                >Próximo&gt;</a
-              >
+            <div class="d-flex gap-3 justify-content-between">
+              <p class="mb-0">Exibindo <span style="font-weight: 500">1 de 1</span></p>
+              <div class="d-flex gap-5">
+                <a style="color: black; text-decoration: underline; cursor: pointer;">&lt;Anterior</a>
+                <a style="color: black; text-decoration: underline; cursor: pointer;">Próximo&gt;</a>
+              </div>
             </div>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </div>
-    </div>
       <div class="row h-100">
         <aside class="col-md-3 text-dark sidebar h-100">
           <header class="sidebar-header py-4">
