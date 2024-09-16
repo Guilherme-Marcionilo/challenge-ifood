@@ -1,37 +1,78 @@
+document.querySelectorAll('.custom-select option').forEach(option => {
+    const color = option.getAttribute('data-color');
+    if (color) {
+        option.style.color = color;
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
-    const imgCalc = document.getElementById('arrow-btn-calc');
-    imgCalc.src = '../images/arrow-right-short.svg';
+    var checkbox = document.getElementById('toggle-switch');
 
-    const imgTotalRepasse = document.getElementById('arrow-btn-repasse-total');
-    imgTotalRepasse.src = '../images/arrow-right-short.svg';
-})
+    checkbox.addEventListener('change', function() {
+        if (checkbox.checked) {
+            console.log('Ligado');
+        } else {
+            console.log('Desligado');
+        }
+    });
+});
 
-changeCalcArrowBtnImage = () => {
-    const img = document.getElementById('arrow-btn-calc');
-    if (img.src.includes('arrow-down-short.svg')) {
-        img.src = '../images/arrow-right-short.svg';
-    } else {
-        img.src = '../images/arrow-down-short.svg'
-    }
-}
 
-changeRepasseTotalArrowBtnImage = () => {
-    const img = document.getElementById('arrow-btn-repasse-total');
-    if (img.src.includes('arrow-down-short.svg')) {
-        img.src = '../images/arrow-right-short.svg';
-    } else {
-        img.src = '../images/arrow-down-short.svg'
-    }
-}
+document.addEventListener('DOMContentLoaded', function() {
+    var selectElement = document.getElementById('category-select');
+
+    selectElement.addEventListener('change', function() {
+        var selectedValue = selectElement.value;
+        
+        if (selectedValue === 'nova_categoria') {
+            var modal = new bootstrap.Modal(document.getElementById('exportModal2'));
+            modal.show();
+        }
+    });
+});
 
 function openPrimaryModal() {
     var primaryModal = new bootstrap.Modal(document.getElementById('exportModal'));
     primaryModal.show();
 }
 
+
+function arrowclick() {
+    let arrowclick = document.getElementById('arrowbotton');
+    let itensArow = document.getElementById('itensArrow');
+
+    if (itensArow.classList.contains('remove-itens') ) {
+        itensArow.classList.remove('remove-itens')
+    }else {
+        itensArow.classList.add('remove-itens')
+    }
+}
+
+function arrowclick2() {
+    let arrowclick = document.getElementById('arrowbotton');
+    let itensArow2 = document.getElementById('itensArrow2');
+
+    if (itensArow2.classList.contains('remove-itens') ) {
+        itensArow2.classList.remove('remove-itens')
+    }else {
+        itensArow2.classList.add('remove-itens')
+    }
+}
+
+function arrowclick3() {
+    let arrowclick = document.getElementById('arrowbotton');
+    let itensArow3 = document.getElementById('itensArrow3');
+
+    if (itensArow3.classList.contains('remove-itens') ) {
+        itensArow3.classList.remove('remove-itens')
+    }else {
+        itensArow3.classList.add('remove-itens')
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     let currentPage = 1;
-    const totalPages = 2; 
+    const totalPages = 5; 
 
     // Função para alternar a tabela
     function alternaTabela(tabelaId) {
@@ -50,18 +91,24 @@ document.addEventListener('DOMContentLoaded', function() {
         let tabelaId;
         switch (pageNumber) {
             case 1:
-                tabelaId = 'repasses-ifood';
+                tabelaId = 'comissoes';
                 break;
             case 2:
-                tabelaId = 'outros-recebimentos';
+                tabelaId = 'mensalidade';
+                break;
+            case 3:
+                tabelaId = 'taxas';
+                break;
+            case 4:
+                tabelaId = 'outras';
                 break;
             default:
-                tabelaId = 'repasses-ifood'; 
+                tabelaId = 'comissoes'; 
                 break;
         }
 
-        alternaTabela(tabelaId);
-        atualizarPaginacao(pageNumber);
+        // alternaTabela(tabelaId);
+        // atualizarPaginacao(pageNumber);
     }
 
 
@@ -125,7 +172,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    alternaTabela('repasses-ifood');
-    document.querySelector('.menu-ta a[data-table="repasses-ifood"]').classList.add('men-table-2');
+    alternaTabela('comissoes');
+    document.querySelector('.menu-ta a[data-table="comissoes"]').classList.add('men-table-2');
     atualizarPaginacao(currentPage);
 });
+
+function openAnotherModal() {
+    $('#exportModal').modal('hide'); // Fecha o modal atual
+    $('#secondaryModal').modal('show'); // Abre o outro modal
+}

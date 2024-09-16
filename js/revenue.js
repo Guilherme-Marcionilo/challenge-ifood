@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Função para alternar a tabela
     function alternaTabela(tabelaId) {
-        document.querySelectorAll('.table-container table').forEach(table => {
-            table.classList.add('table-hidden');
-        });
+        // document.querySelectorAll('.table-container table').forEach(table => {
+        //     table.classList.add('table-hidden');
+        // });
 
         const tabelaParaMostrar = document.getElementById(tabelaId);
         if (tabelaParaMostrar) {
@@ -107,8 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
         }
 
-        alternaTabela(tabelaId);
-        atualizarPaginacao(pageNumber);
+        // alternaTabela(tabelaId);
+        // atualizarPaginacao(pageNumber);
     }
 
 
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             currentPage = 1; 
             atualizarPaginacao(currentPage);
         });
-    });
+    }); 
 
     
     document.querySelectorAll('.pagination a').forEach(link => {
@@ -172,8 +172,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    alternaTabela('comissoes');
-    document.querySelector('.menu-ta a[data-table="comissoes"]').classList.add('men-table-2');
+    alternaTabela('repasses-ifood');
+    document.querySelector('.menu-ta a[data-table="repasses-ifood"]').classList.add('men-table-2');
     atualizarPaginacao(currentPage);
 });
 

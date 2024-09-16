@@ -204,3 +204,8 @@ html {
     background-size: 10px;
     position: relative;
 }
+
+.form-label {
+  font-weight: 500;
+  font-size: 15px;
+}
