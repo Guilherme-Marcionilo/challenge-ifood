@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
         }
 
-        alternaTabela(tabelaId);
-        atualizarPaginacao(pageNumber);
+        // alternaTabela(tabelaId);
+        // atualizarPaginacao(pageNumber);
     }
 
 

@@ -171,10 +171,6 @@ html {
   font-size: 15px;
 }
 
-.menu-ta {
-  border-bottom: 2px solid #ccc;
-}
-
 .menu-ta a {
   padding-bottom: 10px;
   border-bottom: 2px solid transparent;
@@ -187,6 +183,12 @@ html {
   border-bottom: 2px solid red;
   color: red;
 }
+
+
+.menu-ta a:hover {
+  border-bottom: 2px solid red;
+  color: red;
+} 
 
 .status-tb {
   text-align: center;
