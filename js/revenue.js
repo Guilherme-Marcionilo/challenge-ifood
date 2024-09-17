@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Função para alternar a tabela
     function alternaTabela(tabelaId) {
-        // document.querySelectorAll('.table-container table').forEach(table => {
-        //     table.classList.add('table-hidden');
-        // });
+        document.querySelectorAll('.table-container table').forEach(table => {
+            table.classList.add('table-hidden');
+        });
 
         const tabelaParaMostrar = document.getElementById(tabelaId);
         if (tabelaParaMostrar) {
