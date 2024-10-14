@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Despesas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/expense.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../css/expense.css" />
+    <link rel="icon" href="images/../../images/Logo.png" type="image/png" />
+</head>
+
+<body>
+    <div class="container-fluid h-100">
+        <header class="row">
+            <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
+                style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)">
+                <div class="container-fluid d-flex justify-content-between align-items-center"
+                    style="margin-left: 250px">
+                    <a class="navbar-brand" href="#">Despesas</a>
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="bi bi-person-circle text-red"></i>
+                        <div class="d-flex flex-column">
+                            <div class="d-flex gap-2 align-items-center">
+                                <span class="fs-5">Pizzaria G'S</span>
+                                <i class="bi bi-chevron-down" style="cursor: pointer; font-weight: bold"
+                                    data-bs-toggle="collapse" data-bs-target="#userMenu" aria-expanded="false"
+                                    aria-controls="userMenu"></i>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="fs-9">Loja Ativa</span>
+                                <div
+                                    style="top: 0; background-color: #58cf81; width: 13px; height: 13px; border-radius: 50px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="collapse position-absolute end-0 px-4" id="userMenu"
+            style="min-width: 500px; min-height: 200px; z-index: 100;">
+            <div class="card card-body p-12" style="z-index: 1">
+                <ul class="list-unstyled mb-0">
+                    <p style="font-weight: 500">Escolher loja</p>
+                    <div>
+                        <input type="text" class="form-control" placeholder="Busque pelo nome ou ID" />
+                    </div>
+                    <div class="tela mb-3 p-3 d-flex align-items-center"
+                        style="background-color: rgba(128, 128, 128, 0.205); margin-top: 25px; width: 100%; height: 60px;">
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <img src="../images/fluent-emoji-flat_pizza.png" alt=""
+                                style="margin-left: 20px; height: 40px" />
+                            <div class="text-nowrap" style="margin-right: 20px">
+                                <p class="mb-0" style="font-weight: 500">Pizzaria G's - 1001000</p>
+                                <p class="mb-0">Rua xxxx, 100, Bairro, Cidade, SP, BR</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 justify-content-between">
+                        <p class="mb-0">Exibindo <span style="font-weight: 500">1 de 1</span></p>
+                        <div class="d-flex gap-5">
+                            <a style="color: black; text-decoration: underline; cursor: pointer;">&lt;Anterior</a>
+                            <a style="color: black; text-decoration: underline; cursor: pointer;">Próximo&gt;</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="row h-100">
+            <aside class="col-md-3 text-dark sidebar h-100">
+                <header class="sidebar-header py-4">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="../images/Logo.png" alt="FinHub Logo" />
+                    </div>
+                </header>
+                <nav class="nav flex-column sidebar-nav py-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html"><i class="bi bi-house-door-fill"></i><span
+                                    class="ml-2">Início</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="balance.html"><i class="bi bi-cash-coin"></i><span
+                                    class="ml-2">Saldo</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="revenue.html"><i class="bi bi-currency-dollar"></i><span
+                                    class="ml-2">Receitas</span></a>
+                        </li>
+                        <li class="nav-item" style="background-color: #fde9ea; color: #ea1d2c;">
+                            <a class="nav-link" href="../pages/expense.html" style="color: #ea1d2c;"><i
+                                    class="bi bi-bar-chart-fill"></i><span class="ml-2">Despesas</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="transaction-extract.html"><i
+                                    class="bi bi-file-earmark-text-fill"></i><span class="ml-2">Extrato</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="orders.html" aria-controls="pedidos-collapse">
+                                <i class="bi bi-file-text-fill"></i>
+                                <span class="ml-2">Pedidos</span>
+                            </a>
+                            <ul class="nav flex-column ml-4" id="pedidos-collapse">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="add-order.html">
+                                        <i class="bi bi-arrow-return-right"></i>
+                                        Adicionar pedido
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="financial-report.html"><i
+                                    class="bi bi-file-earmark-bar-graph-fill"></i><span
+                                    class="ml-2">Relatórios</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help.html"><i class="bi bi-question-octagon-fill"></i><span
+                                    class="ml-2">Ajuda</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="my-account.html"><i class="bi bi-shield-fill-minus"></i><span
+                                    class="ml-2">Segurança</span></a>
+                            <ul class="nav flex-column ml-4" id="seguranca-collapse">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="access-management.html"><i
+                                            class="bi bi-arrow-return-right"></i>Gestão de acesso</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="create-access.html">
+                                      <i class="bi bi-arrow-return-right"></i>
+                                      Criar acesso
+                                    </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="see-access.html">
+                                      <i class="bi bi-arrow-return-right"></i>
+                                      Ver acessos
+                                    </a>
+                                  </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="main-login.html"><i class="bi bi-box-arrow-right"></i><span
+                                    class="ml-2">Sair</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <footer class="sidebar-footer py-4">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <img src="../images/Logo FinHub.png" alt="FinHub Logo" />
+                    </div>
+                </footer>
+            </aside>
+
+
+            <!-- Conteudo principal -->
+            <main id="col-one" class="col px-4 pt-3">
+                <div class="d-flex flex-wrap flex-md-nowrap justify-content-between align-items-start mb-3">
+                    <div class="d-flex flex-wrap gap-3 mb-3 flex-grow-1">
+                        <div class="me-3 p-3"
+                            style="border-radius: 5px; width: 250px; min-width: 200px; text-align: center; border-bottom: 2px solid rgba(128, 128, 128, 0.171); box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+                            <p class="mb-0 fs-6 fw-bold">Despesa Atual</p>
+                            <p class="mb-2 fs-4 fw-light">R$ 437,50</p>
+                        </div>
+                        <div class="p-3"
+                            style="border-radius: 5px; width: 250px; min-width: 200px; text-align: center; border-bottom: 2px solid rgba(128, 128, 128, 0.171); box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <p class="mb-0 fs-6 fw-bold">Despesa prevista</p>
+                                    <p class="mb-2 fs-4 fw-light">R$ 50,00</p>
+                                </div>
+                                <div class="text-end">
+                                    <p class="mb-0 fs-6 fw-bold">-5%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-red fs-6 text-center" type="button"
+                        data-bs-toggle="modal" data-bs-target="#exportModal"
+                        style="width: 250px;">
+                        + Adicionar Despesa
+                    </button>
+                </div>
+
+                <section class="row mt-4">
+                    <div class="col-md-6">
+                        <div>
+                            <p style="font-weight: 500;">Boletos pendentes:</p>
+                            <ul>
+                                <li>Você não possui boleto pendente de pagamento</li>
+                            </ul>
+                            <br>
+                            <p style="font-weight: 500;">Seu plano iFood: PLANO BÁSICO <a style="cursor: pointer;"
+                                    onclick="arrowclick()" id="arrowbotton"><i class="bi bi-chevron-down"></i></a></p>
+                            <ul id="itensArrow" class="remove-itens">
+                                <li>12% Comissão sobre pedidos delivery</li>
+                                <li>R$ 110,00/mês Mensalidade para faturamento acima de R$ 1.800,00/mês</li>
+                                <li>3.2% Taxa para pedidos pagos via iFood</li>
+                                <a style="color: red;" href="">Altera Plano Ifood</a>
+                            </ul>
+                            <br>
+                            <p style="font-weight: 500;">Seu plano de repasse: 1 semana <a style="cursor: pointer;"
+                                    onclick="arrowclick2()"><i class="bi bi-chevron-down"></i></p></a>
+                            <ul id="itensArrow2" class="remove-itens">
+                                <li>1,4% taxa de transação</li>
+                                <a style="color: red;" href="">Altera Plano de repasse</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="">
+                            <div class="">
+                                <h5 style="font-size: 18px;" class="card-title mb-3 text-center">Julho de 2024 <a
+                                        style="cursor: pointer;"><i class="bi bi-chevron-down"></i></a></h5>
+                            </div>
+                            <div id="itensArrow3"
+                                style="box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); padding: 15px; align-items: center;">
+                                <ul>
+                                    <li class="list-group-item mb-2">Valor bruto das vendas <span
+                                            style="font-weight: bold;" class="float-end">R$
+                                            2.000,00</span></li>
+                                    <li class="list-group-item mb-2">Total comissões <span
+                                            class="float-end text-danger">-R$ 240,00</span></li>
+                                    <li class="list-group-item mb-2">Total taxas <span class="float-end text-danger">-R$
+                                            87,72</span></li>
+                                    <li class="list-group-item mb-2">Mensalidade <span class="float-end text-danger">-R$
+                                            110,00</span></li>
+                                    <li class="list-group-item mb-2">Demais despesas <span
+                                            class="float-end text-danger">-R$ 0,00</span></li>
+                                    <li class="list-group-item mb-2">Valor líquido <span style="font-weight: bold;"
+                                            class="float-end">R$
+                                            1.562,28</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="row mt-4">
+                    <h4 style="font-size: 15px;">Filtros</h4>
+                    <div class="col-md-2">
+                        <label for="dateFrom" class="form-label">De</label>
+                        <div class="input-group">
+                            <input type="date" class="form-control" id="dateFrom" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="dateTo" class="form-label">Até</label>
+                        <div class="input-group">
+                            <input type="date" class="form-control" id="dateTo" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="situacao" class="form-label">Situação</label>
+                        <select class="form-select" id="situacao">
+                            <option value="todos" selected>Todos</option>
+                            <option value="pendente">Pendente</option>
+                            <option value="concluido">Concluído</option>
+                            <option value="cancelado">Cancelado</option>
+                        </select>
+                    </div>
+                    <div class="col-md">
+                        <label for="pesquisar" class="form-label">Pesquisar</label>
+                        <input type="text" class="form-control" placeholder="Pesquisar">
+                    </div>
+                </section>
+
+                <div class="align-items-end justify-content-end d-flex pt-4">
+                    <button class="btn btn-red fs-6 add-order" type="button" data-bs-toggle="modal"
+                        data-bs-target="#exportModalExtrato" style="width: 250px">Exportar</button>
+                </div>
+                <section class="row mt-4 movimentacoes">
+                    <div class="d-flex gap-4 w-100 menu-ta">
+                        <a class="men-table" href="#" data-table="comissoes">Comissões</a>
+                        <a class="men-table" href="#" data-table="mensalidade">Mensalidade</a>
+                        <a class="men-table" href="#" data-table="taxas">Taxas</a>
+                        <a class="men-table" href="#" data-table="outras">Outras Despesas</a>
+                    </div>
+                    <div class="table-container">
+                        <table id="comissoes" class="table table-bordered table-hidden">
+                            <thead>
+                                <tr>
+                                    <th class="table-active">Pedido</th>
+                                    <th class="table-active">Data</th>
+                                    <th class="table-active">Valor pedido</th>
+                                    <th class="table-active">Comissão (12%)</th>
+                                    <th class="table-active">Forma de pagamento</th>
+                                    <th class="table-active">Previsão de desconto</th>
+                                    <th class="table-active">Situação</th>
+                                    <th class="table-active">Detalhes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>500</td>
+                                    <td>12-07-24 19:45</td>
+                                    <td>R$ 40,00</td>
+                                    <td>R$ 4,80</td>
+                                    <td>ONLINE</td>
+                                    <td>17-07-24</td>
+                                    <td class="status-tb"><span class="status-pendente">PENDENTE</span></td>
+                                    <td><a href="#" class="text-red" data-bs-toggle="modal"
+                                            data-bs-target="#pedidoModal">Ver detalhes</a></td>
+                                </tr>
+                                <tr>
+                                    <td>499</td>
+                                    <td>12-07-24 18:50</td>
+                                    <td>R$ 55,00</td>
+                                    <td>R$ 6,60</td>
+                                    <td>ONLINE</td>
+                                    <td>17-07-24</td>
+                                    <td class="status-tb"><span class="status-pendente">PENDENTE</span></td>
+                                    <td><a href="#" class="text-red" data-bs-toggle="modal"
+                                            data-bs-target="#pedidoModal">Ver detalhes</a></td>
+                                </tr>
+                                <tr>
+                                    <td>498</td>
+                                    <td>12-07-24 18:35</td>
+                                    <td>R$ 40,00</td>
+                                    <td>R$ 4,80</td>
+                                    <td>VIA LOJA</td>
+                                    <td>17-07-24</td>
+                                    <td class="status-tb"><span class="status-pendente">PENDENTE</span></td>
+                                    <td><a href="#" class="text-red" data-bs-toggle="modal"
+                                            data-bs-target="#pedidoModal">Ver detalhes</a></td>
+                                </tr>
+                                <tr>
+                                    <td>497</td>
+                                    <td>11-07-24 20:35</td>
+                                    <td>R$ 65,00</td>
+                                    <td>R$ 7,80</td>
+                                    <td>ONLINE</td>
+                                    <td>17-07-24</td>
+                                    <td class="status-tb"><span class="status-pendente text-center">PENDENTE</span></td>
+                                    <td><a href="#" class="text-red" data-bs-toggle="modal"
+                                            data-bs-target="#pedidoModal">Ver detalhes</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <!-- Tabela de Mensalidade (inicialmente escondida) -->
+                        <table id="mensalidade" class="table table-bordered table-hidden">
+                            <thead>
+                                <tr>
+                                    <th class="table-active">Mês</th>
+                                    <th class="table-active">Faturamento mensal</th>
+                                    <th class="table-active">Valor Mensalidade</th>
+                                    <th class="table-active">Previsão de desconto</th>
+                                    <th class="table-active">Observações</th>
+                                    <th class="table-active">Situação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>JULHO</td>
+                                    <td>R$ 2.000,00</td>
+                                    <td>R$ 110,00</td>
+                                    <td>31-07-24</td>
+                                    <td>O valor da mensalidade será descontado no dia do repasse</td>
+                                    <td class="status-tb"><span class="status-pendente">PENDENTE</span></td>
+                                </tr>
+                                <tr>
+                                    <td>JUNHO</td>
+                                    <td>R$ 1.900,00</td>
+                                    <td>R$ 110,00</td>
+                                    <td>03-07-24</td>
+                                    <td>O valor da mensalidade será descontado no dia do repasse</td>
+                                    <td class="status-tb"><span class="status-pago">PAGO</span></td>
+                                </tr>
+                                <tr>
+                                    <td>MAIO</td>
+                                    <td>R$ 1.500,00</td>
+                                    <td>R$ 0,00</td>
+                                    <td>05-06-24</td>
+                                    <td>O valor da mensalidade NÃO será descontado</td>
+                                    <td class="status-tb"><span class="status-pago">PAGO</span></td>
+                                </tr>
+                                <tr>
+                                    <td>ABRIL</td>
+                                    <td>R$ 2.500,00</td>
+                                    <td>R$ 110,00</td>
+                                    <td>01-05-24</td>
+                                    <td>O valor da mensalidade será descontado no dia do repasse</td>
+                                    <td class="status-tb"><span class="status-pago">PAGO</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Tabela de Taxas (inicialmente escondida) -->
+                        <table id="taxas" class="table table-bordered table-hidden">
+                            <thead>
+                                <tr>
+                                    <th class="table-active">Pedido</th>
+                                    <th class="table-active">Data</th>
+                                    <th class="table-active">Valor pedido</th>
+                                    <th class="table-active">Taxa transação (3,2%)</th>
+                                    <th class="table-active">Taxa repasse (1,49%)</th>
+                                    <th class="table-active">Forma de pagamento</th>
+                                    <th class="table-active">Previsão de desconto</th>
+                                    <th class="table-active">Situação</th>
+                                    <th class="table-active">Detalhes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>500</td>
+                                    <td>12-07-24 19:45</td>
+                                    <td>R$ 40,00</td>
+                                    <td>-R$ 2,28</td>
+                                    <td>-R$ 0,03</td>
+                                    <td>ONLINE</td>
+                                    <td>17-07-24</td>
+                                    <td class="status-tb"><span class="status-pendente">PENDENTE</span></td>
+                                    <td><a href="#" class="text-red" data-bs-toggle="modal"
+                                            data-bs-target="#pedidoModal">Ver detalhes</a></td>
+                                </tr>
+                                <tr>
+                                    <td>499</td>
+                                    <td>12-07-24 18:50</td>
+                                    <td>R$ 55,00</td>
+                                    <td>-R$ 1,76</td>
+                                    <td>-R$ 0,82</td>
+                                    <td>ONLINE</td>
+                                    <td>17-07-24</td>
+                                    <td class="status-tb"><span class="status-pendente">PENDENTE</span></td>
+                                    <td><a href="#" class="text-red" data-bs-toggle="modal"
+                                            data-bs-target="#pedidoModal">Ver detalhes</a></td>
+                                </tr>
+                                <tr>
+                                    <td>498</td>
+                                    <td>12-07-24 18:35</td>
+                                    <td>R$ 40,00</td>
+                                    <td>-R$ 0,00</td>
+                                    <td>-R$ 0,03</td>
+                                    <td>VIA LOJA</td>
+                                    <td>17-07-24</td>
+                                    <td class="status-tb"><span class="status-pendente">PENDENTE</span></td>
+                                    <td><a href="#" class="text-red" data-bs-toggle="modal"
+                                            data-bs-target="#pedidoModal">Ver detalhes</a></td>
+                                </tr>
+                                <tr>
+                                    <td>497</td>
+                                    <td>11-07-24 20:35</td>
+                                    <td>R$ 65,00</td>
+                                    <td>-R$ 2,08</td>
+                                    <td>-R$ 0,97</td>
+                                    <td>ONLINE</td>
+                                    <td>17-07-24</td>
+                                    <td class="status-tb"><span class="status-pendente">PENDENTE</span></td>
+                                    <td><a href="#" class="text-red" data-bs-toggle="modal"
+                                            data-bs-target="#pedidoModal">Ver detalhes</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Tabela de Outras Despesas (inicialmente escondida) -->
+                        <table id="outras" class="table table-bordered table-hidden text-center">
+                            <thead>
+                                <tr>
+                                    <th class="table-active text-center">Data</th>
+                                    <th class="table-active text-center">Valor</th>
+                                    <th class="table-active text-center">Descrição</th>
+                                    <th class="table-active text-center">Situação</th>
+                                    <th class="table-active text-center">Excluir</th>
+                                    <th class="table-active text-center">Editar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td>12-07-24</td>
+                                    <td>R$ 40,00</td>
+                                    <td>Entrega pedido nº 430</td>
+                                    <td class="status-tb"><span class="status-pago">PAGO</span></td>
+                                    <td><i class="bi bi-trash"></i></td>
+                                    <td><i class="bi bi-pencil-square"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>12-07-24</td>
+                                    <td>R$ 55,00</td>
+                                    <td>Entrega pedido nº 430</td>
+                                    <td class="status-tb"><span class="status-pago">PAGO</span></td>
+                                    <td><i class="bi bi-trash"></i></td>
+                                    <td><i class="bi bi-pencil-square"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>12-07-24</td>
+                                    <td>R$ 40,00</td>
+                                    <td>Entrega pedido nº 430</td>
+                                    <td class="status-tb"><span class="status-pago">PAGO</span></td>
+                                    <td><i class="bi bi-trash"></i></td>
+                                    <td><i class="bi bi-pencil-square"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>11-07-24 </td>
+                                    <td>R$ 65,00</td>
+                                    <td>Entrega pedido nº 430</td>
+                                    <td class="status-tb"><span class="status-pago">PAGO</span></td>
+                                    <td><i class="bi bi-trash"></i></td>
+                                    <td><i class="bi bi-pencil-square"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination pagination-style">
+                                <li class="page-item text-decoration-all"><a class="page-link text-red" href="#">&lt;
+                                        <span class="text-decoration">Anterior</span></a></li>
+                                <li class="page-item active"><a class="page-link select-item" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link text-red" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link text-red" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link text-red" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link text-red" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link text-red" href="#"><span
+                                            class="text-decoration">Próximo</span> &gt;</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-lg" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportModalLabel">Nova despesa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <h6>Nome da despesa</h6>
+                            <input type="text" class="form-control" placeholder="Dê um nome para sua despesa">
+                        </div>
+                        <div class="col">
+                            <h6>Descrição</h6>
+                            <input type="text" class="form-control" placeholder="Exemplo: Alimentos da sua loja">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <h6>Categorias</h6>
+                            <div class="custom-select-wrapper">
+                                <select class="custom-select">
+                                    <option value="categoria1" data-color="#007bff">Categoria 1</option>
+                                    <option value="categoria2" data-color="#28a745">Categoria 2</option>
+                                    <option value="categoria3" data-color="#dc3545">Categoria 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h6>Valor</h6>
+                            <input type="text" class="form-control" placeholder="Exemplo: R$ 200,00">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-red mt-2" data-bs-toggle="modal"
+                        data-bs-target="#secondaryModal">
+                        Nova Categoria
+                    </button>
+                    <div class="row mb-3">
+                        <div class="col-md-3">
+                            <h6>Despesa Fixa</h6>
+                            <label class="switch">
+                                <input type="checkbox" id="toggle-switch-fixel">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <h6>Despesa variável</h6>
+                            <label class="switch">
+                                <input type="checkbox" id="toggle-switch-variavel">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <h6>Data de vencimento</h6>
+                            <div class="input-group">
+                                <input type="date" class="form-control" id="dateTo">
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center gap-3">
+                            <h6 class="m-0" style="text-align: center;">Pago</h6>
+                            <input style="text-align: center;" type="checkbox">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-grey" data-bs-dismiss="modal"
+                            aria-label="Close">Voltar</button>
+                        <button type="button" class="btn btn-red ml-auto">Adicionar Despesa</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Secundário -->
+    <div class="modal fade" id="secondaryModal" tabindex="-1" aria-labelledby="secondaryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="secondaryModalLabel">Nova Categoria</h5>
+                </div>
+                <div class="modal-body ">
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <p>Nome da Categoria</p>
+                            <input type="text" class="form-control col-md-2" placeholder="Exemplo: Casa">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <p>Escolha a cor da sua categoria</p>
+                            <label>
+                                <input style="border: 2px solid red; background-color: red;" type="checkbox"
+                                    class="colored-checkbox" data-color="red">
+                                Vermelho
+                            </label>
+                            <br>
+                            <label>
+                                <input style="border: 2px solid rgb(0, 255, 64); background-color: rgb(0, 255, 64)"
+                                    type="checkbox" class="colored-checkbox" data-color="green">
+                                Verde
+                            </label>
+                            <br>
+                            <label>
+                                <input style="border: 2px solid rgb(238, 255, 0); background-color: rgb(238, 255, 0);"
+                                    type="checkbox" class="colored-checkbox" data-color="yellow">
+                                Amarelo
+                            </label>
+                            <br>
+                            <label>
+                                <input style="border: 2px solid rgb(0, 26, 255); background-color: rgb(0, 26, 255);"
+                                    type="checkbox" class="colored-checkbox">
+                                Azul (padrão)
+                            </label>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-grey" data-bs-dismiss="modal" aria-label="Close"  onclick="openAnotherModal()">Fechar</button>
+                    <button type="button" class="btn btn-red fs-6" data-bs-dismiss="modal">Salvar mudanças</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal pedido -->
+
+
+    <div class="modal fade" id="pedidoModal" tabindex="-1" aria-labelledby="pedidoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header p-4">
+                    <h5 class="modal-title" id="pedidoModalLabel">Despesas</h5>
+                    <div class="d-flex justify-content-end">
+                        <span class="p-3">12-07-24 19:45</span>
+                    </div>
+                </div>
+
+
+                <div class="modal-body p-4">
+                    <!-- Primeira linha de textos -->
+                    <div class="row">
+                        <div class="col text-center">
+                            <h6>Despesa</h6>
+                        </div>
+                        <div class="col text-center">
+                            <h6>Data de vencimento</h6>
+                        </div>
+                        <div class="col text-center">
+                            <h6>Situação</h6>
+                        </div>
+                        <div class="col text-center">
+                            <h6>Nome</h6>
+                        </div>
+                    </div>
+
+                    <!-- Segunda linha de textos -->
+                    <div class="row ">
+                        <div class="col text-center">
+                            <h6 class="text-muted">Mensalidade</h6>
+                        </div>
+                        <div class="col text-center">
+                            <h6 class="text-muted">31-08-2024</h6>
+                        </div>
+                        <div class="col text-center">
+                            <h6 class="text-muted">Pendente</h6>
+                        </div>
+                        <div class="col text-center">
+                            <h6 class="text-muted">Guilherme</h6>
+                        </div>
+                    </div>
+
+                    <div class="mt-4"
+                        style="background-color: rgba(206, 206, 206, 0.664); width: 600px; border-radius: 30px; padding: 15px;">
+                        <p style="font-weight: 500;">Mensalidade</p>
+                        <ul>
+                            <li>Consultoia para funcionários</li>
+                            <li>Ánalise de performace</li>
+                            <li>Campanha</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-footer p-4">
+                    <button type="button" class="btn btn-red px-5" data-bs-dismiss="modal">Voltar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Exportar Extrato -->
+    <div class="modal fade" id="exportModalExtrato" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportModalLabel">Extrato por período</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Escolha o mês que você quer o extrato</h6>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <h6>Mês</h6>
+                            <input type="text" class="form-control" placeholder="Atual">
+                        </div>
+                        <div class="col">
+                            <h6>Ano</h6>
+                            <input type="text" class="form-control" placeholder="Atual">
+                        </div>
+                    </div>
+                    <h6>Desde o dia <input type="text" class="form-control d-inline-block small-form" placeholder="1">
+                        até o dia <input type="text" class="form-control d-inline-block small-form" placeholder="30">
+                    </h6>
+                    <h6 class="mt-3">Selecione os tipos de despesa você deseja</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="extratoFormato" id="formatoOFX"
+                                    value="OFX">
+                                <label class="form-check-label" for="formatoOFX">
+                                    Comissões
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="extratoFormato" id="formatoPDF"
+                                    value="PDF">
+                                <label class="form-check-label" for="formatoPDF">
+                                    Mensalidade
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="extratoFormato" id="formatoCSV"
+                                    value="CSV">
+                                <label class="form-check-label" for="formatoCSV">
+                                    Taxas
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="extratoFormato" id="formatoCSV"
+                                    value="CSV">
+                                <label class="form-check-label" for="formatoCSV">
+                                    Outras Despesas
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    <h6 class="mt-3">Selecione o formato</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoOFX"
+                                    value="OFX">
+                                <label class="form-check-label" for="formatoOFX">
+                                    Visualizar em tela
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoOFX"
+                                    value="OFX">
+                                <label class="form-check-label" for="formatoOFX">
+                                    OFX
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoPDF"
+                                    value="PDF">
+                                <label class="form-check-label" for="formatoPDF">
+                                    PDF
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="extratoFormato" id="formatoCSV"
+                                    value="CSV">
+                                <label class="form-check-label" for="formatoCSV">
+                                    CSV
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-red px-5">Gerar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/expense.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

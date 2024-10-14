@@ -1,0 +1,159 @@
+@media (max-width: 1000px) {
+
+
+    #col-one {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .slider {
+        width: 48px;
+        height: 25px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 19px !important;
+        width: 18px !important;
+        border-radius: 50%;
+        right: 5px;
+        bottom: 5px;
+        top: 2px;
+        background-color: white;
+        transition: .4s;
+    }
+    .ctn-prince {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .main-content {
+        padding: 0 20px;
+      }
+      .btn {
+        width: 100px;
+
+      }
+    
+      .btn-in {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+    
+      .btn-in a,
+      .btn-in button {
+        margin-bottom: 10px;
+      }
+    
+      .division2 {
+        flex-direction: column;
+      }
+    
+      .division2 .col-md-4 {
+        width: 100%;
+      }
+    
+      .card {
+        margin-bottom: 20px;
+      }
+
+      .title-acess {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+      .btn-in button {
+        border: none;
+        width: 100px !important;
+        font-size: 10px !important;
+        height: 30px;
+        color: white;
+        background-color: red;
+        border-radius: 10px !important;
+    }
+      
+  
+}
+
+
+
+.ctn-prince {
+    display: flex;
+    flex-direction: row;
+}
+
+.division {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title-acess {}
+
+.acess-1 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-red {
+    background-color: var(--color-red);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-red:hover {
+    background-color: #cc1724;
+    color: var(--color-light);
+}
+
+.dono {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.relatorio {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+}
+
+.relatorio p {
+    margin: 0;
+    padding-top: 0;
+}
+
+.ver-mais-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    color: red;
+}
+
+.btnacess:hover {
+    background-color: rgb(94, 0, 0);
+
+}
+
+.ver-mais-link:hover {
+
+    color: rgb(139, 0, 0);
+}
+
+#col-one {
+    margin-left: 250px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-left: 0;
+    overflow: auto;
+    z-index: 5;
+}

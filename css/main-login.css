@@ -1,0 +1,242 @@
+:root {
+  --color-light: hsl(0, 0%, 100%);
+  --color-red: #EA1D2C;
+  --color-red-background: #cc1724;
+  --color-grey-claro: #dadada;
+  --color-grey-escuro: #767676;
+  --font-body: 'Poppins', sans-serif;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field .form-control {
+  padding-right: 40px;
+  /* Adicione espaço para o ícone */
+}
+
+.password-field .toggle-password {
+  right: 20px;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+  z-index: 10;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  font-family: var(--font-body);
+}
+
+.text-red {
+  color: var(--color-red);
+}
+
+.text-light {
+  color: var(--color-light);
+}
+
+.btn-red {
+  background-color: var(--color-red);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-red:hover {
+  background-color: var(--color-red-background);
+  color: var(--color-light);
+}
+
+.image-col {
+  height: 100vh;
+  left: 0;
+  display: flex;
+}
+
+.image-col img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  float: left;
+}
+
+.logo-ifood {
+  width: 120px;
+  margin-bottom: 70px;
+}
+
+.custom-link {
+  color: var(--color-red);
+}
+
+.titulo {
+  font-size: 1.5rem;
+  text-align: left;
+  width: 75%;
+}
+
+.descricao {
+  text-align: left;
+  width: 75%;
+}
+
+.email-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+}
+
+.form-email {
+  font-weight: bold;
+}
+
+.form-control {
+  border: 2px solid var(--color-red);
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border: 2px solid var(--color-red);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.access-problem {
+  font-weight: bold;
+  text-align: right;
+  width: 75%;
+  margin-top: -10px;
+}
+
+.link-cadastro {
+  font-weight: bold;
+}
+
+.link-cadastro:hover {
+  color: var(--color-red-background);
+  text-decoration: none;
+}
+
+.logo-finhub {
+  width: 150px;
+  margin-top: 70px;
+}
+
+
+/* Tela Login 2 */
+
+.password-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+}
+
+.form-password {
+  font-weight: bold;
+}
+
+.alterar-email {
+  font-weight: bold;
+  text-align: left;
+  width: 75%;
+}
+
+.access-problem-alterar {
+  font-weight: bold;
+  text-align: right;
+  width: 75%;
+}
+
+.input-group {
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+}
+
+/* Tela login 3 */
+
+.btn-grey {
+  background-color: var(--color-grey-claro);
+  color: var(--color-grey-escuro);
+}
+
+.style-codigo {
+  width: 50px;
+  margin: 0 5px;
+}
+
+.btn-grey.active {
+  background-color: var(--color-red);
+  color: white;
+  border: none;
+}
+
+.btn-grey.active:hover {
+  background-color: var(--color-red-background);
+}
+
+.time {
+  color: #333;
+  font-weight: bold;
+}
+
+.time.expired {
+  color: var(--color-red);
+}
+
+.linka.expired {
+  color: var(--color-red);
+}
+
+.btn-grey:hover {
+  background-color: #7c7c7c;
+  color: var(--color-light);
+}
+
+.codigo-field {
+  display: flex;
+  color: var(--color-grey-escuro);
+  flex-direction: column;
+  align-items: flex-start;
+  width: 75%;
+}
+
+.form-codigo {
+  font-weight: bold;
+}
+
+
+.style-codigo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-color: var(--color-grey-claro);
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.style-codigo-dois:hover {
+  color: var(--color-grey-claro);
+}
+
+.link-codigo {
+  color: var(--color-grey-escuro);
+}
+
+.link-codigo:hover {
+  color: var(--color-red-background);
+}

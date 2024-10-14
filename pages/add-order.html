@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inclusão de novo pedido</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="
+    https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css
+    ">
+
+  <link rel="stylesheet" href="../css/orders.css" />
+  <link rel="icon" href="images/../../images/Logo.png" type="image/png" />
+</head>
+
+<body>
+
+  <!-- Início Topnav -->
+
+  <div class="container-fluid h-100">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
+        style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)">
+        <div class="container-fluid d-flex justify-content-between align-items-center" style="margin-left: 250px">
+          <!-- Tema da tela em que o usuário se encontra -- (Trocar o nome) -->
+          <a class="navbar-brand" href="#">Inclusão de novo pedido</a>
+
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-person-circle text-red"></i>
+            <div class="d-flex flex-column">
+              <div class="d-flex gap-2 align-items-center">
+                <span class="fs-5">Pizzaria G'S</span>
+                <i class="bi bi-chevron-down" style="cursor: pointer; font-weight: bold" data-bs-toggle="collapse"
+                  data-bs-target="#userMenu" aria-expanded="false" aria-controls="userMenu"></i>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="fs-9">Loja Ativa</span>
+                <div style="
+                      top: 0;
+                      background-color: #58cf81;
+                      width: 13px;
+                      height: 13px;
+                      border-radius: 50px;
+                    "></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="collapse position-absolute end-0 px-4" id="userMenu" style="min-width: 500px; min-height: 200px; z-index: 100;">
+      <div class="card card-body p-12" style="z-index: 1;">
+        <!-- Conteúdo do popup -->
+        <ul class="list-unstyled mb-0">
+          <p style="font-weight: 500">Escolher loja</p>
+          <div>
+            <input type="text" class="form-control" placeholder="Busque pelo nome ou ID" />
+          </div>
+          <div class="tela mb-3 p-3 d-flex align-items-center" style="
+              background-color: rgba(128, 128, 128, 0.205);
+              margin-top: 25px;
+              width: 100%;
+              height: 60px;
+              ">
+            <div class="d-flex align-items-center justify-content-between w-100">
+              <img src="../images/fluent-emoji-flat_pizza.png" alt="" style="margin-left: 20px; height: 40px" />
+              <div class="text-nowrap" style="margin-right: 20px">
+                <p class="mb-0" style="font-weight: 500">
+                  Pizzaria G's - 1001000
+                </p>
+                <p class="mb-0">Rua xxxx, 100, Bairro, Cidade, SP, BR</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex gap-3 justify-content-between">
+            <p class="mb-0">
+              Exibindo <span style="font-weight: 500">1 de 1</span>
+            </p>
+            <div class="d-flex gap-5">
+              <a style="
+                  color: black;
+                  text-decoration: underline;
+                  cursor: pointer;
+                  ">&lt;Anterior</a>
+              <a style="
+                  color: black;
+                  text-decoration: underline;
+                  cursor: pointer;
+                  ">Próximo&gt;</a>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <!-- Fim Topnav -->
+    <!-- Início Menu Lateral -->
+    <div class="row h-100">
+      <aside class="col-md-3 text-dark sidebar h-100">
+        <header class="sidebar-header py-4">
+          <div class="d-flex justify-content-start align-items-center">
+            <img src="../images/Logo.png" alt="FinHub Logo" />
+          </div>
+        </header>
+        <nav class="nav flex-column sidebar-nav py-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">
+                <i class="bi bi-house-door-fill"></i>
+                <span class="ml-2">Início</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="balance.html">
+                <i class="bi bi-cash-coin"></i>
+                <span class="ml-2">Saldo</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="revenue.html">
+                <i class="bi bi-currency-dollar"></i>
+                <span class="ml-2">Receitas</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="expense.html">
+                <i class="bi bi-bar-chart-fill"></i>
+                <span class="ml-2">Despesas</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="transaction-extract.html">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span class="ml-2">Extrato</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="orders.html">
+                <i class="bi bi-file-text-fill"></i>
+                <span class="ml-2">Pedidos</span>
+              </a>
+              <ul class="nav flex-column ml-4" id="pedidos-collapse">
+                <li class="nav-item" style="background-color: #fde9ea; color: #ea1d2c;">
+                  <a class="nav-link" href="add-order.html" style="color: #ea1d2c;">
+                    <i class="bi bi-arrow-return-right"></i>
+                    Adicionar pedido
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="financial-report.html">
+                <i class="bi bi-file-earmark-bar-graph-fill"></i>
+                <span class="ml-2">Relatórios</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="help.html">
+                <i class="bi bi-question-octagon-fill"></i>
+                <span class="ml-2">Ajuda</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="my-account.html">
+                <i class="bi bi-shield-fill-minus"></i>
+                <span class="ml-2">Segurança</span>
+              </a>
+              <ul class="nav flex-column ml-4" id="seguranca-collapse">
+                <li class="nav-item">
+                  <a class="nav-link" href="access-management.html">
+                    <i class="bi bi-arrow-return-right"></i>
+                    Gestão de acesso
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="create-access.html">
+                    <i class="bi bi-arrow-return-right"></i>
+                    Criar acesso
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="see-access.html">
+                    <i class="bi bi-arrow-return-right"></i>
+                    Ver acessos
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="main-login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span class="ml-2">Sair</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <footer class="sidebar-footer py-4">
+          <div class="d-flex justify-content-start align-items-center">
+            <img src="../images/Logo FinHub.png" alt="FinHub Logo" />
+          </div>
+        </footer>
+      </aside>
+      <!-- Fim Menu Lateral -->
+
+      <!-- Início conteúdo add-order -->
+      <main id="col-one" class="col px-4 pt-3">
+        <section class="format-section">
+          <div class="row mb-4">
+            <div class="col-12">
+              <p class="form-label">Dados do cliente</p>
+            </div>
+
+            <div class="col-12">
+              <div class="row g-3 mb-3 align-items-end">
+                <div class="col-md-3">
+                  <label for="CPF" class="form-label">CPF/CNPJ</label>
+                  <input type="text" class="form-control" placeholder="123.227.123-16">
+                </div>
+                <div class="col-md-2">
+                  <button class="btn btn-red w-100" type="button" data-bs-toggle="add-client"
+                    data-bs-target="#exportAddOrder">Novo cliente</button>
+                </div>
+                <div class="col-md-7">
+                  <label for="name" class="form-label">Nome</label>
+                  <input type="text" class="form-control" disabled placeholder="José da Silva">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-12">
+              <p class="form-label">Endereço de entrega</p>
+            </div>
+
+            <div class="col-12">
+              <div class="row g-3 mb-3 align-items-end">
+                <div class="col-md-2">
+                  <label for="CEP" class="form-label">CEP</label>
+                  <input type="text" class="form-control" disabled placeholder="0512371-200">
+                </div>
+                <div class="col-md-8">
+                  <label for="Endereço" class="form-label">Endereço</label>
+                  <input type="text" class="form-control" disabled placeholder="Rua das ruas">
+                </div>  
+                <div class="col-md-2">
+                  <label for="numero" class="form-label">Número</label>
+                  <input type="text" class="form-control" disabled placeholder="1892">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="row g-3 mb-3 align-items-end">
+                <div class="col-md-5">
+                  <label for="complemento" class="form-label">Complemento</label>
+                  <input type="text" class="form-control" disabled placeholder="bloco A12">
+                </div>
+                <div class="col-md-3">
+                  <label for="bairro" class="form-label">Bairro</label>
+                  <input type="text" class="form-control" disabled placeholder="Harry potter">
+                </div>
+                <div class="col-md-3">
+                  <label for="cidade" class="form-label">Cidade</label>
+                  <input type="text" class="form-control" disabled placeholder="Rio de janeiro">
+                </div>
+                <div class="col-md-1">
+                  <label for="estado" class="form-label">Estado</label>
+                  <input type="text" class="form-control" disabled placeholder="RJ">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="row g-3 mb-3 align-items-end">
+                <div class="col-md-3">
+                  <label for="telefone" class="form-label">Telefone</label>
+                  <input type="text" class="form-control" disabled placeholder="2819-21031">
+                </div>
+                <div class="col-md-3">
+                  <label for="celular" class="form-label">Celular</label>
+                  <input type="text" class="form-control" disabled placeholder="11 98293012">
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
+                  <label for="formaPagamento" class="form-label">Forma de pagamento</label>
+                  <select class="form-select" id="situacao">
+                    <option value="todos" selected></option>
+                    <option value="online">ONLINE</option>
+                    <option value="via_loja">VIA LOJA</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-12">
+              <p class="form-label">Pedido</p>
+            </div>
+
+            <div class="col-12">
+              <nav class="nav flex-column border nav-pedidos">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      data-bs-toggle="collapse" data-bs-target="#collapseDoDia"
+                      aria-expanded="false" aria-controls="collapseDoDia">
+                      <span>Do DIA</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="nav flex-column collapse" id="collapseDoDia">
+                      <li class="nav-item item-detail">
+                        <p>Sexta: Quatro queijos</p>
+                        <div class="switch-container">
+                          <p class="valor-pizza-desconto">R$ 58,00</p>
+                          <p class="valor-pizza-sem-desconto">R$ 68,00</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+
+              <!-- Segundo bloco: Favoritas da G's -->
+              <nav class="nav flex-column border nav-pedidos">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseFavoritas"
+                      aria-expanded="false" aria-controls="collapseFavoritas">
+                      <span>Favoritas da G's</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="nav flex-column collapse" id="collapseFavoritas">
+                      <li class="nav-item item-detail">
+                        <p>Pizza P de Chocolate</p>
+                        <div class="switch-container">
+                          <p class="valor-pizza-desconto">R$ 42,00</p>
+                          <p class="valor-pizza-sem-desconto">R$ 48,00</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                      <li class="nav-item item-detail">
+                        <p>Pizza M de Calabresa + Borda Simples de Catupiry</p>
+                        <div class="switch-container">
+                          <p class="valor-pizza-desconto">R$ 58,00</p>
+                          <p class="valor-pizza-sem-desconto">R$ 77,00</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                      <li class="nav-item item-detail">
+                        <p>Pizza M de 4 queijos</p>
+                        <div class="switch-container">
+                          <p class="valor-pizza-desconto">R$ 57,00</p>
+                          <p class="valor-pizza-sem-desconto">R$ 76,00</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                      <li class="nav-item item-detail">
+                        <p>Pizza P de Kit Kat + Vulcão de Chocolate</p>
+                        <div class="switch-container">
+                          <p class="valor-pizza-desconto">R$ 84,00</p>
+                          <p class="valor-pizza-sem-desconto">R$ 95,00</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                      <li class="nav-item item-detail">
+                        <p>Pizza M de Mignon c/ Cheddar</p>
+                        <div class="switch-container">
+                          <p class="valor-pizza-desconto">R$ 97,00</p>
+                          <p class="valor-pizza-sem-desconto">R$ 109,00</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+
+              <!-- Bloco de tamanhos de pizza -->
+              <nav class="nav flex-column border nav-pedidos">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePizzaP"
+                      aria-expanded="false" aria-controls="collapsePizzaP">
+                      <span>Pizza P - 6 fatias, 25cm</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="nav flex-column collapse" id="collapsePizzaP">
+                      <li class="nav-item item-detail">
+                        <p>Pizza P - 2 Sabores</p>
+                        <div class="switch-container">
+                          <p>A partir de</p>
+                          <p class="valor-pizza">R$ 41,00</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+
+              <nav class="nav flex-column border nav-pedidos">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePizzaM"
+                      aria-expanded="false" aria-controls="collapsePizzaM">
+                      <span>Pizza M - 8 fatias, 30cm</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="nav flex-column collapse" id="collapsePizzaM">
+                      <li class="nav-item item-detail">
+                        <p>Pizza M - 2 Sabores</p>
+                        <div class="switch-container">
+                          <p>A partir de</p>
+                          <p class="valor-pizza">R$ 55,00</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+
+              <nav class="nav flex-column border nav-pedidos">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePizzaG"
+                      aria-expanded="false" aria-controls="collapsePizzaG">
+                      <span>Pizza G - 10 fatias, 35cm</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="nav flex-column collapse" id="collapsePizzaG">
+                      <li class="nav-item item-detail">
+                        <p>Pizza G - 2 Sabores</p>
+                        <div class="switch-container">
+                          <p>A partir de</p>
+                          <p class="valor-pizza">R$ 73,00</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                      <li class="nav-item item-detail">
+                        <p>Pizza G - 3 Sabores</p>
+                        <div class="switch-container">
+                          <p>A partir de</p>
+                          <p class="valor-pizza">R$ 72,99</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+
+              <nav class="nav flex-column border nav-pedidos">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePizzaGG"
+                      aria-expanded="false" aria-controls="collapsePizzaGG">
+                      <span>Pizza GG - 12 fatias, 40cm</span>
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="nav flex-column collapse" id="collapsePizzaGG">
+                      <li class="nav-item item-detail">
+                        <p>Pizza GG - 3 Sabores</p>
+                        <div class="switch-container">
+                          <p>A partir de</p>
+                          <p class="valor-pizza">R$ 91,98</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                      <li class="nav-item item-detail">
+                        <p>Pizza GG - 4 Sabores</p>
+                        <div class="switch-container">
+                          <p>A partir de</p>
+                          <p class="valor-pizza">R$ 92,00</p>
+                          <label class="switch">
+                            <input type="checkbox" id="toggle-switch-fixel">
+                            <span class="slider"></span>
+                          </label>
+                          <i class="bi bi-pencil-square"></i>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="row">
+                <div class="d-flex justify-content-end mb-3">
+                  <button class="btn btn-red fs-6 add-order" type="button" data-bs-toggle="add-order"
+                    data-bs-target="#exportAddOrder" style="width: 250px">Cadastrar pedido</button>
+                </div>
+              </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

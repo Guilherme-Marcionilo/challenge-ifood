@@ -11,8 +11,15 @@ saldodes
 Variáveis
 --color-light: hsl(0, 0%, 100%);
 --color-red: #EA1D2C;
+--color-blue: #2B57AC;
+--color-grey-escuro: #767676;
+--color-grey-claro: #dadada;
+--color-green: #038138;
 --font-body: 'Poppins', sans-serif;
+
+teste
 ------------------------------------------------------
+testando develop
 
 ícones
 Olho cortado = <i class="bi bi-eye-slash"></i>
@@ -35,4 +42,4 @@ Seta para baixo (Extrato/Relatório) = <i class="bi bi-arrow-down"></i>
 Pesquisar = <i class="bi bi-search"></i>
 + = <i class="bi bi-plus"></i>
 Lixo = <i class="bi bi-trash"></i>
-Editar = <i class="bi bi-pencil-square"></i>
+Editar = c
