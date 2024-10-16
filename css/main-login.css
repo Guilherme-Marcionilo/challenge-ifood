@@ -240,3 +240,10 @@ html {
 .link-codigo:hover {
   color: var(--color-red-background);
 }
+
+.logo-finhub {
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  width: 150px !important; /* Tamanho padrão */
+  margin-bottom: 70px !important;
+}
