@@ -19,7 +19,9 @@ html {
   font-family: var(--font-body);
   overflow-y: auto;
 }
-
+#topdisable {
+  margin-left: 250px;
+}
 img {
   max-width: 100%;
 }

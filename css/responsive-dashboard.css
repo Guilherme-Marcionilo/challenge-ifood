@@ -39,9 +39,39 @@
   h4 {
     font-size: 1.2rem;
   }
+  .sidebar {
+    display: none; 
+    transition: all 0.3s; 
+  }
+  
+  .sidebar.active {
+    display: block; 
+    z-index: 100;
+  }
+
+.active-ban {
+  display: none;
+  margin-left: 80%;
 }
 
-/* Estilos adicionais para a modal */
+  #col-one {
+    padding: 0; 
+    margin: 0; 
+    width: 100%; 
+}
+
+#topdisable {
+margin-left: 0;
+}
+
+#topdisable2 {
+  display: none;
+}
+
+
+}
+
+
 .modal-header h4 {
   font-weight: bold;
 }
@@ -77,3 +107,4 @@
 .small-form {
   width: 44px;
 }
+

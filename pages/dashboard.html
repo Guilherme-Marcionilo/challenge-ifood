@@ -30,11 +30,14 @@
     <div class="row">
       <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
         style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)">
-        <div class="container-fluid d-flex justify-content-between align-items-center" style="margin-left: 250px">
+        <div id="topdisable" class="container-fluid d-flex justify-content-between align-items-center ">
           <!-- Tema da tela em que o usuário se encontra -- (Trocar o nome) -->
           <a class="navbar-brand" href="#">Dashboard Financeiro</a>
+          <button class="navbar-toggler" type="button" id="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <div class="d-flex align-items-center gap-3">
+          <div id="topdisable2" class="d-flex align-items-center gap-3">
             <i class="bi bi-person-circle text-red"></i>
             <div class="d-flex flex-column">
               <div class="d-flex gap-2 align-items-center">
@@ -289,6 +292,8 @@
       </main>
     </div>
   </div>
+
+  <!--MODAL-->
   
     <!-- Vlibras -->
     <div vw class="enabled" style="margin: 2% !important;">
@@ -308,6 +313,15 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+  
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
 
 </body>
 
