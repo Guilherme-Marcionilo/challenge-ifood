@@ -314,12 +314,23 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-
     const menuToggle = document.getElementById('menu-toggle');
     const sidebar = document.querySelector('.sidebar');
   
+    // Alterna a visibilidade da sidebar ao clicar no botão de toggle
     menuToggle.addEventListener('click', () => {
       sidebar.classList.toggle('active');
+    });
+  
+    // Função para fechar o menu se o clique for fora dele
+    document.addEventListener('click', function(event) {
+      const isClickInsideSidebar = sidebar.contains(event.target);
+      const isClickOnToggle = menuToggle.contains(event.target);
+  
+      // Se o clique não for dentro do menu ou no botão de toggle, fecha o menu
+      if (!isClickInsideSidebar && !isClickOnToggle && window.innerWidth <= 992) {
+        sidebar.classList.remove('active');
+      }
     });
   </script>
 
