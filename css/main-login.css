@@ -152,11 +152,12 @@ html {
   font-weight: bold;
   text-align: left;
   width: 75%;
+  margin-bottom: 0.2rem !important;
 }
 
 .access-problem-alterar {
   font-weight: bold;
-  text-align: right;
+  text-align: left;
   width: 75%;
 }
 
