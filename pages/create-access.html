@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Criar acesso</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Criar acesso</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="../css/sidebar.css" />
-    <link rel="icon" href="../images/Logo.png" type="image/png" />
-  </head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-  <body>
-    <div class="container-fluid h-100">
-      <header class="row">
-        <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
-          style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)">
-          <div class="container-fluid d-flex justify-content-between align-items-center" style="margin-left: 250px">
-            <a class="navbar-brand" href="#">Criar acesso</a>
-            <div class="d-flex align-items-center gap-3">
-              <i class="bi bi-person-circle text-red"></i>
-              <div class="d-flex flex-column">
-                <div class="d-flex gap-2 align-items-center">
-                  <span class="fs-5">Pizzaria G'S</span>
-                  <i class="bi bi-chevron-down" style="cursor: pointer; font-weight: bold" data-bs-toggle="collapse"
-                    data-bs-target="#userMenu" aria-expanded="false" aria-controls="userMenu"></i>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                  <span class="fs-9">Loja Ativa</span>
-                  <div style="top: 0; background-color: #58cf81; width: 13px; height: 13px; border-radius: 50px;"></div>
-                </div>
+  <link rel="stylesheet" href="../css/sidebar.css" />
+  <link rel="stylesheet" href="../css/responsive-collapse.css" />
+  <link rel="stylesheet" href="../css/responsive-menu.css" />
+  <link rel="icon" href="../images/Logo.png" type="image/png" />
+</head>
+
+<body>
+  <div class="container-fluid h-100">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
+        style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)">
+        <div id="topdisable" class="container-fluid d-flex justify-content-between align-items-center ">
+          <!-- Tema da tela em que o usuário se encontra -- (Trocar o nome) -->
+          <a id="topdisablemenuhamburguer" class="navbar-brand" href="#">Criar acesso</a>
+          <button class="navbar-toggler" type="button" id="menu-toggle" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div id="topdisable2" class="d-flex align-items-center gap-3">
+            <i class="bi bi-person-circle text-red"></i>
+            <div class="d-flex flex-column">
+              <div class="d-flex gap-2 align-items-center">
+                <span class="fs-5 responsive-top d-none d-sm-block">Pizzaria G'S</span>
+                <i class="bi bi-chevron-down" style="cursor: pointer; font-weight: bold" data-bs-toggle="collapse"
+                  data-bs-target="#userMenu" aria-expanded="false" aria-controls="userMenu"></i>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="fs-9 d-none d-sm-block">Loja Ativa</span>
+                <div class="d-none d-sm-block" style="
+                      top: 0;
+                      background-color: #58cf81;
+                      width: 13px;
+                      height: 13px;
+                      border-radius: 50px;
+                    "></div>
               </div>
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
       </header>
       <div class="collapse position-absolute end-0 px-4" id="userMenu"
         style="min-width: 500px; min-height: 200px; z-index: 100;">
@@ -120,7 +125,7 @@
                 </a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="orders.html">
+                <a class="nav-link" href="orders.html">
                   <i class="bi bi-file-text-fill"></i>
                   <span class="ml-2">Pedidos</span>
                 </a>
@@ -128,7 +133,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="add-order.html">
                       <i class="bi bi-arrow-return-right"></i>
-                      Adicionar pedido
+                      <span>Adicionar pedido</span>
                     </a>
                   </li>
                 </ul>
@@ -146,24 +151,25 @@
                 </a>
               </li>
               <li class="nav-item">
-              <a class="nav-link" href="my-account.html">
+                <a class="nav-link" href="my-account.html">
                   <i class="bi bi-shield-fill-minus"></i>
                   <span class="ml-2">Segurança</span>
                 </a>
-              <ul class="nav flex-column ml-4" id="seguranca-collapse">
+                <ul class="nav flex-column ml-4" id="seguranca-collapse">
                   <li class="nav-item">
                     <a class="nav-link" href="access-management.html">
                       <i class="bi bi-arrow-return-right"></i>
-                      Gestão de acesso
+                      <span>Gestão de acesso</span>
                     </a>
                   </li>
                   <li class="nav-item" style="background-color: #fde9ea; color: #ea1d2c;">
-                    <a class="nav-link" href="create-access.html" style="color: #ea1d2c;"><i class="bi bi-arrow-return-right"></i>Criar acesso</a>
+                    <a class="nav-link" href="create-access.html" style="color: #ea1d2c;"><i
+                        class="bi bi-arrow-return-right"></i><span>Criar acesso</span></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="see-access.html">
                       <i class="bi bi-arrow-return-right"></i>
-                      Ver acessos
+                      <span>Ver acessos</span
                     </a>
                   </li>
                 </ul>
@@ -178,7 +184,7 @@
           </nav>
           <footer class="sidebar-footer py-4">
             <div class="d-flex justify-content-start align-items-center">
-              <img src="../images/Logo FinHub.png" alt="FinHub Logo" />
+              <img id="myImage" src="../images/Logo FinHub.png" alt="FinHub Logo" />
             </div>
           </footer>
         </aside>
@@ -195,42 +201,26 @@
                   <div class="card-body">
                     <form class="row g-3">
                       <div class="col-md-12">
-                        <label for="nome" class="form-label"
-                          >Nome da pessoa</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="nome"
-                          placeholder="Fulano"
-                        />
+                        <label for="nome" class="form-label">Nome da pessoa</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Fulano" />
                       </div>
                       <div class="col-md-12">
-                        <label for="email" class="form-label"
-                          >E-mail de acesso</label
-                        >
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="email"
-                          placeholder="nome@email.com.br"
-                        />
+                        <label for="email" class="form-label">E-mail de acesso</label>
+                        <input type="email" class="form-control" id="email" placeholder="nome@email.com.br" />
                       </div>
                       <div class="col-md-12">
-                        <label for="perfil" class="form-label"
-                          >Selecione o tipo de perfil</label
-                        >
+                        <label for="perfil" class="form-label">Selecione o tipo de perfil</label>
                         <select class="form-select" id="perfil">
                           <option value="operador">Operador</option>
                           <option value="gerente">Gerente</option>
                           <option value="administrador">Marketing</option>
-                          <option value="administrador">Financeiro</option> 
-                          <option value="administrador">Administrador</option>  
+                          <option value="administrador">Financeiro</option>
+                          <option value="administrador">Administrador</option>
                         </select>
                       </div>
                       <div class="col-md-12 text-end">
                         <a href="access-management.html" class="btn btn-grey">Cancelar</a>
-                      <button type="button" class="btn btn-red ml-auto">Salvar</button>
+                        <button type="button" class="btn btn-red ml-auto">Salvar</button>
                       </div>
                     </form>
                   </div>
@@ -241,9 +231,9 @@
         </main>
       </div>
     </div>
-    
+
     <!-- Vlibras -->
-    <div vw class="enabled"  style="margin: 2% !important;">
+    <div vw class="enabled" style="margin: 2% !important;">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>
         <div class="vw-plugin-top-wrapper"></div>
@@ -255,10 +245,31 @@
     </script>
     <!-- Fim Vlibras -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const sidebar = document.querySelector('.sidebar');
+
+      // Alterna a visibilidade da sidebar ao clicar no botão de toggle
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+      });
+
+      // Função para fechar o menu se o clique for fora dele
+      document.addEventListener('click', function (event) {
+        const isClickInsideSidebar = sidebar.contains(event.target);
+        const isClickOnToggle = menuToggle.contains(event.target);
+
+        // Se o clique não for dentro do menu ou no botão de toggle, fecha o menu
+        if (!isClickInsideSidebar && !isClickOnToggle && window.innerWidth <= 768) {
+          sidebar.classList.remove('active');
+        }
+      });
+    </script>
+</body>
+
 </html>

@@ -12,6 +12,8 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="../css/balance.css" />
+  <link rel="stylesheet" href="../css/responsive-collapse.css" />
+  <link rel="stylesheet" href="../css/responsive-menu.css" />
   <link rel="icon" href="images/../../images/Logo.png" type="image/png" />
 </head>
 
@@ -22,21 +24,25 @@
     <div class="row">
       <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 p-3"
         style="border-bottom: 2px solid rgba(226, 226, 226, 0.459)">
-        <div class="container-fluid d-flex justify-content-between align-items-center" style="margin-left: 250px">
+        <div id="topdisable" class="container-fluid d-flex justify-content-between align-items-center ">
           <!-- Tema da tela em que o usuário se encontra -- (Trocar o nome) -->
-          <a class="navbar-brand" href="#">Saldo</a>
+          <a id="topdisablemenuhamburguer" class="navbar-brand" href="#">Saldo</a>
+          <button class="navbar-toggler" type="button" id="menu-toggle" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <div class="d-flex align-items-center gap-3">
+          <div id="topdisable2" class="d-flex align-items-center gap-3">
             <i class="bi bi-person-circle text-red"></i>
             <div class="d-flex flex-column">
               <div class="d-flex gap-2 align-items-center">
-                <span class="fs-5">Pizzaria G'S</span>
+                <span class="fs-5 responsive-top d-none d-sm-block">Pizzaria G'S</span>
                 <i class="bi bi-chevron-down" style="cursor: pointer; font-weight: bold" data-bs-toggle="collapse"
                   data-bs-target="#userMenu" aria-expanded="false" aria-controls="userMenu"></i>
               </div>
               <div class="d-flex align-items-center gap-2">
-                <span class="fs-9">Loja Ativa</span>
-                <div style="
+                <span class="fs-9 d-none d-sm-block">Loja Ativa</span>
+                <div class="d-none d-sm-block" style="
                       top: 0;
                       background-color: #58cf81;
                       width: 13px;
@@ -143,10 +149,10 @@
                 <span class="ml-2">Pedidos</span>
               </a>
               <ul class="nav flex-column ml-4" id="pedidos-collapse">
-                <li>
+                <li class="nav-item">
                   <a class="nav-link" href="add-order.html">
                     <i class="bi bi-arrow-return-right"></i>
-                    Adicionar pedido
+                    <span>Adicionar pedido</span>
                   </a>
                 </li>
               </ul>
@@ -172,34 +178,28 @@
                 <li class="nav-item">
                   <a class="nav-link" href="access-management.html">
                     <i class="bi bi-arrow-return-right"></i>
-                    Gestão de acesso
+                    <span>Gestão de acesso</span>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="create-access.html">
                     <i class="bi bi-arrow-return-right"></i>
-                    Criar acesso
+                    <span>Criar acesso</span>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="see-access.html">
                     <i class="bi bi-arrow-return-right"></i>
-                    Ver acessos
+                    <span>Ver acesso</span>
                   </a>
                 </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="main-login.html">
-                <i class="bi bi-box-arrow-right"></i>
-                <span class="ml-2">Sair</span>
-              </a>
             </li>
           </ul>
         </nav>
         <footer class="sidebar-footer py-4">
           <div class="d-flex justify-content-start align-items-center">
-            <img src="../images/Logo FinHub.png" alt="FinHub Logo" />
+            <img id="myImage" src="../images/Logo FinHub.png" alt="FinHub Logo" />
           </div>
         </footer>
       </aside>
@@ -476,18 +476,18 @@
     </div>
   </div>
 
-    <!-- Vlibras -->
-    <div vw class="enabled"  style="margin: 2% !important;">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
+  <!-- Vlibras -->
+  <div vw class="enabled" style="margin: 2% !important;">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    <!-- Fim Vlibras -->
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <!-- Fim Vlibras -->
   <script src="../js/balance.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
@@ -495,6 +495,26 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    // Alterna a visibilidade da sidebar ao clicar no botão de toggle
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+
+    // Função para fechar o menu se o clique for fora dele
+    document.addEventListener('click', function (event) {
+      const isClickInsideSidebar = sidebar.contains(event.target);
+      const isClickOnToggle = menuToggle.contains(event.target);
+
+      // Se o clique não for dentro do menu ou no botão de toggle, fecha o menu
+      if (!isClickInsideSidebar && !isClickOnToggle && window.innerWidth <= 768) {
+        sidebar.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 
 </html>

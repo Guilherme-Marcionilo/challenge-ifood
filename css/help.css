@@ -13,6 +13,14 @@
     height: 100%;
     font-family: var(--font-body);
   }
+
+  #topdisable {
+    margin-left: 250px;
+  }
+
+  img {
+    max-width: 100%;
+  }
   
   .text-red {
     color: var(--color-red);

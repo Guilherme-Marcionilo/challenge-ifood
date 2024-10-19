@@ -5,6 +5,7 @@
   --color-black: #000000;
   --font-body: "Poppins", sans-serif;
 }
+
 body,
 html {
   margin: 0;
@@ -13,16 +14,28 @@ html {
   height: 100%;
   font-family: var(--font-body);
 }
+
+#topdisable {
+  margin-left: 250px;
+}
+
+img {
+  max-width: 100%;
+}
+
 .text-red {
   color: var(--color-red);
 }
+
 .text-red:hover {
   text-decoration: none;
   color: var(--color-red-background);
 }
+
 .text-light {
   color: var(--color-light);
 }
+
 .sidebar {
   background-color: var(--color-light);
   position: fixed;
@@ -33,15 +46,18 @@ html {
   overflow-y: auto;
   transition: all 0.3s ease;
 }
+
 .sidebar-header {
   color: var(--color-red);
   padding: 20px 0;
 }
+
 .sidebar-nav {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .sidebar-nav .nav-link {
   display: flex;
   align-items: center;
@@ -50,25 +66,31 @@ html {
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
+
 .sidebar-nav .nav-link:hover {
   background-color: #fde9ea;
   color: var(--color-red);
 }
+
 .sidebar-nav .nav-link i {
   font-size: 1.2rem;
   margin-right: 10px;
 }
+
 .sidebar-nav .nav-link .ml-2 {
   margin-left: 10px;
 }
+
 .sidebar-nav .nav-link .ml-4 {
   margin-left: 40px;
 }
+
 .sidebar-footer {
   color: var(--color-red);
   padding: 20px 0;
   margin-bottom: 20px;
 }
+
 .btn-red {
   background-color: var(--color-red);
   color: white;
@@ -77,11 +99,13 @@ html {
   font-weight: 500;
   transition: all 0.3s ease;
 }
+
 .btn-red:hover {
   background-color: #cc1724;
   color: white;
   cursor: pointer;
 }
+
 .btn-outline-red {
   background-color: var(--color-light);
   color: var(--color-red);
@@ -92,6 +116,7 @@ html {
   border-radius: 5px;
   transition: all 0.3s ease;
 }
+
 .btn-outline-red:hover {
   background-color: #fde9ea;
   cursor: pointer;
@@ -106,7 +131,8 @@ html {
   font-weight: 500;
 }
 
-.modal-body h6, .modal-body h5 {
+.modal-body h6,
+.modal-body h5 {
   margin-top: 15px;
 }
 
@@ -144,4 +170,30 @@ html {
   padding-left: 0;
   overflow: auto;
   z-index: 5;
+}
+
+@media (max-width: 576px) {
+  .centralizado {
+    text-align: center;
+    /* Centraliza o texto */
+    display: flex;
+    /* Usando Flexbox */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    flex-direction: column;
+    /* Empilha os elementos verticalmente */
+  }
+
+  .remover-m-p {
+    margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        /* Remove o padding superior */
+        padding-bottom: 0 !important;
+        /* Remove o padding inferior */
+        padding-left: 0 !important;
+        /* Remove o padding esquerdo */
+        padding-right: 0 !important;
+  }
 }
