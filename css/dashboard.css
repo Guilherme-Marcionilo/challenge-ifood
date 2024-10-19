@@ -36,6 +36,10 @@ img {
   color: var(--color-light);
 }
 
+.fw-bold {
+  font-weight: 500 !important;
+}
+
 .sidebar {
   background-color: var(--color-light);
   position: fixed;
@@ -226,4 +230,17 @@ h4 {
 
 .small-form {
   width: 44px;
+}
+
+
+@media (max-width: 576px) {
+
+  .format-icon-saldo,
+  .format-icon-receita,
+  .format-icon-despesa {
+    font-size: 2rem;
+    /* Ajuste o tamanho do ícone, se necessário */
+    margin-left: 10px;
+    /* Adiciona um espaço entre o texto e o ícone */
+  }
 }
