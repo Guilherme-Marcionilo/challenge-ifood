@@ -19,6 +19,8 @@
 
   <link rel="stylesheet" href="../css/dashboard.css" />
   <link rel="stylesheet" href="../css/responsive-dashboard.css" />
+  <link rel="stylesheet" href="../css/responsive-collapse.css" />
+  <link rel="stylesheet" href="../css/responsive-menu.css" />
   <link rel="icon" href="../images/Logo.png" type="image/png" />
 </head>
 
@@ -41,13 +43,13 @@
             <i class="bi bi-person-circle text-red"></i>
             <div class="d-flex flex-column">
               <div class="d-flex gap-2 align-items-center">
-                <span class="fs-5">Pizzaria G'S</span>
+                <span class="fs-5 responsive-top d-none d-sm-block">Pizzaria G'S</span>
                 <i class="bi bi-chevron-down" style="cursor: pointer; font-weight: bold" data-bs-toggle="collapse"
                   data-bs-target="#userMenu" aria-expanded="false" aria-controls="userMenu"></i>
               </div>
               <div class="d-flex align-items-center gap-2">
-                <span class="fs-9">Loja Ativa</span>
-                <div style="
+                <span class="fs-9 d-none d-sm-block">Loja Ativa</span>
+                <div class="d-none d-sm-block" style="
                       top: 0;
                       background-color: #58cf81;
                       width: 13px;
@@ -156,7 +158,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="add-order.html">
                     <i class="bi bi-arrow-return-right"></i>
-                    Adicionar pedido
+                    <span>Adicionar pedido</span>
                   </a>
                 </li>
               </ul>
@@ -182,19 +184,19 @@
                 <li class="nav-item">
                   <a class="nav-link" href="access-management.html">
                     <i class="bi bi-arrow-return-right"></i>
-                    Gestão de acesso
+                    <span>Gestão de acesso</span>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="create-access.html">
                     <i class="bi bi-arrow-return-right"></i>
-                    Criar acesso
+                    <span>Criar acesso</span>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="create-access.html">
                     <i class="bi bi-arrow-return-right"></i>
-                    Ver acessos
+                    <span>Ver acessos</span>
                   </a>
                 </li>
               </ul>
@@ -209,7 +211,7 @@
         </nav>
         <footer class="sidebar-footer py-4">
           <div class="d-flex justify-content-start align-items-center">
-            <img src="../images/Logo FinHub.png" alt="FinHub Logo" />
+            <img id="myImage" src="../images/Logo FinHub.png" alt="FinHub Logo" />
           </div>
         </footer>
       </aside>
@@ -328,7 +330,7 @@
       const isClickOnToggle = menuToggle.contains(event.target);
   
       // Se o clique não for dentro do menu ou no botão de toggle, fecha o menu
-      if (!isClickInsideSidebar && !isClickOnToggle && window.innerWidth <= 992) {
+      if (!isClickInsideSidebar && !isClickOnToggle && window.innerWidth <= 768) {
         sidebar.classList.remove('active');
       }
     });
