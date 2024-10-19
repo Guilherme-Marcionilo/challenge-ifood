@@ -12,7 +12,9 @@
 }
 
 @media (max-height: 720px) {
-  body, html {
+
+  body,
+  html {
     overflow: auto;
   }
 
@@ -22,5 +24,37 @@
 
   .logo-finhub {
     margin-top: auto;
+  }
+}
+
+/* Ajustes para telas pequenas, por exemplo, smartphones */
+@media (max-width: 576px) {
+
+  /* Centralizar o texto "Cadastre sua loja" com o parágrafo acima */
+  .link-cadastro {
+    display: block;
+    text-align: center;
+    margin-top: 0.5px;
+    /* Espaçamento opcional entre o link e o parágrafo */
+  }
+
+  .link-cadastro.access-problem {
+    display: block;
+    text-align: end;
+  }
+
+  /* Ajustar o botão "Avançar" para não ficar tão gordo */
+  .btn-red.btn-grey {
+    padding: 10px 20px;
+    /* Diminuir o padding para torná-lo mais proporcional */
+    font-size: 1rem;
+    /* Ajustar o tamanho da fonte para adequar ao layout */
+  }
+
+  .btn-grey {
+    padding: 10px 20px;
+    /* Diminuir o padding para torná-lo mais proporcional */
+    font-size: 1rem;
+    /* Ajustar o tamanho da fonte para adequar ao layout */
   }
 }
