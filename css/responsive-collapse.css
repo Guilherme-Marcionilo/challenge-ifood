@@ -1,0 +1,30 @@
+@media (max-width: 576px) {
+  #userMenu {
+    min-width: 100% !important;
+    left: 0;
+    right: 0;
+    padding: 10px;
+  }
+
+  #userMenu .card-body {
+    padding: 10px;
+  }
+
+  #userMenu input.form-control {
+    width: 100%;
+  }
+
+  #userMenu .tela {
+    height: auto;
+    padding: 10px;
+  }
+
+  #userMenu img {
+    height: 30px;
+    margin-left: 10px;
+  }
+
+  #userMenu p {
+    font-size: 14px;
+  }
+}

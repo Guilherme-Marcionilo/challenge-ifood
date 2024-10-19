@@ -8,6 +8,7 @@
     font-size: 2rem;
   }
 }
+
 @media (max-width: 1300px) {
 
   h6 {
@@ -22,11 +23,11 @@
 @media (max-width: 1120px) {
 
   h6 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   h4 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -39,41 +40,4 @@
   h4 {
     font-size: 1.2rem;
   }
-}
-
-/* Estilos adicionais para a modal */
-.modal-header h4 {
-  font-weight: bold;
-}
-
-.modal-body h6,
-.modal-body h5 {
-  margin-top: 15px;
-}
-
-.modal-body .form-check-label {
-  margin-left: 10px;
-}
-
-.modal-body .form-control {
-  margin-bottom: 10px;
-}
-
-.modal-footer .btn-primary {
-  background-color: var(--color-red);
-  border: none;
-}
-
-.modal-footer .btn-primary:hover {
-  background-color: #c71720;
-}
-
-/* Estilos para os radio buttons selecionados */
-.form-check-input:checked {
-  background-color: var(--color-red);
-  border-color: var(--color-red);
-}
-
-.small-form {
-  width: 44px;
 }
