@@ -224,4 +224,7 @@ img {
     overflow: hidden; /* Oculta o texto que ultrapassa o limite do campo */
     text-overflow: ellipsis; /* Adiciona reticências ao final do texto que não couber */
   }
+  #dateTo {
+    width: 100px !important;
+  }
 }
