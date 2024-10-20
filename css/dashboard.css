@@ -19,9 +19,11 @@ html {
   font-family: var(--font-body);
   overflow-y: auto;
 }
+
 #topdisable {
   margin-left: 250px;
 }
+
 img {
   max-width: 100%;
 }
@@ -32,6 +34,10 @@ img {
 
 .text-light {
   color: var(--color-light);
+}
+
+.fw-bold {
+  font-weight: 500 !important;
 }
 
 .sidebar {
@@ -90,8 +96,6 @@ img {
   margin-bottom: 20px;
 }
 
-
-
 .format-icon-saldo {
   width: 120px;
   margin-bottom: 200px;
@@ -112,7 +116,6 @@ img {
   font-size: 3vw;
   color: var(--color-red);
 }
-
 
 
 .link-saldo {
@@ -190,3 +193,54 @@ h4 {
   font-size: 1.5rem;
 }
 
+
+/* Modal */
+
+.modal-header h4 {
+  font-weight: bold;
+}
+
+.modal-body h6,
+.modal-body h5 {
+  margin-top: 15px;
+}
+
+.modal-body .form-check-label {
+  margin-left: 10px;
+}
+
+.modal-body .form-control {
+  margin-bottom: 10px;
+}
+
+.modal-footer .btn-primary {
+  background-color: var(--color-red);
+  border: none;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #c71720;
+}
+
+/* Estilos para os radio buttons selecionados */
+.form-check-input:checked {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.small-form {
+  width: 44px;
+}
+
+
+@media (max-width: 576px) {
+
+  .format-icon-saldo,
+  .format-icon-receita,
+  .format-icon-despesa {
+    font-size: 2rem;
+    /* Ajuste o tamanho do ícone, se necessário */
+    margin-left: 10px;
+    /* Adiciona um espaço entre o texto e o ícone */
+  }
+}

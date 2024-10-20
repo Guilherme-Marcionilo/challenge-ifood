@@ -1,0 +1,209 @@
+/* Esconder o texto dos itens de menu entre 769px e 992px */
+@media (min-width: 577px) and (max-width: 992px) {
+  aside.sidebar {
+    height: 100vh;
+    /* Definir a altura do menu lateral para ocupar toda a altura da tela */
+    overflow-y: auto;
+    /* Habilitar rolagem vertical */
+  }
+
+  /* Ajustes para os itens de menu */
+  .sidebar-nav .nav-item {
+    cursor: pointer;
+    /* Cursor indicando que é clicável */
+  }
+
+  .sidebar-nav .nav-item .ml-2 {
+    display: none;
+    /* Esconde o texto ao lado dos ícones */
+  }
+
+  /* Ajuste no tamanho dos ícones, se necessário */
+  .sidebar-nav .nav-item i {
+    font-size: 1.5rem;
+    /* Aumentar o tamanho do ícone */
+  }
+
+  #col-one {
+    margin-left: 100px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-left: 0;
+    overflow: auto;
+    z-index: 5;
+  }
+
+  #myImage {
+    content: url('../images/favicon_transparent_32x32.png');
+    /* Imagem para telas intermediárias */
+  }
+
+}
+
+/* Estilo para telas menores que 568px */
+@media (max-width: 576px) {
+  .navbar-toggler {
+    position: absolute;
+    left: 0;
+  }
+
+  /* Ajustar o tamanho do texto da marca */
+  #topdisablemenuhamburguer {
+    font-size: 1rem;
+    /* Reduzir tamanho da fonte */
+    word-break: break-word;
+    /* Permitir quebras de linha no texto longo */
+  }
+
+  /* Mostrar apenas o ícone do menu do usuário */
+  #userMenu span,
+  #userMenu .ml-2 {
+    display: none;
+    /* Esconder o texto */
+  }
+
+  #topdisable {
+    margin-left: 100px;
+  }
+}
+
+/* Ajuste de espaçamento para submenus */
+.sidebar-nav .nav-item ul {
+  padding-left: 5px;
+  /* Ajuste para submenus */
+}
+
+/* Reduzir a largura do menu lateral em telas pequenas */
+@media (min-width: 576px) and (max-width: 992px) {
+  aside.sidebar {
+    flex: 0 0 80px;
+    /* Reduzir a largura do menu lateral */
+    max-width: 80px;
+    /* Máxima largura em telas menores */
+  }
+
+  .sidebar .sidebar-nav ul li a {
+    padding: 10px;
+    /* Reduzir o espaçamento do item do menu */
+  }
+
+  /* Ajustar o tamanho dos ícones */
+  .sidebar-nav ul li i {
+    font-size: 1.5rem;
+    /* Ajustar o tamanho do ícone conforme necessário */
+  }
+
+  .nav-item ul.nav li.nav-item span {
+    display: none;
+  }
+}
+
+/* Manter os ícones visíveis */
+@media (max-width: 992px) {
+  .nav-item ul.nav li.nav-item i {
+    display: inline-block;
+  }
+}
+
+/* Para garantir mais espaço ao conteúdo */
+@media (max-width: 992px) {
+  .col-md-9 {
+    flex: 0 0 calc(100% - 80px);
+    /* Ajusta o conteúdo para ocupar o espaço restante */
+    max-width: calc(100% - 80px);
+    /* Ajustar a largura do conteúdo */
+  }
+
+    #topdisable {
+      margin-left: 100px;
+    }
+}
+
+/* Estilos para telas entre 568px e 992px */
+@media (min-width: 576px) and (max-width: 768px) {
+
+  /* Aqui você pode remover ou modificar os estilos que estão causando problemas */
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .navbar {
+    /* Mantenha os mesmos estilos da media query acima */
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  .responsive-top {
+    font-size: 0.9rem;
+  }
+
+  #topdisable2 {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  #topdisablemenuhamburguer {
+    display: block;
+    /* Exibir o menu hambúrguer */
+  }
+
+  /* Outros ajustes de estilo para dispositivos móveis */
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .sidebar {
+    display: none;
+    overflow-y: auto;
+    transition: all 0.3s;
+  }
+
+  .sidebar.active {
+    display: block;
+    z-index: 100;
+  }
+
+  .active-ban {
+    display: none;
+    margin-left: 80%;
+  }
+
+  #col-one {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  #topdisable {
+    margin-left: 50px;
+  }
+
+  #topdisable2 {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) {
+  #menu-toggle {
+    display: none;
+  }
+
+
+}

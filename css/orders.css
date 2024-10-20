@@ -20,6 +20,14 @@ html {
   overflow-y: auto;
 }
 
+#topdisable {
+  margin-left: 250px;
+}
+
+img {
+  max-width: 100%;
+}
+
 .text-red {
   color: var(--color-red);
 }
@@ -336,6 +344,13 @@ input:checked+.slider:before {
   border-top: 1px solid black !important;
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 576px) {
+  .table {
+    font-size: 0.8rem;
+    /* Tamanho da fonte menor em telas pequenas */
+  }
 }
 
 
