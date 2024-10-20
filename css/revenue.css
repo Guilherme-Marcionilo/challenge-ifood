@@ -477,4 +477,10 @@ input:checked+.slider:before {
   }
 
 
-  
+@media (max-width: 720px) {
+  .input-text {
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    overflow: hidden; /* Oculta o texto que ultrapassa o limite do campo */
+    text-overflow: ellipsis; /* Adiciona reticências ao final do texto que não couber */
+  }
+}
