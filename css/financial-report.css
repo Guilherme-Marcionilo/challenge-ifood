@@ -175,25 +175,17 @@ img {
 @media (max-width: 576px) {
   .centralizado {
     text-align: center;
-    /* Centraliza o texto */
     display: flex;
-    /* Usando Flexbox */
     justify-content: center;
-    /* Centraliza horizontalmente */
     align-items: center;
-    /* Centraliza verticalmente */
     flex-direction: column;
-    /* Empilha os elementos verticalmente */
   }
 
   .remover-m-p {
     margin-bottom: 0 !important;
-        padding-top: 0 !important;
-        /* Remove o padding superior */
-        padding-bottom: 0 !important;
-        /* Remove o padding inferior */
-        padding-left: 0 !important;
-        /* Remove o padding esquerdo */
-        padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
