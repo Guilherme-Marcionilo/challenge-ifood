@@ -148,3 +148,28 @@ p {
   font-size: 15px;
   font-weight: 500;
 }
+
+
+@media (max-width: 720px) {
+  .row.mt-5, .row.mt-2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+
+  .row.mt-5 .col-5, .row.mt-2 .col-5,
+  .row.mt-5 .col-3, .row.mt-2 .col-3,
+  .row.mt-5 .col-2, .row.mt-2 .col-2 {
+    flex: 1; 
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .status-pendente {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-left: 40px; 
+  }
+}
