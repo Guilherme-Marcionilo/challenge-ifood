@@ -225,6 +225,7 @@ img {
     text-overflow: ellipsis; /* Adiciona reticências ao final do texto que não couber */
   }
   #dateTo {
-    width: 300px !important;
+    width: 400px !important;
+    margin-bottom: 3px;
   }
 }
