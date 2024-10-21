@@ -224,8 +224,8 @@ img {
     overflow: hidden; /* Oculta o texto que ultrapassa o limite do campo */
     text-overflow: ellipsis; /* Adiciona reticências ao final do texto que não couber */
   }
-  #dateTo {
-    width: 273px !important;
+  #dateToBalance {
+    width: 220px !important;
     margin-bottom: 15px;
   }
 }
